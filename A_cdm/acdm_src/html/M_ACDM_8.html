@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A-CDM</title>
+    
+    <!-- jquery -->
+    <link rel="stylesheet" href="../css/jquery-ui.min.css" type="text/css"/>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    
+    <!-- custom -->
+    <link type="text/css" rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="../js/pub_js.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+           <div class="header_title">
+               <a class="back" href="javascript:window.history.back();">뒤로가기</a>
+               <h2>DEPARTURES</h2>
+           </div>
+            <div class="header_util">
+                <button class="header_time" type="button" title="추천"><i class="icon_time"></i>UTC 10:21</button>
+                <button type="button" title="알림"><i class="icon_alert"></i></button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="content_wrap">
+                <div class="search_area">
+                    <div class="option_area">
+                        <div class="date_btn">
+                            <button type="button" title="">23</button>
+                            <button class="on" type="button" title="">24</button>
+                            <button type="button" title="">25</button>
+                        </div>
+                        <div class="time_sel">
+                            <button type="button" title=""><i class="icon_time"></i>10~14</button>
+                        </div>
+                        <div class="select_box">
+                            <select name="" title="">
+                                <option>전체</option>
+                                <option selected>종료편 제외</option>
+                                <option>종료편</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input_box">
+                        <button class="search_btn" type="button" title="검색"></button>
+                        <input type="text" class="search" title="" placeholder="편명,도착지를 입력하세요.">
+                        <button class="reroad" type="button"></button>
+                    </div>
+                </div>
+                <div class="content_inner">
+                   <div class="color_info">
+                       <ul>
+                           <li>
+                               <span class="auto_color"></span>TOBT 자동생성
+                           </li>
+                           <li>
+                               <span class="input_color"></span>TOBT 정상입력
+                           </li>
+                           <li>
+                               <span class="modify_color"></span>TOBT 입력/수정필요
+                           </li>
+                       </ul>
+                       <button class="icon_tooltip"></button>
+                   </div>
+                    <div class="result_header">
+                        <div class="option">
+                            <div class="mr10">
+                                <i class="icon_cal"></i>2022-01-25
+                            </div>
+                            <div class="">
+                                <i class="icon_m_time"></i>10~14
+                            </div>
+                        </div>
+                        <dl>
+                            <dt>총</dt>
+                            <dd>26건</dd>
+                        </dl>
+                    </div>
+                    <div class="result_list">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <div class="flight_info form auto_form">
+                                        <div class="ci_logo">
+                                            <img src="../images/Asiana_Airlines.svg.svg" alt="asiana airlines">
+                                        </div>
+                                        <div class="flight">
+                                            <p class="flight_name ice">KE011</p>
+                                            <p class="flight_time">SIBT <span>12:10</span></p>
+                                            <ul>
+                                                <li>CDG(*HKG)</li>
+                                                <li>B748</li>
+                                                <li>230</li>
+                                                <li>Ard</li>
+                                            </ul>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="time_list">
+                                        <ul>
+                                            <li>
+                                                <div><span>EOBT</span>11:55</div>
+                                            </li>
+                                            <li>
+                                                <div class="fc_green"><span class="fc_green">TOBT</span>12:00</div>
+                                            </li>
+                                            <li>
+                                                <div class="fc_blue"><span class="fc_blue">TSAT</span>12:10</div>
+                                            </li>
+                                            <li>
+                                                <div><span>TTOT</span>12:10</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </a>
+                                <div class="icon_favorite on"></div>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="flight_info form form1">
+                                        <div class="ci_logo">
+                                            <img src="../images/main_01.png" alt="asiana airlines">
+                                        </div>
+                                        <div class="flight">
+                                            <p class="flight_name">KE011</p>
+                                            <p class="flight_time">SIBT <span>12:10</span></p>
+                                            <ul>
+                                                <li>CDG(*HKG)</li>
+                                                <li>B748</li>
+                                                <li>231</li>
+                                                <li>Ard</li>
+                                            </ul>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="time_list">
+                                        <ul>
+                                            <li>
+                                                <div class="fc_red"><span class="fc_red">EOBT</span>11:55</div>
+                                            </li>
+                                            <li>
+                                                <div class="fc_green"><span class="fc_green">TOBT</span>12:00</div>
+                                            </li>
+                                            <li>
+                                                <div class="fc_blue"><span class="fc_blue">TSAT</span>12:10</div>
+                                            </li>
+                                            <li>
+                                                <div class="fc_yel"><span class="fc_yel">TTOT</span>12:10</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </a>
+                                <div class="icon_favorite"></div>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="flight_info form form2">
+                                        <div class="ci_logo">
+                                            <img src="../images/Asiana_Airlines.svg.svg" alt="asiana airlines">
+                                        </div>
+                                        <div class="flight">
+                                            <p class="flight_name">KE011</p>
+                                            <p class="flight_time">SIBT <span>12:10</span></p>
+                                            <ul>
+                                                <li>CDG(*HKG)</li>
+                                                <li>B748</li>
+                                                <li>232</li>
+                                                <li>Ard</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="time_list">
+                                        <ul>
+                                            <li class="bg_red">
+                                                <div class="fc_red"><span class="fc_red">EOBT</span>11:55</div>
+                                            </li>
+                                            <li class="bg_green">
+                                                <div class="fc_green"><span class="fc_green">TOBT</span>12:00</div>
+                                            </li>
+                                            <li class="bg_blue">
+                                                <div class="fc_blue"><span class="fc_blue">TSAT</span>12:10</div>
+                                            </li>
+                                            <li class="bg_yel">
+                                                <div class="fc_yel"><span class="fc_yel">TTOT</span>12:10</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </a>
+                                <div class="icon_favorite"></div>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="flight_info">
+                                        <div class="ci_logo">
+                                            <img src="../images/Asiana_Airlines.svg.svg" alt="asiana airlines">
+                                        </div>
+                                        <div class="flight">
+                                            <p class="flight_name">KE011</p>
+                                            <p class="flight_time">SIBT <span>12:10</span></p>
+                                            <ul>
+                                                <li>CDG(*HKG)</li>
+                                                <li>B748</li>
+                                                <li>233</li>
+                                                <li>Ard</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="time_list">
+                                        <ul>
+                                            <li>
+                                                <div><span>ELDT</span>11:55</div>
+                                            </li>
+                                            <li>
+                                                <div><span>ALDT</span>12:00</div>
+                                            </li>
+                                            <li>
+                                                <div><span>EIBT</span>12:10</div>
+                                            </li>
+                                            <li>
+                                                <div><span>AIBT</span>12:10</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </a>
+                                <div class="icon_favorite"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu_bar">
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="icon_home"></i>
+                        <p>홈</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="icon_arrive"></i>
+                        <p>도착편</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="icon_depart on"></i>
+                        <p>출발편</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="icon_star"></i>
+                        <p>즐겨찾기</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="icon_menu"></i>
+                        <p>전체메뉴</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A-CDM</title>
+    
+    <!-- jquery -->
+    <link rel="stylesheet" href="../css/jquery-ui.min.css" type="text/css"/>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    
+    <!-- custom -->
+    <link type="text/css" rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="../js/pub_js.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+       
+        <!-- HEADER -->
+        <div class="header">
+            <div class="header_title">
+                <a class="back" href="javascript:window.history.back();">뒤로가기</a>
+                <h2>계정신청 조회</h2>
+            </div>
+            <div class="header_util"><!-- 보이는 페이지 에서만 ac 추가 해주세요. -->
+                <button class="header_time" type="button" title="추천"><i class="icon_time"></i>UTC 10:21</button>
+                <button type="button" title="알림"><i class="icon_alert"></i></button>
+            </div>
+        </div>
+        <!-- //HEADER -->
+        
+        <!-- CONTAINER -->
+        <div class="container">
+        
+            <div class="phone_sh">
+                <ul>
+                    <li>
+                        <span>성명</span>
+                        <input type="text" placeholder="이름을 입력하세요." maxlength="20" class="mt8">
+                    </li>
+                    <li>
+                        <span>핸드폰번호</span>
+                                <div class="flex just_sbw mt8">
+                                    <select name="phone" class="select" id="select_7">
+                                        <option disabled="" selected="" hidden="" value=""c>010</option>
+                                        <option value="">011</option>
+                                        <option value="">017</option>
+                                        <option value="">016</option>
+                                    </select>
+                                    <input type="text" title="num" maxlength="10" placeholder="- 없이 숫자만 입력하세요.">
+                                </div>
+                    </li>
+                </ul>
+                <div class="loockup_box">
+                    <div class="loockup_wrap">
+                            <table>
+                                <tr>
+                                    <th>신청일</th>
+                                    <td>2022-02-20</td>
+                                </tr>
+                                <tr>
+                                    <th>신청권한</th>
+                                    <td>A-CDM</td>
+                                </tr>
+                                <tr>
+                                    <th>상태</th>
+                                    <td>신청대기</td>
+                                </tr>
+                            </table>
+                    </div>
+                </div>
+                <!-- <div class="loockup_box on">
+                    <div class="loockup_wrap">
+                            <table>
+                                <tr>
+                                    <th>신청일</th>
+                                    <td>2022-02-20</td>
+                                </tr>
+                                <tr>
+                                    <th>신청권한</th>
+                                    <td>A-CDM</td>
+                                </tr>
+                                <tr>
+                                    <th>상태</th>
+                                    <td>신청대기</td>
+                                </tr>
+                            </table>
+                    </div>
+                </div> -->
+            </div>
+        
+        
+            <div class="agreeBottom">
+                <span><a href="#" class="btn_default_tr">계정신청 변경 / 해지</a></span>
+                <!-- <span><a href="#" class="btn_default_tr num_on">계정신청 변경 / 해지</a></span> -->
+                <span><a href="#" class="btn_primary_sh">조회</a></span>
+            </div>
+        </div>
+        <!-- //CONTAINER -->
+    </div>
+
+</body>
+</html>

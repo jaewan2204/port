@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>SIPAC-작업중</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- js,css files -->
+    <!-- css -->
+    <link type="text/css" rel="stylesheet" href="../../plugins/MDB/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="../../plugins/datepicker/css/bootstrap-datetimepicker.min.css">
+    <link type="text/css" rel="stylesheet" href="../../plugins/datatables/dataTables.bootstrap4.css">
+    <!--slick slide CSS_main slide-->
+    <link type="text/css" rel="stylesheet" href="../../plugins/slick/slick.css">
+    <link type="text/css" rel="stylesheet" href="../../css/common.css">
+    <link type="text/css" rel="stylesheet" href="../../js/c3-0.6.12/c3.css">
+
+    <link rel="shortcut icon" href="../../images/favicon2.ico">
+
+    <script type="text/javascript" src="../../js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../../plugins/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../plugins/totemticker/jquery.totemticker.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="../../plugins/MDB/js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="../../plugins/MDB/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../plugins/datepicker/js/moment.min.js"></script>
+    <script type="text/javascript" src="../../plugins/datepicker/js/bootstrap-datetimepicker.min.js"></script>
+    <!-- Datatables -->
+    <script type="text/javascript" src="../../plugins/datatables/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="../../plugins/jquery-slimScroll-1.3.8/jquery.slimscroll.js"></script>
+    <!-- Slick slider -->
+    <script type="text/javascript" src="../../plugins/slick/slick.min.js"></script>
+
+    <script type="text/javascript" src="../../plugins/fixto/fixto.min.js"></script>
+    <!-- D3.js Chart Library-->
+    <script type="text/javascript" src="../../js/d3/d3.min.js"></script>
+    <script type="text/javascript" src="../../js/c3-0.6.12/c3.min.js"></script>
+
+    <!-- develop common js -->
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <script type="text/javascript" src="../../js/commonUtil.js"></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div id="headerWrap" class="clf">
+        <div class="header_t">
+            <h1 id="logo">
+                <a href="../0_메인,로그인/메인.html">SIPAC – Sistema de Registro Integrado del Patrimonio Cultural Peruano</a>
+            </h1>
+            <div id="headerOption">
+                <div id="bellBtnWrap" class="layerTooltipBtn" data-layer-tool-tip="notiTooltip"><a href="javascript:void(0);"><i class="xi-bell-o"></i><span id="alertTotalCnt">99+</span></a></div>
+                <button id="logoutBtnWrap" class="ml20"><i class="xi-log-out"></i> Cerrar sesión</button>
+            </div>
+        </div>
+
+        <ul id="nav" class="clf">
+            <li><a href="">Patrimonio Mueble</a></li>
+            <li><a href="">Patriomonio Immueble Histórico</a></li>
+            <li><a href="" class="active">Patrimonio Arqueológico</a></li>
+            <li><a href="">SIG</a></li>
+            <li><a href="">Plataforma Externa</a></li>
+            <li><a href="">Gestión Electrónica(DCS)</a></li>
+            <li><a href="">Gestión de Sistema</a></li>
+        </ul>
+    </div>
+    <!-- //HEADER -->
+    <div id="breadCrumbWrap" class="clf">
+        <ul class="clf">
+            <li><i class="xi-home" style="color:#717171"></i></li>
+            <li>Patrimonio Arqueológico</li>
+            <li>DPGA</li>
+            <li>INVESTIGACIÓN EN PATRIMONIO INMUEBLE PREHISPÁNICO</li>
+            <li class="active">BÚSQUEDA INVESTIGACIÓN</li>
+        </ul>
+    </div>
+    <!-- wrapper -->
+    <div id="wrapper">
+        <!-- SIDEBAR -->
+        <div id="sideBarWrap">
+            <div class="profile-wrap">
+                <div class="profile-name"><i class="xi-profile"></i><span>Juan diego flor</span></div>
+                <div class="profile-btn">
+                    <a href="#none" class="btn1"><i class="xi-document"></i> Mi Página</a>
+                    <a href="#none" class="btn2"><i class="xi-star"></i> Favoritos</a>
+                </div>
+            </div>
+            <ul id="sideNavWrap">
+                <li><a href="#none">Búsqueda</a></li>
+                <li>
+                    <a href="#none">DSFL<i class="xi-angle-right-min"></i></a>
+                    <ul>
+                        <li><a href="#none">Registro</a></li>
+                        <li><a href="#none">Fichas para imprimir</a></li>
+                        <li><a href="#none">Historial</a></li>
+                        <li><a href="#none">Repositorio</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#none">DCIA<i class="xi-angle-right-min"></i></a>
+                    <ul>
+                        <li><a href="#none">Registro</a></li>
+                        <li><a href="#none">Historial</a></li>
+                        <li><a href="#none">Reporte</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#none">DMO<i class="xi-angle-right-min"></i></a>
+                    <ul>
+                        <li><a href="#none">Registro</a></li>
+                        <li><a href="#none">Historial</a></li>
+                        <li><a href="#none">Reporte</a></li>
+                    </ul>
+                </li>
+                <li class="on">
+                    <a href="#none">DPGA<i class="xi-angle-right-min"></i></a>
+                    <ul>
+                        <li><a href="#none">RESOLUCIÓN DE DECLARATORIA</a></li>
+                        <li><a href="#none">RETIRO DE CONDICIÓN</a></li>
+                        <li>
+                            <a href="#none" class="on">INVESTIGACIÓN EN PATRIMONIO INMUEBLE PREHISPÁNICO</a>
+                            <p>
+                                <a href="#none">NUEVO INVESTIGACIÓN</a>
+                                <a href="#none" class="on">BÚSQUEDA INVESTIGACIÓN</a>
+                            </p>
+                        </li>
+                        <li><a href="#none">ESTADÍSTICAS</a></li>
+                    </ul>
+                </li>
+                <li><a href="#none">DOCUMENTACIÓN</a></li>
+                <li><a href="#none">VISUALIZACIÓN DE FICHA EXTERNA</a></li>
+                <li><a href="#none">Mantenimineto</a></li>
+            </ul>
+            <script>
+                $('#sideNavWrap > li > a').on('click', function() {
+                    if ($(this).parent().hasClass('on')) {
+                        $(this).parent().removeClass('on');
+                    } else {
+                        $('#sideNavWrap > li').removeClass('on');
+                        $(this).parent().addClass('on');
+                    }
+                });
+            </script>
+        </div>
+        <!-- SIDEBAR -->
+        <div id="contentsWrap" class="clf">
+            <div class="ContentsHeader">
+                <h2 class="title">LISTA DE INVESTIGACIÓN EN PATRIMONIO INMUEBLE PREHISPÁNICO</h2>
+            </div>
+            <!-- cont -->
+            <div class="cont">
+                <!--tableWrap-->
+                <div class="tableWrap">
+                    <!--searchWrap-->
+                    <div class="searchWrap clf mb">
+                        <dl class="col2">
+                            <dt>Nº Inscripción</dt>
+                            <dd>
+                                <div class="form_box txt_ib">
+                                    <label class="selectLabel clf">
+                                        <input type="radio" id="conS_01" name="conS_01" value="Y">
+                                        <span>Individual</span>
+                                    </label>
+                                    <label class="selectLabel clf">
+                                        <input type="radio" id="conS_01" name="conS_01" value="N" checked="">
+                                        <span>Rango</span>
+                                    </label>
+                                </div>
+                                <span class="codeRegNacType2">De</span>
+                                <input type="text" name="" id="" value="" placeholder="Numero" class="w_70">
+                                <span class="codeRegNacType">A</span>
+                                <input type="text" name="" id="" value="" placeholder="Numero" class="w_70">
+                            </dd>
+                        </dl>
+                        <dl class="col2">
+                            <dt>Código de Registro Nacional</dt>
+                            <dd>
+                                <div class="form_box txt_ib">
+                                    <label class="selectLabel clf">
+                                        <input type="radio" id="conS_02" name="conS_02" value="Y">
+                                        <span>Individual</span>
+                                    </label>
+                                    <label class="selectLabel clf">
+                                        <input type="radio" id="conS_02" name="conS_02" value="N" checked="">
+                                        <span>Rango</span>
+                                    </label>
+                                </div>
+                                <span class="codeRegNacType">De BC - ARQ -</span>
+                                <input type="text" name="" id="" value="" placeholder="Numero" class="w_70">
+                                <span class="codeRegNacType">A BC - ARQ -</span>
+                                <input type="text" name="" id="" value="" placeholder="Numero" class="w_70">
+                            </dd>
+                        </dl>
+                        <dl class="col1">
+                            <dt>Tipo de investigación</dt>
+                            <dd>
+                                <select class="select w_264 reset" name="">
+                                    <option value="">-- Seleccione --</option>
+                                    <option value="">01</option>
+                                    <option value="">02</option>
+                                    <option value="">03</option>
+                                </select>
+                            </dd>
+                        </dl>
+                        <dl class="col2">
+                            <dt>N° de Resolución de autorización</dt>
+                            <dd>
+                                <input type="text" name="" id="" value="" placeholder="Textual" class="w_100p">
+                            </dd>
+                        </dl>
+                        <dl class="col2">
+                            <dt>Nombre de proyecto</dt>
+                            <dd>
+                                <input type="text" name="" id="" value="" placeholder="Textual" class="w_100p">
+                            </dd>
+                        </dl>
+                        <dl class="col2">
+                            <dt>Título</dt>
+                            <dd>
+                                <input type="text" name="" id="" value="" placeholder="Textual" class="w_100p">
+                            </dd>
+                        </dl>
+                        <dl class="col2">
+                            <dt>Autores</dt>
+                            <dd>
+                                <input type="text" name="" id="" value="" placeholder="Textual" class="w_100p">
+                            </dd>
+                        </dl>
+                        <p class="b_btn">
+                            <a href="javascript:void(0);" class="searchBtn btn btn_primary"><i class="xi-search"></i>Buscar</a>
+                            <a href="javascript:void(0);" class="resetBtn btn btn_secondary"><i class="xi-renew"></i>Limpiar</a>
+                        </p>
+                    </div>
+                    <!--list_top-->
+                    <div class="list_top">
+                        <b id="TOTAL_PAGE_INFO">Total 4 (1 / 1 Page)</b>
+                        <ul class="table_row">
+                            <li class="cell">Mostrar por página
+                                <select id="sbListSize" class="">
+                                    <option value="10">10</option>
+                                    <option value="20">20</option>
+                                    <option value="30">30</option>
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--table_list-->
+                    <table class="td_border_r center">
+                        <colgroup>
+                            <col width="50">
+                            <col width="">
+                            <col width="200">
+                            <col width="150">
+                            <col width="200">
+                            <col width="150">
+                            <col width="50">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>Nº</th>
+                                <th>Tipo de investigación</th>
+                                <th>Nombre de proyecto</th>
+                                <th>N° de Resolución de autorización</th>
+                                <th>Título</th>
+                                <th>Autores</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>PONENCIAS</td>
+                                <td>SAMPLE DATA</td>
+                                <td>ABC-12345</td>
+                                <td>SAMPLE TÍTULO</td>
+                                <td>AUTORE 1, AUTORE 2, AUTORE 3, AUTORE 4</td>
+                                <td>
+                                    <div class="dt-list-control">
+                                        <span onclick="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Ver ficha"><i class="xi-search"></i></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>ARTÍCULOS</td>
+                                <td>SAMPLE DATA</td>
+                                <td>ABC-12345</td>
+                                <td>SAMPLE TÍTULO</td>
+                                <td>AUTORE 1, AUTORE 2, AUTORE 3, AUTORE 4</td>
+                                <td>
+                                    <div class="dt-list-control">
+                                        <span onclick="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Ver ficha"><i class="xi-search"></i></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>POSTERS ACADÉMICOS</td>
+                                <td>SAMPLE DATA</td>
+                                <td>ABC-12345</td>
+                                <td>SAMPLE TÍTULO</td>
+                                <td>AUTORE 1, AUTORE 2, AUTORE 3, AUTORE 4</td>
+                                <td>
+                                    <div class="dt-list-control">
+                                        <span onclick="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Ver ficha"><i class="xi-search"></i></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>RECURSOS AUDIOVISUALES</td>
+                                <td>SAMPLE DATA</td>
+                                <td>ABC-12345</td>
+                                <td>SAMPLE TÍTULO</td>
+                                <td>AUTORE 1, AUTORE 2, AUTORE 3, AUTORE 4</td>
+                                <td>
+                                    <div class="dt-list-control">
+                                        <span onclick="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Ver ficha"><i class="xi-search"></i></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>PONENCIAS</td>
+                                <td>SAMPLE DATA</td>
+                                <td>ABC-12345</td>
+                                <td>SAMPLE TÍTULO</td>
+                                <td>AUTORE 1, AUTORE 2, AUTORE 3, AUTORE 4</td>
+                                <td>
+                                    <div class="dt-list-control">
+                                        <span onclick="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Ver ficha"><i class="xi-search"></i></span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="pagenation mb20 mt20" id="pageMaker">
+                        <a class="direction l2" href="javascript:void(0);"></a>
+                        <a class="direction l1" href="javascript:void(0);"></a>
+                        <a class="active" href="javascript:void(0);">1</a>
+                        <a class="" href="javascript:void(0);">2</a>
+                        <a class="" href="javascript:void(0);">3</a>
+                        <a class="" href="javascript:void(0);">4</a>
+                        <a class="" href="javascript:void(0);">5</a>
+                        <a class="direction r1" href="javascript:void(0);"></a>
+                        <a class="direction r2" href="javascript:void(0);"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //wrapper -->
+
+    <!-- footer-wrap -->
+    <div id="footer-wrap">
+        <div class="footer">
+            <!-- <div class="footer-img"><img src="/images/footer_logo.png" alt=""></div> -->
+            <div class="footer-text">SIPAC</div>
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="javascript:void(0);">Notificaciones</a></li>
+                    <li><a href="javascript:void(0);">Sugerencia</a></li>
+                    <li><a href="javascript:void(0);">Manual de usuario</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-center"><img src="/images/koica_logo.png" alt=""></div>
+            <div class="footer-address">
+                Sede Central: Av. Javier Prado Este 2465<br>
+                San Borja, Lima 41 Perú<br>
+                Central Telefónica: 511-6189393
+            </div>
+        </div>
+    </div>
+    <!-- //footer-wrap -->
+
+</body>
+<script src="../../js/commonPublish.js"></script>
+
+</html>

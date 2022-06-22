@@ -1,0 +1,380 @@
+@charset "UTF-8";
+
+.tableWrap table {border-top:1px solid #e1e1e1; border-bottom:1px solid #e1e1e1; width:100%; font:12px 'Encode Sans Condensed', sans-serif}
+.tableWrap table th {white-space: nowrap; border-right:1px solid #e1e1e1; border-bottom:1px solid #e1e1e1; background:#f6f6f6; font-weight:400; padding:3px 5px; color:#444;}
+.tableWrap table thead th{white-space: normal;}
+.tableWrap table td + .tableWrap table td th {border-left:1px solid #e1e1e1}
+.tableWrap table th span, .pointTit, .searchWrap dt span{color:#cf2f0f; margin-left:3px}
+.tableWrap table th .tit {color:#444; margin-left:0; margin-top:5px; display:inline-block}
+.tableWrap table td {padding:3px 5px; color:#333; border-bottom:1px solid #e1e1e1; word-break:break-word}
+
+
+
+table th, table td{line-height: 1.4em; height:30px;}
+table thead, table tbody, table tfoot{border-left:1px solid #e1e1e1 !important; border-right:1px solid #e1e1e1 !important;}
+table th{ font-weight: bold !important;}
+
+
+tfoot{background:#ecf7ff; font-weight: bold}
+.bg_lsky{background:#ecf7ff !important; font-weight:bold}
+.bg_sky{background:#cfe9fc; font-weight:bold}
+.bg_lGray{background:#efefef; font-weight:bold}
+/* 210702 */
+.bg_yellow{background:#FFF2CC !important; font-weight:bold}
+
+.bg_warning, .bg_warning td, .bg_warning th{background: #fffcd1 !important; color:#cf2f0f !important;}
+
+
+ 
+.table_w_auto{overflow-x: auto !important; width:1050px}
+.table_w_auto > table.td_border_r {margin-left:-1px}  
+/*.table_w_auto table{table-layout: fixed; width: auto; min-width: 100%;}*/
+.table_w_auto table {table-layout:fixed; width:100%; min-width:100%}  
+.table_w_auto table th, .table_w_auto table td {word-wrap:break-word}
+/*  .table_w_auto td{white-space: nowrap;}*/
+
+ 
+.tableWrap table.fix_size_140 {height:140px}
+.tableWrap table.fix_size_270 {height:270px}
+
+/* 20190712 */
+.nscroll{width:1050px;overflow:auto;}
+
+
+
+
+
+.tableWrap table .subTh {font:12px 'Encode Sans Condensed', sans-serif; text-align:center; font-weight:600}
+.tableWrap table caption {min-height:1.4em; padding:0 0 5px 3px; /*margin-bottom:5px;*/ font:15px 'Encode Sans Condensed', sans-serif; font-weight:600; text-align:left;}
+.tableCaption {font:15px 'Encode Sans Condensed', sans-serif; font-weight:600; text-align:left; margin:0 0 5px 3px}
+.firstCaption {margin:0 0 5px 3px !important}
+
+.tableWrap table caption span, .dt-header-title span, h3 span {color:#cf2f0f; margin-left:3px}
+
+.tableWrap table select.single {width:350px}
+.tableWrap table select.multi {width:33%}
+/*.centerSelect {display:block; margin:2px auto}
+.tableWrap table input[type=text], .tableWrap table input[type=password] {outline:none; width:100%; height:25px; border:1px solid #b4b4b4; padding:0 5px; box-sizing:border-box}
+.tableWrap table input[type=text]:focus, .tableWrap table input[type=password]:focus {border:1px solid #9c9c9c}
+.tableWrap table textarea, textarea{width:100%; max-width:100%; height:50px; min-height:50px; max-height:200px; outline:none; border:1px solid #b4b4b4; padding:5px; box-sizing:border-box}
+.tableWrap table textarea:focus {border:1px solid #9c9c9c}*/
+
+.addFunTable {border:1px solid #e1e1e1}
+.addFunTable th {text-align:center}
+.addFunTable td {padding:5px; box-sizing:border-box; border:1px solid #e1e1e1; text-align:center}
+
+.searchResultTable {border-left:1px solid #e1e1e1}
+.searchResultNone td {text-align:center; padding:30px 0}
+
+
+.editTableWrap {position:relative}
+.rowAdd {cursor:pointer; border:1px solid #e1e1e1; border-radius:3px 3px 0 0; text-align:center; padding:3px; font:12px 'Encode Sans Condensed', sans-serif; color:#606060; background:#f6f6f6; position:absolute; top:0; right:0;}
+.rowAdd_f {position:absolute; right:0; top:-17px}
+.rowDel {cursor:pointer}
+.editTableWrap, .noneCapFun, .noneFun {margin-top:15px}
+
+
+
+
+/* bottom btn group */
+#formActBox {background:#fff; padding:10px 10px}  
+#formActBox > a {width:100px; text-align:center; display:block; padding:5px 0; font:12px 'Encode Sans Condensed', 'notokr';  float:left}
+
+#formActBox ol {float:left; list-style:none}
+#formActBox ol li {float:left; margin-right:5px}
+#formActBox ul {float:right; list-style:none}
+#formActBox ul li {float:left; margin-left:5px}
+#formActBox ul li button, #formActBox ol li button {font:12px 'Encode Sans Condensed', 'notokr'; min-width:100px; padding:5px 10px; cursor:pointer}
+
+.border {margin-bottom:50px}
+
+
+
+
+
+
+/* table style */
+.td_border_r td{border-right:1px solid #e1e1e1;}
+/*.td_border_r td:last-child{border-right:none;}*/
+.th_border_r0 th:last-child{border-right:none;}
+.th_left th{text-align: left !important;}
+.td_pd10 td{ padding:10px 0 !important;}
+
+.td_subTitle {border-right:none !important}  
+
+
+
+
+/* RESULT TABLE */
+.scrollHidden {width:1025px; overflow:hidden}
+.resultTbl, .fixed_tbl {width:1041px}
+.resultTbl {height:150px; overflow-x:hidden; overflow-y:scroll}
+.fixed_tbl {font:14px 'Encode Sans Condensed'; font-weight:400; border-bottom:none !important}
+.fixed_tbl th {border-bottom:none !important}
+.fixed_tbl th:last-child {border-right:0 none !important}
+.resultTbl table {padding-right:10px; font:12px 'Encode Sans Condensed'; font-weight:400}
+.resultTbl table td {padding-left:5px !important; padding:5px; border:1px solid #e1e1e1; border-left:none}
+.resultTbl table td.rowNum {text-align:center}
+
+/* TABLE &BTN SIZE */
+.resultTbl_w_small {width:55px}
+.resultTbl_w_small2 {width:30px}
+
+
+
+
+/* ============================ */
+/* DATA TABLE */
+.dataTable {border-collapse:collapse}
+.dataTable td, .dataTable  th {box-sizing:border-box !important}
+
+ 
+.dt-header-title {float:left; padding-left:3px; /*min-height:1.4em; margin-left:3px; margin-bottom:5px;*/ font:15px 'Encode Sans Condensed', sans-serif; font-weight:600; text-align:left; }
+.dt-add-btn {float:right; background:#f6f6f6; border-radius:3px 3px 0 0; padding:2px 0; text-align:center; border:1px solid #e1e1e1; cursor:pointer; font:12px 'Encode Sans Condensed', sans-serif; color:#606060; border-bottom:none}
+
+
+ 
+.dt-add-table {box-sizing:border-box}
+.dt-add-table th {text-align:center}
+.dt-add-table th:last-child {border-right:none}
+.dt-add-table td {border-right:1px solid #e1e1e1}
+.dt-add-table td:last-child {border-right:none}
+.dt-add-table .subTh {background:#f6f6f6; font:12px 'Encode Sans Condensed', sans-serif; text-align:center; font-weight:600}
+ 
+.dt-list-table {box-sizing:border-box}
+.dt-list-table thead {border-bottom:1px solid #e1e1e1;}
+.dt-list-table th {text-align:center; border-bottom:none !important; line-height: 1.2em !important; height:30px;}
+.dt-list-table th:last-child {border-right:none}
+.dt-list-table tr:last-child td {border-bottom:none}
+.dt-scroll {border-collapse:collapse}
+
+.dt-list-table-scroll {height:150px}
+.dt-list-hide th {text-align:center; font:13px 'Encode Sans Condensed', sans-serif}
+.dt-list-table {/*margin-top:-38px;*/ border-collapse:collapse}
+.dt-list-table tr td {border-right:1px solid #e1e1e1; word-break:break-all; text-overflow:ellipsis}
+.dt-list-table tr td:last-child {border-right:none}
+
+ 
+.dt-list-control {display:table; min-width:55px; max-width:70px; margin:0 auto; text-align:center; margin-top:-1px; margin-bottom:-1px}
+.dt-list-control.dt-list-control-single {min-width:auto !important}
+.table_w_auto .dt-list-control{max-width:55px;}
+
+ 
+.dt-list-control.dt-list-control-extend {max-width:85px !important}
+
+ 
+.dt-list-control.dt-list-control-full-extend {max-width:110px !important}
+
+.dt-list-control span, .dt-list-control a {display:inline-block; height:25px; line-height:25px; margin:1px; padding:0px 5px; float:none; border:1px solid #bbb; cursor:pointer; color:#000}
+/*.dt-list-control span:last-child {margin-right:0;}*/
+
+ /*210705 .dt-list-control size long plus  */
+ .dt-list-control.long {max-width:100px;}
+
+.dataTable2 {border-bottom:none !important; border-left:1px solid #e1e1e1}
+.dataTable2 th {outline:none}
+
+
+ 
+.dt-def-btn {width:75px}	 
+.dt-loc-btn {width:120px}    
+.dt-file-btn {width:95px}   
+.dt-col-no {width:55px !important}
+.dt-col-control {width:110px !important}
+.dt_btn{width:auto !important; padding:2px 10px !important}
+
+/* point table */
+.table1{border-top:1px solid #b32929 !important;}
+.table1 th{background: #faf3f3 !important; color:#b32929 !important; }
+
+/* th white */
+.table2{}
+.table2 th{background: none !important; font-weight: bold !important;}
+.table2 th, .table2 td{padding-left:5px !important;}
+.left th{text-align: left !important;}
+
+/* white, readonly table */
+.table_box caption{height:30px; line-height: 30px !important; padding-left:5px !important; border:1px solid #ddd; border-bottom:0;}
+.table_box table caption{padding-bottom:5px; font-size:12px; color:#999; }
+.table_box th{background: none !important; font-weight: bold !important; border-right:none !important; white-space: nowrap;}
+.table_box td{padding:3px 5px 3px 5px !important;}
+
+
+.caption2{font-size:12px !important; color:#999; }
+
+
+
+/* BORDER CONTROL */
+.t_none {border-top:none !important}
+.r_none {border-right:none !important}
+.b_none {border-bottom:none !important}
+.l_none {border-left:none !important}
+.t_border {border-top:1px solid #e1e1e1 !important}
+.r_border {border-right:1px solid #e1e1e1 !important}
+.b_border {border-bottom:1px solid #e1e1e1 !important}
+.l_border {border-left:1px solid #e1e1e1 !important}
+
+.lr_border thead, .lr_border tbody{border-left:1px solid #e1e1e1 !important; border-right:1px solid #e1e1e1 !important;}
+.lr_border table.dataTable{border-left:1px solid #e1e1e1 !important; border-right:1px solid #e1e1e1 !important;}
+.lr_border .dataTables_scrollBody{border-left:1px solid #e1e1e1 !important; border-right:1px solid #e1e1e1 !important; }
+.lr_border .dataTables_scrollBody table.dataTable{border-left:none !important; border-right:none !important; }
+
+.table_h_sm .slimScrollDiv, .table_h_sm .dataTables_scrollBody{height:100px !important; max-height: none !important;}
+.table_h_md .slimScrollDiv, .table_h_md .dataTables_scrollBody{height:300px !important; max-height: none !important;}
+.table_h_lg .slimScrollDiv, .table_h_lg .dataTables_scrollBody{height:600px !important; max-height: none !important;}
+
+.dataTables_scrollFoot{display:none;}
+
+.def_border {border:1px solid #e1e1e1 !important}
+
+.border_t {border-top:1px solid #e1e1e1}
+.border_b {border-bottom:1px solid #e1e1e1}
+.border_l {border-left:1px solid #e1e1e1}
+
+.border_r tr td:last-child {border-right:1px solid #e1e1e1 !important;}
+
+.insertRow {box-shadow:0 0 5px rgba(0,0,0,0.2)}
+.text-center {text-align:center}
+.text-left {text-align:left !important}
+
+.subSelect {width:350px}
+
+::placeholder {color:#ccc; opacity:1}
+:-ms-input-placeholder {color:#ccc}
+::-ms-input-placeholder {color:#ccc}
+
+ 
+.dataNone{display:table; width:100%; min-height:100px; line-height:1.6em;}
+.dataNone i{display:table-cell; text-align:center; color:#bcbfca; vertical-align:middle; padding:20px 0; font:12px 'xeicon', 'Encode Sans Condensed', sans-serif !important}
+.dataNone i:before{clear:both; display:block; margin-bottom:5px; content:"\e9ab"; font-size:30px}
+/*.dataNone i:before{clear:both; display:block; margin-bottom:5px; content:"\e9ab"; font-size:30px;}
+.dataNone i:after{clear:both; display:block; content:"No tiene ninguna información"; font:12px "Encode Sans Condensed", sans-serif}  
+
+.dataNone2{display:table; width:100%; min-height:100px; line-height:1.6em;}
+.dataNone2 i{display:table-cell; text-align:center; color:#bcbfca; vertical-align: middle; padding:20px 0; font:12px 'xeicon', 'Encode Sans Condensed', sans-serif !important}
+.dataNone2 i:before{clear:both; display:block; margin-bottom:5px; content:"\e9ab"; font-size:30px;}
+
+/* list top text */
+.list_top{margin-bottom:5px; color:#888;}
+.list_top b{color:#333;}
+.list_top b.lg{font-size:1.2em !important;}
+
+/* pagenation */
+.pagenation{padding:0px 0;text-align:center;line-height:normal; font-size:0; margin-top:10px; }
+.pagenation *{display:inline-block; font-size:13px; line-height:normal;text-decoration:none;vertical-align:middle; text-align:center;  box-sizing:border-box;}
+.pagenation a{min-width:25px; height:25px; line-height:25px; padding:0 5px; margin:0 2px; vertical-align:middle;  }
+.pagenation a:link, .pagenation a:visited, .pagenation a:focus{color:#888;}
+.pagenation a:hover, .pagenation a:active, .pagenation a.active{ color:#fff; background:#7f8386; }
+.pagenation .direction{line-height: 26px; margin:0 1px; text-align: center; font-size:12px; background: #ddd;}
+.pagenation .direction:before{display:inline-block; font-family: 'notokr';}
+.pagenation .direction.l1:before{content: "<";}
+.pagenation .direction.l2:before{content: "<<";}
+.pagenation .direction.r1:before{content: ">";}
+.pagenation .direction.r2:before{content: ">>";}
+
+
+
+/* ====================================================== */
+/* DATA NONE LAYOUT */
+/* ====================================================== */
+.none_data_center td {border-bottom:none !important; overflow:hidden; display:block}
+.none_data_center.none_data_center110 td {height:108px}
+.none_data_center.none_data_center150 td {height:147px}
+.none_data_center.none_data_center300 td {height:298px}
+.none_data_center.none_data_center320 td {height:318px}
+.none_data_center.none_data_center450 td {height:110px; max-height:448px}  
+
+
+
+ 
+.editList tr {cursor:pointer}
+.editList tr.on {background:#f6f6f6}
+.editList td {border-bottom:none !important}
+
+ 
+.editList3_d {min-height:250px; border:1px solid #e1e1e1}
+.editList3_d table{margin-left:-1px; margin-top:-1px; margin-right:-1px; width:calc(100% + 2.5px - 1px)}
+.editList3 tr {cursor:pointer}
+.editList3 tr.on {background:#f6f6f6}
+
+ 
+.table_effect tr {cursor:pointer}
+
+ 
+.clickEvtTable tr {cursor:pointer}
+.clickEvtTable tr.on {background:#f6f6f6 !important}
+
+ 
+.editList2 {min-height:320px}
+.editList2_noneData {height:320px}
+
+/*.editList4 {min-height:447px}*/
+.editList4 {margin-top:-1px}
+.editList4_noneData {height:448px}
+
+ 
+.editList5 {margin-top:-1px; min-height:298px; height:308px}
+
+ 
+.editList6 {margin-top:-1px; min-height:148px; height:148px}
+
+ 
+.borderSimple {border:1px solid #e1e1e1; border-top:none}
+.borderSimple table thead {border-left:none !important; border-right:none !important}
+.borderSimple table thead th:last-child {border-right:none !important}
+.borderSimple tbody {border-left:none !important; border-right:none !important}
+.borderSimple tbody td:last-child{border-right:none !important}
+.borderSimple .slimScrollDiv table {margin:-1px 0 -1px 0 !important}
+.borderSimple .slimScrollDiv table td {line-height:normal !important}
+
+ 
+.borderSimple.borderSimple_row .slimScrollDiv table {margin:0 0 0 0 !important}  
+.borderSimple.borderSimple_row .slimScrollDiv table tr:last-child td{border-bottom:none !important}
+.borderSimple.borderSimple_row td .dt-list-control span, .borderSimple.borderSimple_row td .dt-list-control a {height:23px; line-height:23px}
+
+ 
+.infoTable {border-top:1px solid #b32929}
+
+ 
+.cursorTable tr {cursor:pointer}
+
+
+
+
+/* ====================================================== */
+/* INNER SCROLL TABLE  */
+/* ====================================================== */
+ 
+.innerScrollTable {border:1px solid #e1e1e1; border-top:none}
+.innerScrollTable table {margin-top:-1px; border-bottom:none}
+.innerScrollTable table thead {border-left:none !important; border-right:none !important}
+.innerScrollTable table thead th:last-child {border-right:none !important}
+.innerScrollTable tbody {border-left:none !important; border-right:none !important}
+.innerScrollTable tbody td:last-child{border-right:none !important}
+.innerScrollTable .slimScrollDiv table {margin:-1px 0 -1px 0 !important; overflow:hidden}
+
+.innerScrollTable.innerScrollTable_fix .slimScrollDiv table tr:last-child td{/* border-bottom:none !important */}  
+
+ 
+.innerScrollTable .ist_moreSize table tr:last-child td{border-bottom:none !important}
+.innerScrollTable .ist_moreSize table .none_data_center {border-bottom:none !important}
+ 
+.innerScrollTable .slimScrollDiv .ist_fixSize {margin:0 0 -2px 0}
+.innerScrollTable .slimScrollDiv .ist_fixSize table {overflow:visible}
+ 
+	.innerScrollTable .ist_fixSize.ist_scrollRow5 {height:150px}
+	.innerScrollTable .ist_fixSize.ist_scrollRow10 {height:300px}
+	.innerScrollTable .ist_fixSize.ist_scrollRow15 {height:450px}
+
+ 
+.horizontalNormalScroll {width:1050px; overflow-x:auto !important; border-left:1px solid #e1e1e1; border-right:1px solid #e1e1e1}
+.horizontalNormalScroll > table {table-layout:fixed; width:100%; min-width:100%}
+.horizontalNormalScroll > table td, .horizontalNormalScroll > table th {word-wrap:break-word; border-right:1px solid #e1e1e1}
+.horizontalNormalScroll > table td:last-child, .horizontalNormalScroll > table th:last-child {border-right:none}
+.horizontalNormalScroll > table tbody, .horizontalNormalScroll > table thead {border-left:none !important; border-right:none !important}
+
+.horizontalNormalScrollX {width:1050px; overflow-x:hidden !important; border-left:1px solid #e1e1e1; border-right:1px solid #e1e1e1}
+.horizontalNormalScrollX > table {table-layout:fixed; width:100%; min-width:100%}
+.horizontalNormalScrollX > table td, .horizontalNormalScroll > table th {word-wrap:break-word; border-right:1px solid #e1e1e1}
+.horizontalNormalScrollX > table td:last-child, .horizontalNormalScroll > table th:last-child {border-right:none}
+.horizontalNormalScrollX > table tbody, .horizontalNormalScroll > table thead {border-left:none !important; border-right:none !important}

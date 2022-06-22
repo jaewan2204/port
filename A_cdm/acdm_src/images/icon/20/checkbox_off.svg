@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/20/checkbox_off</title>
+    <g id="icon/20/checkbox_off" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" x="0" y="0" width="20" height="20"></rect>
+        <rect id="Rectangle" stroke="#00ADB7" stroke-width="1.5" fill="#00AAB5" x="3" y="3" width="14" height="14" rx="2"></rect>
+        <path d="M9.36319358,12.967836 C9.19574486,12.9676926 9.03520819,12.9028814 8.91687779,12.7876511 L5.96950937,9.92107206 C5.73762823,9.67904291 5.74447032,9.30188304 5.98498575,9.0679603 C6.22550118,8.83403756 6.61329063,8.82738302 6.86214095,9.05290814 L9.36319358,11.4854052 L13.5484567,7.414863 C13.797307,7.18933788 14.1850965,7.19599243 14.4256119,7.42991516 C14.6661274,7.6638379 14.6729694,8.04099777 14.4410883,8.28302693 L9.80950936,12.7876511 C9.69117896,12.9028814 9.53064229,12.9676926 9.36319358,12.967836 L9.36319358,12.967836 Z" id="Shape" stroke="#FFFFFF" stroke-width="0.2" fill="#FFFFFF"></path>
+    </g>
+</svg>

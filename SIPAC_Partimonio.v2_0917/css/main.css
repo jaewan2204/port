@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+.main{background: #f2f2f2; min-width:1300px; }
+
+.mainWrap{position:relative; margin:0 auto; width:1300px; padding-top:110px; }
+.mainWrap .visual, .mainCont .notice, .mainCont .user, .mainCont .favorit, .mainCont .link a{position:relative; margin-bottom:20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); background: #fff;}
+
+.mainWrap .visual{float:left; width:600px; height:575px; padding:320px 0 0 38px; background: url("../images/main_visual.jpg") 50% 50% no-repeat; background-size:cover;}
+.mainWrap .visual i, .mainWrap .visual b{display:inline-block; width:100%;}
+/*.mainWrap .visual i{height:50px; background: url("../images/main_visual_logo.png") 0 0 no-repeat;}*/
+.mainWrap .visual b{ line-height:1.4em; letter-spacing: -0.05em; color:#d53337; font: 600 30px 'notokr', sans-serif}
+
+
+
+.mainCont{float:right; width:680px;}
+
+.mainCont .notice{position:relative; height:60px; line-height: 60px; padding:0 0 0 15px; overflow: hidden;}
+.mainCont .notice span{display:inline-block; height:22px; line-height: 22px; padding:0 8px; background: #d53337; color:#fff; font-size:11px; border-radius:11px;}
+.mainCont .notice span i{font-size:12px; vertical-align: text-bottom;}
+.mainCont .notice ul{display:inline-block; width:80%; vertical-align: top; height:60px; overflow:hidden; margin:0; padding:0;}
+.mainCont .notice ul li{position:relative; height:60px; line-height: 60px; padding-left:5px; color:#333; }
+.mainCont .notice ul li em:hover{color:#d53337;}
+
+.mainCont .notice li em{display:inline-block; width:63%;  font-size:16px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden; cursor: pointer; }
+.mainCont .notice li b{position:absolute; right:0; top:17px; display:inline-block; height:30px; line-height: 30px; font-size:12px; color:#9b9b9b; font-weight: normal;}
+
+
+
+.mainCont .notice p{position:absolute; right:0; top:0; display:block; width:30px; height:60px; border-left:1px solid #ddd;}
+.mainCont .notice p em{position:absolute; right:0; display:block; width:30px;  height:30px; line-height: 30px; font-size:14px; text-align: center; cursor: pointer;}
+.mainCont .notice p em:hover{color:#d53337;}
+.mainCont .notice .up{top:0; border-bottom:1px solid #ddd;}
+.mainCont .notice .down{bottom:0;}
+
+
+
+.mainCont .user{position:relative; height:140px; padding:10px 30px 0 140px;}
+.mainCont .user dt{height:50px; line-height: 50px; font-size:18px; color:#222; font-weight: bold; border-bottom:1px solid #eee;}
+.mainCont .user dt em{position:absolute; top:50%; transform:translateY(-50%); left:30px; display:block; width:85px; height:85px; border-radius:50%; overflow:hidden/*background:#eee url("../images/ex_user.jpg") 50% 50% no-repeat; background-size:cover*/}
+.mainCont .user dt em img {position:relative; width:85px; height:auto; top:50%; transform:translateY(-50%)}  
+.mainCont .user dt em.noimg{background:#eee; font-size:40px; color:#bbb; text-align:center; font-weight:normal; line-height:85px}
+.mainCont .user dt em.noimg img {display:none}
+.mainCont .user dt em.noimg:before{clear:both; display:inline-block; content:"\e9f5"; font-family:'xeicon'; font-style:normal}  
+.mainCont .user dt a{float:right; font-size:12px; color:#686c71; font-weight:normal;}
+.mainCont .user dt a:hover{color:#d53337;}
+.mainCont .user dt a i{font-size:14px; vertical-align: middle;}
+.mainCont .user dd{padding-top:10px}
+.mainCont .user dd p{min-height:1.4em; line-height:1.4em; font-size:13px; color:#222}
+
+
+ 
+.mainCont .favorit {height:245px; padding:25px}
+.mainCont .favorit ul{min-height:164px}
+.mainCont .favorit ul li{float:left; display:table; width:33.3%; padding:5px}
+.mainCont .favorit ul li:nth-child(3n+2){width:33.4%;}
+.mainCont .favorit ul li a {display:table-cell; width:100%; padding:0 10px; height:72px; line-height:1.3em;  border:1px solid #d53337; vertical-align: middle; font-size:13px; color:#d53337; transition:ease 0.2s; transition-duration:0.2s}
+.mainCont .favorit ul li a .category {font-size:11px; color:#000; font-weight:bold; opacity:0.8}
+.mainCont .favorit ul li a .menuName {font-size:13px}
+.mainCont .favorit .editFavorit {width:auto; padding:0 7px !important; margin:5px 7px 0 0}
+.mainCont .favorit ul li a.active {background:#d53337}
+.mainCont .favorit ul li a.active .category, .mainCont .favorit ul li a.active .menuName {color:#fff}
+
+
+.mainCont .link{margin-left:-10px; margin-right:-10px;}
+.mainCont .link li{float:left; display:table; width:50%; padding:0 10px;}
+.mainCont .link a{display:table-cell; height:70px; padding-left:20px; vertical-align: middle; color:#222; font-size:15px;}
+.mainCont .link a i{vertical-align: middle; font-size:20px;}
+.mainCont a:hover{ color:#d53337;}
+
+ 
+.modal-body .favoritList .favorit{width:768px; min-height:155px; padding:0}
+.modal-body .favoritList .favorit li{float:left; display:table; width:33.3%; padding:0 10px 10px 0}
+.modal-body .favoritList .favorit li:nth-child(3n+2){width:33.4%;}
+.modal-body .favoritList .favorit li a{position:relative; cursor:default; display:table-cell; width:100%; padding:0 10px; height:65px; line-height:1.3em; border:1px solid #d53337; vertical-align:middle; font-size:13px; color:#d53337}
+.modal-body .favoritList .favorit li a .category {font-size:11px; color:#000; font-weight:bold; opacity:0.8}
+.modal-body .favoritList .favorit li a .menuName {font-size:13px}
+.modal-body .favoritList .favorit li a .btn_close {position:absolute; top:6px; right:6px; cursor:pointer}
+
+ 
+.layerTooltip {position:absolute; z-index:101; padding:10px; background:#fff; border:1px solid #efefef; box-shadow:0 2px 4px rgba(0,0,0,0.1)}
+.layerTooltip .arrow {position:absolute; color:#efefef}
+.layerTooltip .arrow-top {top:-19px; left:173px}
+/*.layerTooltip .arrow-right {}
+.layerTooltip .arrow-bottom {}*/
+.layerTooltip .arrow-left {top:15px; left:-20px}
+.layerTooltip .btn_close {position:absolute; top:-10px; right:-10px; border-radius:20px; background:#df5337}
+.layerTooltip .btn_close:hover {background:#a92023}
+.layerTooltip .btn_close i {color:#fff}
+
+ 
+.profileTooltip.layerTooltip {top:44px; left:235px; padding:10px}
+.profileTooltip.layerTooltip .favoritList .favorit {width:100%}
+.profileTooltip.layerTooltip .favoritList .favorit li{float:left; display:table; width:100%; padding: 0; height:100%; border-bottom:1px solid #efefef; transition:ease 0.2s; transition-duration:0.2s}
+.profileTooltip.layerTooltip .favoritList .favorit li a{position:relative; cursor:pointer; display:table-cell; width:100%; height:auto; line-height:1.3em; font-size:11px; color:#d53337; padding:10px 0 10px 5px; border:none; transition:ease 0.2s; transition-duration:0.2s}
+.profileTooltip.layerTooltip .favoritList .favorit li:last-child {padding-bottom:5px; border:0}
+/*.profileTooltip.layerTooltip .favoritList .favorit li a:hover {background:#d53337; color:#ffffff !important}*/
+.profileTooltip.layerTooltip .favoritList .favorit li a .category {padding:0 0 3px 0; font-size:11px; opacity:0.8; font-weight:bold; color:#000}
+.profileTooltip.layerTooltip .favoritList .favorit li a .menuName {padding:0 0 0 0; font-size:12px}
+.profileTooltip.layerTooltip .favoritList .favorit li.active a {background:#d53337}
+.profileTooltip.layerTooltip .favoritList .favorit li.active a .category, .profileTooltip.layerTooltip .favoritList .favorit li.active a .menuName {color:#fff}
+
+ 
+.notiTooltip.layerTooltip {top:55px; right:70px; padding:15px; z-index:99999}
+.notiTooltip.layerTooltip h3 {font-size:12px; color:#d53337}
+.notiTooltip.layerTooltip table {border:none !important; width:100%; font-size:11px}
+.notiTooltip.layerTooltip table tr {cursor:pointer}
+.notiTooltip.layerTooltip table tr:hover {text-decoration:underline}
+.notiTooltip.layerTooltip table th, .notiTooltip.layerTooltip table td {height:18px}
+.notiTooltip.layerTooltip table th {color:#636363}
+.notiTooltip.layerTooltip table td {color:#000; font-weight:bold; text-align:right}
+.notiTooltip.layerTooltip table tbody {border:none !important}
+
+/* 210705 tab main page css move */
+#contentsWrap {position:relative}
+.logo_title {width:450px; margin:30px 0 0 0}
+.introCopy {margin:0}
+.introCopy h3 {font-size:22px; font-weight:bold}
+.introCopy h4 {font-size:15px; font-weight:normal; font-style:italic; line-height:20px}
+.siteAddress {font-size:15px; margin:30px 0 0 0; display:inline-block}
+.introImgSliderWrap {background:#fff; width:400px; margin:0 auto}
+.introImgSliderWrap .introImgSlider {width:400px; height:400px}
+.introImgSliderWrap .introImgSlider .introImgSliderImg {width:400px; height:400px; background:#fff; outline:none}
+.introImgSliderWrap .introImgSlider .introImgSliderImg b {display:table-cell; width:400px; height:400px; vertical-align:middle; text-align:center}
+.introImgSliderWrap .introImgSlider .introImgSliderImg img {max-width:400px; max-height:400px; width:auto !important; display:inline-block}

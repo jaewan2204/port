@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A-CDM</title>
+    
+    <!-- jquery -->
+    <link rel="stylesheet" href="../css/jquery-ui.min.css" type="text/css"/>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    
+    <!-- custom -->
+    <link type="text/css" rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="../js/pub_js.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+       
+        <!-- HEADER -->
+        <div class="header">
+            <div class="header_title">
+                <a class="back" href="javascript:window.history.back();">뒤로가기</a>
+                <h2>사용자 관리</h2>
+            </div>
+            <div class="header_util"><!-- 보이는 페이지 에서만 ac 추가 해주세요. -->
+                <button class="header_time" type="button" title="추천"><i class="icon_time"></i>UTC 10:21</button>
+                <button type="button" title="알림"><i class="icon_alert"></i></button>
+            </div>
+        </div>
+        <!-- //HEADER -->
+        
+        <!-- CONTAINER -->
+        <div class="container">
+            <div class="account_wrap">
+                <p class="sm_title">소속직원 확인 후 승인해 주시기 바랍니다.</p>
+                <div class="user_box">
+                    <div class="user_wrap2">
+                            <table>
+                                <tr>
+                                    <th>구분</th>
+                                    <td>신규</td>
+                                </tr>
+                                <tr>
+                                    <th>아이디</th>
+                                    <td>jkdsdjkstd12</td>
+                                </tr>
+                                <tr>
+                                    <th>성명</th>
+                                    <td>홍길동</td>
+                                </tr>
+                                <tr>
+                                    <th>휴대폰번호</th>
+                                    <td>010-0000-0000</td>
+                                </tr>
+                                <tr>
+                                    <th>소속사</th>
+                                    <td>조업사</td>
+                                </tr>
+                                <tr>
+                                    <th>신청일</th>
+                                    <td>2033-06-15</td>
+                                </tr>
+                                <tr>
+                                    <th>상태</th>
+                                    <td>상태대기</td>
+                                </tr>
+                            </table>
+                    </div>
+        
+                    <div class="user_wrap3">
+                        <table>
+                            <tr>
+                                <th>반려사유</th>
+                                <td>반려사유는 이러한 이유에서
+                                    반려 조치 되었습니다.
+                                    다시 신청 해주세요.</td>
+                            </tr>
+                        </table>
+                    </div>
+        
+                    <!-- <div class="user_wrap3 on">
+                        <table>
+                            <tr>
+                                <th>반려사유</th>
+                                <td>반려사유는 이러한 이유에서
+                                    반려 조치 되었습니다.
+                                    다시 신청 해주세요.</td>
+                            </tr>
+                        </table>
+                    </div> -->
+        
+                </div>
+            </div>
+            <div class="user_accord">
+                <p class="ac_title">권한</p>
+                    <div class="accordion">
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="answer01">
+                                <label for="answer01">A 항공사명 및 코드<em></em></label>
+                                <div>
+                                    <input type="checkbox" class="btn-check" id="setbtn01">
+                                    <label class="btn btn-primary" for="setbtn01"><em></em>TOBT 조회</label>
+        
+                                    <input type="checkbox" class="btn-check" id="setbtn02">
+                                    <label class="btn btn-primary" for="setbtn02"><em></em>TOBT 입력</label>
+        
+                                    <input type="checkbox" class="btn-check" id="setbtn03">
+                                    <label class="btn btn-primary" for="setbtn03"><em></em><p>제방빙신청 EEZT 입력</p></label>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="answer02">
+                                <label for="answer02">B 항공사명 및 코드<em></em></label>
+                                <div>
+                                    <input type="checkbox" class="btn-check" id="setbtn04">
+                                    <label class="btn btn-primary" for="setbtn04"><em></em>TOBT 조회</label>
+        
+                                    <input type="checkbox" class="btn-check" id="setbtn05">
+                                    <label class="btn btn-primary" for="setbtn05"><em></em>TOBT 입력</label>
+        
+                                    <input type="checkbox" class="btn-check" id="setbtn06">
+                                    <label class="btn btn-primary" for="setbtn06"><em></em><p>제방빙신청 EEZT 입력</p></label>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="answer03">
+                                <label for="answer03">C 항공사명 및 코드<em></em></label>
+                                <div>
+                                    <input type="checkbox" class="btn-check" id="setbtn07">
+                                    <label class="btn btn-primary" for="setbtn07"><em></em>TOBT 조회</label>
+        
+                                    <input type="checkbox" class="btn-check" id="setbtn08">
+                                    <label class="btn btn-primary" for="setbtn08"><em></em>TOBT 입력</label>
+        
+                                    <input type="checkbox" class="btn-check" id="setbtn09">
+                                    <label class="btn btn-primary" for="setbtn09"><em></em><p>제방빙신청 EEZT 입력</p></label>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="answer04">
+                                <label for="answer04">D 항공사명 및 코드<em></em></label>
+                                <div>
+                                    <input type="checkbox" class="btn-check" id="setbtn10">
+                                    <label class="btn btn-primary" for="setbtn10"><em></em>TOBT 조회</label>
+        
+                                    <input type="checkbox" class="btn-check" id="setbtn11">
+                                    <label class="btn btn-primary" for="setbtn11"><em></em>TOBT 입력</label>
+        
+                                    <input type="checkbox" class="btn-check" id="setbtn12">
+                                    <label class="btn btn-primary" for="setbtn12"><em></em><p>제방빙신청 EEZT 입력</p></label>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="answer05">
+                                <label for="answer05">E 항공사명 및 코드<em></em></label>
+                                <div>
+                                    <input type="checkbox" class="btn-check" id="setbtn13">
+                                    <label class="btn btn-primary" for="setbtn13"><em></em>TOBT 조회</label>
+        
+                                    <input type="checkbox" class="btn-check" id="setbtn14">
+                                    <label class="btn btn-primary" for="setbtn14"><em></em>TOBT 입력</label>
+        
+                                    <input type="checkbox" class="btn-check" id="setbtn15">
+                                    <label class="btn btn-primary" for="setbtn15"><em></em><p>제방빙신청 EEZT 입력</p></label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+        
+            <div class="agreeBottom mt32">
+                <span><a href="#" class="btn_list">목록</a></span>
+                <span><a href="#" class="btn_reject">반려</a></span>
+                <span><a href="#" class="btn_consent">승인</a></span>
+                <!-- 
+                    <span><a href="#" class="btn_reject on">반려</a></span>
+                    <span><a href="#" class="btn_consent on">승인</a></span>
+                 -->
+            </div>
+        </div>
+        <!-- //CONTAINER -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+.login{background: #f2f2f2;}
+.loginWrap{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%); margin:0 auto;  width:500px; background: #fff; box-shadow: 0 10px 10px rgba(0,0,0,0.2);}
+.loginWrap p{height:100px; line-height: 100px !important; padding-left:30px; background: #d53337; color:#fff; font:bold 17px 'notokr'; vertical-align: middle;}
+//.loginWrap p:before{clear:both; display:inline-block; content:''; width:25px; height:25px; margin-right:10px; vertical-align: middle; background:url("../images/peru_logo.png") 50% 50% no-repeat;}
+.loginWrap ul{width:250px; margin:0 auto; padding:60px 0; }
+.loginWrap li{position:relative; display:block; margin-top:-1px;}
+.loginWrap li i{position:absolute; top:15px; left:10px; color:#555; font-size:14px; z-index:20;}
+.loginWrap li input{width:100%; height:45px; line-height: 45px; padding-left:35px; border:1px solid #ddd; }
+.loginWrap li input:focus{position:relative; z-index:10;}
+.loginWrap li input::placeholder{color:#888;}
+.loginWrap li a{width:100%; height:40px; line-height: 40px; margin-top:5px; font-size:14px; }
+.loginWrap li:last-child{margin-top:0;}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/32/data_bg</title>
+    <g id="icon/32/data_bg" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" x="0" y="0" width="32" height="32"></rect>
+        <path d="M28.0235294,4 L3.97647059,4 C2.88489602,4 2,4.87866511 2,5.96255344 L2,28.0374466 C2,29.1213349 2.88489602,30 3.97647059,30 L28.0235294,30 C29.115104,30 30,29.1213349 30,28.0374466 L30,5.96255344 C30,4.87866511 29.115104,4 28.0235294,4 Z M28.0235294,28.0374466 L3.97647059,28.0374466 L3.97647059,5.96255344 L28.0235294,5.96255344 L28.0235294,28.0374466 Z" id="Shape" fill="#222222"></path>
+        <rect id="Rectangle" fill="#222222" x="6.8" y="2" width="1.6" height="5.6" rx="0.8"></rect>
+        <rect id="Rectangle-Copy-5" fill="#222222" x="12.4" y="2" width="1.6" height="5.6" rx="0.8"></rect>
+        <rect id="Rectangle-Copy-6" fill="#222222" x="18" y="2" width="1.6" height="5.6" rx="0.8"></rect>
+        <rect id="Rectangle-Copy-7" fill="#222222" x="23.6" y="2" width="1.6" height="5.6" rx="0.8"></rect>
+    </g>
+</svg>

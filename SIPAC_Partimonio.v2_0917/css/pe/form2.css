@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+.btn_primary .xi-search ,
+.btn_basic .xi-trash,
+.btn_basic .xi-pen,
+.btn_basic .xi-renew,
+.btn_basic .xi-print,
+.btn_secondary .xi-renew,
+.btn_basic .xi-download,
+.btn_secondary .xi-download,
+.btn_basic .xi-file-download-o,
+.btn_basic .xi-upload {display:none;}
+
+
+.nscroll.tableWrap table {width:auto; min-width:100%}
+.nscroll.tableWrap table th,
+.nscroll.tableWrap table td {min-width:100px}
+.img_upload_list .img_del {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url('../../images/ico_del.gif') no-repeat 50% 50%;
+    text-indent: -10000px;
+    margin-left: 0;
+    border-color: transparent;
+}
+.img_upload_list .img_add {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    margin-left: 5px;
+    vertical-align: middle;
+    background: url('../../images/ico_add.gif') no-repeat 50% 50%;
+    text-indent: -10000px;
+    border-color: transparent;
+}

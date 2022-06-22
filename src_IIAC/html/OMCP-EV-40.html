@@ -1,0 +1,1560 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>인천국제공항 상황관리 협업플랫폼 및 이동지역 차량관리시스템 구축사업</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link type="text/css" rel="stylesheet" href="../css/style.css">
+    <link type="text/css" rel="stylesheet" href="../plugin/swiper-4.5.1/swiper.css">
+    <link type="text/css" rel="stylesheet" href="../plugin/datepicker-1.0.10/datepicker.css">
+    <!-- js -->
+    <script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="../js/pub_js.js"></script>
+    <script type="text/javascript" src="../plugin/swiper-4.5.1/swiper.js"></script>
+    <script type="text/javascript" src="../plugin/slimScroll/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="../plugin/datepicker-1.0.10/datepicker.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="header_top">
+                <div class="header_inner">
+                    <h1>
+                        <a href="#"><img src="../images/img/logo_header.png" alt="Incheon Airport"></a>
+                        <div class="header_text">상황관리 <span>협업플랫폼</span></div>
+                    </h1>
+                    <div class="header_util">
+                        <p>홍길동(인천공항공사)</p>
+                        <button type="button">로그아웃</button>
+                        <button type="button" class="menu_btn">메뉴열기</button>
+                    </div>
+                </div>
+            </div>
+            <div class="header_bot">
+                <div class="gnb">
+                    <ul>
+                        <li><a href="#">상황</a></li>
+                        <li><a href="#" class="active">이벤트</a></li>
+                        <li><a href="#">통계</a></li>
+                        <li><a href="#">매뉴얼</a></li>
+                        <li><a href="#">전화번호</a></li>
+                        <li><a href="#">당직관리</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="m_header">
+            <a href="javascript:window.history.back();" class="util back" title="뒤로가기"><img src="../images/icon/page/arrow_left_24.png"></a>
+            <h1>완료이벤트</h1>
+            <div class="util">
+                <button class="menu">메뉴</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="content_wrap">
+                <div class="content_inner">
+                    <div class="side_gnb">
+                        <dl>
+                            <dt>이벤트</dt>
+                            <dd>
+                                <a href="#">- 이벤트접수</a>
+                            </dd>
+                            <dd>
+                                <a href="#">- 진행이벤트</a>
+                            </dd>
+                            <dd>
+                                <a href="#">- 이벤트처리현황</a>
+                            </dd>
+                            <dd class="active">
+                                <a href="#">- 완료이벤트</a>
+                            </dd>
+                            <dd>
+                                <a href="#">- 삭제이벤트</a>
+                            </dd>
+                            <dd>
+                                <a href="#">- 저시정운영현황조회</a>
+                            </dd>
+                            <dd>
+                                <a href="#">- 대체공항운영현황조회</a>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="content_box">
+                        <div class="pc_content">
+                            <div class="table_type1 accordion_area">
+                                <table>
+                                    <caption class="t_indent">완료이벤트검색</caption>
+                                    <colgroup>
+                                        <col width="8%">
+                                        <col width="38%">
+                                        <col width="8%">
+                                        <col width="38%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>기간</th>
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="text" title="검사 기간 시작일" maxlength="20" class="date w40p" value="2020-09-01">
+                                                    <span class="date_add">~</span>
+                                                    <input type="text" title="검사 기간 마지막일" maxlength="20" class="date w40p" value="2020-09-01">
+                                                </div>
+                                            </td>
+
+                                            <th>이벤트명</th>
+                                            <td colspan="3">
+                                                <input type="text" title="이벤트명" maxlength="20" value="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>개요</th>
+                                            <td>
+                                                <input type="text" title="개요" maxlength="20" value="">
+                                            </td>
+
+                                            <th>발생원인</th>
+                                            <td>
+                                                <div class="flex w100p">
+                                                    <select name="" title="" class="w30p mr10">
+                                                        <option disabled="" selected="" hidden="" value="">선택</option>
+                                                        <option value="">선택</option>
+                                                        <option value="">구분2</option>
+                                                        <option value="">구분3</option>
+                                                    </select>
+                                                    <select name="" title="" class="w30p" disabled>
+                                                        <option disabled="" selected="" hidden="" value="">선택</option>
+                                                        <option value="">선택</option>
+                                                        <option value="">구분2</option>
+                                                        <option value="">구분3</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>이벤트코드</th>
+                                            <td>
+                                                <div class="flex w100p">
+                                                    <select name="" title="" class="w30p mr10">
+                                                        <option disabled="" selected="" hidden="" value="">선택</option>
+                                                        <option value="">선택</option>
+                                                        <option value="">구분2</option>
+                                                        <option value="">구분3</option>
+                                                    </select>
+                                                    <select name="" title="" class="w30p mr10">
+                                                        <option disabled="" selected="" hidden="" value="">선택</option>
+                                                        <option value="">선택</option>
+                                                        <option value="">구분2</option>
+                                                        <option value="">구분3</option>
+                                                    </select>
+                                                    <select name="" title="" class="w30p">
+                                                        <option disabled="" selected="" hidden="" value="">선택</option>
+                                                        <option value="">선택</option>
+                                                        <option value="">구분2</option>
+                                                        <option value="">구분3</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+
+                                            <th>발생위치</th>
+                                            <td>
+                                                <div class="flex w100p">
+                                                    <select name="" title="" class="w30p mr10">
+                                                        <option disabled="" selected="" hidden="" value="">선택</option>
+                                                        <option value="">선택</option>
+                                                        <option value="">구분2</option>
+                                                        <option value="">구분3</option>
+                                                    </select>
+                                                    <select name="" title="" class="w30p" disabled>
+                                                        <option disabled="" selected="" hidden="" value="">선택</option>
+                                                        <option value="">선택</option>
+                                                        <option value="">구분2</option>
+                                                        <option value="">구분3</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>등급</th>
+                                            <td colspan="3">
+                                                <select name="" title="" class="w15p">
+                                                    <option disabled="" selected="" hidden="" value="">선택</option>
+                                                    <option value="">선택</option>
+                                                    <option value="">구분2</option>
+                                                    <option value="">구분3</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="m_content">
+                            <div class="table_type1 accordion_area tborder_none">
+                                <table>
+                                    <caption class="t_indent">완료이벤트검색</caption>
+                                    <colgroup>
+                                        <col width="15%">
+                                        <col width="">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>기간</th>
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="text" title="검사 기간 시작일" maxlength="20" class="date w50p" value="2020-09-01">
+                                                    <span class="date_add">~</span>
+                                                    <input type="text" title="검사 기간 마지막일" maxlength="20" class="date w50p" value="2020-09-01">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>이벤트명</th>
+                                            <td>
+                                                <input type="text" title="이벤트명" maxlength="20" value="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>이벤트개요</th>
+                                            <td>
+                                                <input type="text" title="개요" maxlength="20" value="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>발생원인</th>
+                                            <td>
+                                                <div class="flex w100p">
+                                                    <select name="" title="" class="w50p mr10">
+                                                        <option disabled="" selected="" hidden="" value="">선택</option>
+                                                        <option value="">선택</option>
+                                                        <option value="">구분2</option>
+                                                        <option value="">구분3</option>
+                                                    </select>
+                                                    <select name="" title="" class="w50p" disabled>
+                                                        <option disabled="" selected="" hidden="" value="">선택</option>
+                                                        <option value="">선택</option>
+                                                        <option value="">구분2</option>
+                                                        <option value="">구분3</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>이벤트코드</th>
+                                            <td>
+                                                <div class="flex w100p">
+                                                    <select name="" title="" class="w40p mr10">
+                                                        <option disabled="" selected="" hidden="" value="">선택</option>
+                                                        <option value="">선택</option>
+                                                        <option value="">구분2</option>
+                                                        <option value="">구분3</option>
+                                                    </select>
+                                                    <select name="" title="" class="w40p mr10" disabled>
+                                                        <option disabled="" selected="" hidden="" value="">선택</option>
+                                                        <option value="">선택</option>
+                                                        <option value="">구분2</option>
+                                                        <option value="">구분3</option>
+                                                    </select>
+                                                    <select name="" title="" class="w40p" disabled>
+                                                        <option disabled="" selected="" hidden="" value="">선택</option>
+                                                        <option value="">선택</option>
+                                                        <option value="">구분2</option>
+                                                        <option value="">구분3</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>발생위치</th>
+                                            <td>
+                                                <div class="flex w100p">
+                                                    <select name="" title="" class="w50p mr10">
+                                                        <option disabled="" selected="" hidden="" value="">선택</option>
+                                                        <option value="">선택</option>
+                                                        <option value="">구분2</option>
+                                                        <option value="">구분3</option>
+                                                    </select>
+                                                    <select name="" title="" class="w50p" disabled>
+                                                        <option disabled="" selected="" hidden="" value="">선택</option>
+                                                        <option value="">선택</option>
+                                                        <option value="">구분2</option>
+                                                        <option value="">구분3</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>등급</th>
+                                            <td>
+                                                <select name="" title="" class="w30p">
+                                                    <option disabled="" selected="" hidden="" value="">선택</option>
+                                                    <option value="">선택</option>
+                                                    <option value="">구분2</option>
+                                                    <option value="">구분3</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="pt20 tar">
+                            <button type="button" class="btn btn_lg sub_bdr search_type on">상세검색</button>
+                            <button type="button" class="btn btn_lg main_bdr">초기화</button>
+                            <button type="button" class="btn btn_lg main_btn">검색</button>
+                        </div>
+                    </div>
+                    <div class="content_box mt20">
+                        <div class="content_title">
+                            <h2>처리완료 이벤트 리스트</h2>
+                        </div>
+                        <div class="pc_content">
+                            <div class="table_type2">
+                                <table>
+                                    <caption class="t_indent">처리완료 이벤트 리스트</caption>
+                                    <colgroup>
+                                        <col width="6%">
+                                        <col width="15%">
+                                        <col width="15%">
+                                        <col width="10%">
+                                        <col width="">
+                                        <col width="15%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>발생일시</th>
+                                            <th>종료일시</th>
+                                            <th>등급</th>
+                                            <th>이벤트명</th>
+                                            <th>상세</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                            <div class="table_type2 table_scroll_type1">
+                                <table>
+                                    <caption class="t_indent">처리완료 이벤트 리스트</caption>
+                                    <colgroup>
+                                        <col width="6%">
+                                        <col width="15%">
+                                        <col width="15%">
+                                        <col width="10%">
+                                        <col width="">
+                                        <col width="15%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18 13:15:29</td>
+                                            <td>2021-08-18 13:15:29</td>
+                                            <td>관심</td>
+                                            <td>공항내 항공기 사고</td>
+                                            <td>
+                                                <button type="button" class="btn btn_md sub_bdr overlapping_btn">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>이벤트ID</th>
+                                                                <th>이벤트유형</th>
+                                                                <th>이벤트원인</th>
+                                                                <th>발생위치</th>
+                                                                <th>신고자</th>
+                                                                <th>인명피해현황</th>
+                                                                <th>재산피해현황</th>
+                                                                <th>투입인원</th>
+                                                                <th>사상자인원</th>
+                                                                <th>투입장비</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>20210818-001</td>
+                                                                <td>재난재해 > 항공기사고 > 공항내 항공기 사고</td>
+                                                                <td>기체결함 > 기체결함</td>
+                                                                <td>탑승동 ></td>
+                                                                <td>홍길동</td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18 13:15:29</td>
+                                            <td>2021-08-18 13:15:29</td>
+                                            <td>관심</td>
+                                            <td>공항내 항공기 사고</td>
+                                            <td>
+                                                <button type="button" class="btn btn_md sub_bdr overlapping_btn">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>이벤트ID</th>
+                                                                <th>이벤트유형</th>
+                                                                <th>이벤트원인</th>
+                                                                <th>발생위치</th>
+                                                                <th>신고자</th>
+                                                                <th>인명피해현황</th>
+                                                                <th>재산피해현황</th>
+                                                                <th>투입인원</th>
+                                                                <th>사상자인원</th>
+                                                                <th>투입장비</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>20210818-001</td>
+                                                                <td>재난재해 > 항공기사고 > 공항내 항공기 사고</td>
+                                                                <td>기체결함 > 기체결함</td>
+                                                                <td>탑승동 ></td>
+                                                                <td>홍길동</td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18 13:15:29</td>
+                                            <td>2021-08-18 13:15:29</td>
+                                            <td>관심</td>
+                                            <td>공항내 항공기 사고</td>
+                                            <td>
+                                                <button type="button" class="btn btn_md sub_bdr overlapping_btn">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>이벤트ID</th>
+                                                                <th>이벤트유형</th>
+                                                                <th>이벤트원인</th>
+                                                                <th>발생위치</th>
+                                                                <th>신고자</th>
+                                                                <th>인명피해현황</th>
+                                                                <th>재산피해현황</th>
+                                                                <th>투입인원</th>
+                                                                <th>사상자인원</th>
+                                                                <th>투입장비</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>20210818-001</td>
+                                                                <td>재난재해 > 항공기사고 > 공항내 항공기 사고</td>
+                                                                <td>기체결함 > 기체결함</td>
+                                                                <td>탑승동 ></td>
+                                                                <td>홍길동</td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18 13:15:29</td>
+                                            <td>2021-08-18 13:15:29</td>
+                                            <td>관심</td>
+                                            <td>공항내 항공기 사고</td>
+                                            <td>
+                                                <button type="button" class="btn btn_md sub_bdr overlapping_btn">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>이벤트ID</th>
+                                                                <th>이벤트유형</th>
+                                                                <th>이벤트원인</th>
+                                                                <th>발생위치</th>
+                                                                <th>신고자</th>
+                                                                <th>인명피해현황</th>
+                                                                <th>재산피해현황</th>
+                                                                <th>투입인원</th>
+                                                                <th>사상자인원</th>
+                                                                <th>투입장비</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>20210818-001</td>
+                                                                <td>재난재해 > 항공기사고 > 공항내 항공기 사고</td>
+                                                                <td>기체결함 > 기체결함</td>
+                                                                <td>탑승동 ></td>
+                                                                <td>홍길동</td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18 13:15:29</td>
+                                            <td>2021-08-18 13:15:29</td>
+                                            <td>관심</td>
+                                            <td>공항내 항공기 사고</td>
+                                            <td>
+                                                <button type="button" class="btn btn_md sub_bdr overlapping_btn">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>이벤트ID</th>
+                                                                <th>이벤트유형</th>
+                                                                <th>이벤트원인</th>
+                                                                <th>발생위치</th>
+                                                                <th>신고자</th>
+                                                                <th>인명피해현황</th>
+                                                                <th>재산피해현황</th>
+                                                                <th>투입인원</th>
+                                                                <th>사상자인원</th>
+                                                                <th>투입장비</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>20210818-001</td>
+                                                                <td>재난재해 > 항공기사고 > 공항내 항공기 사고</td>
+                                                                <td>기체결함 > 기체결함</td>
+                                                                <td>탑승동 ></td>
+                                                                <td>홍길동</td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18 13:15:29</td>
+                                            <td>2021-08-18 13:15:29</td>
+                                            <td>관심</td>
+                                            <td>공항내 항공기 사고</td>
+                                            <td>
+                                                <button type="button" class="btn btn_md sub_bdr overlapping_btn">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>이벤트ID</th>
+                                                                <th>이벤트유형</th>
+                                                                <th>이벤트원인</th>
+                                                                <th>발생위치</th>
+                                                                <th>신고자</th>
+                                                                <th>인명피해현황</th>
+                                                                <th>재산피해현황</th>
+                                                                <th>투입인원</th>
+                                                                <th>사상자인원</th>
+                                                                <th>투입장비</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>20210818-001</td>
+                                                                <td>재난재해 > 항공기사고 > 공항내 항공기 사고</td>
+                                                                <td>기체결함 > 기체결함</td>
+                                                                <td>탑승동 ></td>
+                                                                <td>홍길동</td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18 13:15:29</td>
+                                            <td>2021-08-18 13:15:29</td>
+                                            <td>관심</td>
+                                            <td>공항내 항공기 사고</td>
+                                            <td>
+                                                <button type="button" class="btn btn_md sub_bdr overlapping_btn">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>이벤트ID</th>
+                                                                <th>이벤트유형</th>
+                                                                <th>이벤트원인</th>
+                                                                <th>발생위치</th>
+                                                                <th>신고자</th>
+                                                                <th>인명피해현황</th>
+                                                                <th>재산피해현황</th>
+                                                                <th>투입인원</th>
+                                                                <th>사상자인원</th>
+                                                                <th>투입장비</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>20210818-001</td>
+                                                                <td>재난재해 > 항공기사고 > 공항내 항공기 사고</td>
+                                                                <td>기체결함 > 기체결함</td>
+                                                                <td>탑승동 ></td>
+                                                                <td>홍길동</td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18 13:15:29</td>
+                                            <td>2021-08-18 13:15:29</td>
+                                            <td>관심</td>
+                                            <td>공항내 항공기 사고</td>
+                                            <td>
+                                                <button type="button" class="btn btn_md sub_bdr overlapping_btn">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>이벤트ID</th>
+                                                                <th>이벤트유형</th>
+                                                                <th>이벤트원인</th>
+                                                                <th>발생위치</th>
+                                                                <th>신고자</th>
+                                                                <th>인명피해현황</th>
+                                                                <th>재산피해현황</th>
+                                                                <th>투입인원</th>
+                                                                <th>사상자인원</th>
+                                                                <th>투입장비</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>20210818-001</td>
+                                                                <td>재난재해 > 항공기사고 > 공항내 항공기 사고</td>
+                                                                <td>기체결함 > 기체결함</td>
+                                                                <td>탑승동 ></td>
+                                                                <td>홍길동</td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18 13:15:29</td>
+                                            <td>2021-08-18 13:15:29</td>
+                                            <td>관심</td>
+                                            <td>공항내 항공기 사고</td>
+                                            <td>
+                                                <button type="button" class="btn btn_md sub_bdr overlapping_btn">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>이벤트ID</th>
+                                                                <th>이벤트유형</th>
+                                                                <th>이벤트원인</th>
+                                                                <th>발생위치</th>
+                                                                <th>신고자</th>
+                                                                <th>인명피해현황</th>
+                                                                <th>재산피해현황</th>
+                                                                <th>투입인원</th>
+                                                                <th>사상자인원</th>
+                                                                <th>투입장비</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>20210818-001</td>
+                                                                <td>재난재해 > 항공기사고 > 공항내 항공기 사고</td>
+                                                                <td>기체결함 > 기체결함</td>
+                                                                <td>탑승동 ></td>
+                                                                <td>홍길동</td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="6">
+                                                <p class="none_data">데이터가 없습니다.</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="m_content">
+                            <div class="table_type2">
+                                <table>
+                                    <caption class="t_indent">처리완료 이벤트 리스트</caption>
+                                    <colgroup>
+                                        <col width="10%">
+                                        <col width="20%">
+                                        <col width="20%">
+                                        <col width="11%">
+                                        <col width="">
+                                        <col width="11%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>발생일시</th>
+                                            <th>종료일시</th>
+                                            <th>등급</th>
+                                            <th>이벤트명</th>
+                                            <th>상세</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                            <div class="table_type2 table_scroll_type1">
+                                <table>
+                                    <caption class="t_indent">처리완료 이벤트 리스트</caption>
+                                    <colgroup>
+                                        <col width="10%">
+                                        <col width="20%">
+                                        <col width="20%">
+                                        <col width="11%">
+                                        <col width="">
+                                        <col width="11%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18<br />13:15:29</td>
+                                            <td>2021-08-18<br />13:15:29</td>
+                                            <td>관심</td>
+                                            <td>공항내 항공기 사고</td>
+                                            <td>
+                                                <button type="button" class="overlapping_btn on">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping" style="display:table-row;">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>이벤트ID</th>
+                                                                <td class="td_left">20210818-001</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>이벤트유형</th>
+                                                                <td class="td_left">재난재해 > 항공기사고 > 공항내 항공기 사고</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>이벤트원인</th>
+                                                                <td class="td_left">기체결함 > 기체결함</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>발생위치</th>
+                                                                <td class="td_left">탑승동 ></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>신고자</th>
+                                                                <td class="td_left">홍길동</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>인명피해현황</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>재산피해현황</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>투입인원</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>사상자인원</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>투입장비</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18<br />13:15:29</td>
+                                            <td>2021-08-18<br />13:15:29</td>
+                                            <td>관심</td>
+                                            <td>공항내 항공기 사고</td>
+                                            <td>
+                                                <button type="button" class="overlapping_btn">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>이벤트ID</th>
+                                                                <td class="td_left">20210818-001</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>이벤트유형</th>
+                                                                <td class="td_left">재난재해 > 항공기사고 > 공항내 항공기 사고</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>이벤트원인</th>
+                                                                <td class="td_left">기체결함 > 기체결함</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>발생위치</th>
+                                                                <td class="td_left">탑승동 ></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>신고자</th>
+                                                                <td class="td_left">홍길동</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>인명피해현황</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>재산피해현황</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>투입인원</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>사상자인원</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>투입장비</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18<br />13:15:29</td>
+                                            <td>2021-08-18<br />13:15:29</td>
+                                            <td>관심</td>
+                                            <td>공항내 항공기 사고</td>
+                                            <td>
+                                                <button type="button" class="overlapping_btn">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>이벤트ID</th>
+                                                                <td class="td_left">20210818-001</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>이벤트유형</th>
+                                                                <td class="td_left">재난재해 > 항공기사고 > 공항내 항공기 사고</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>이벤트원인</th>
+                                                                <td class="td_left">기체결함 > 기체결함</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>발생위치</th>
+                                                                <td class="td_left">탑승동 ></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>신고자</th>
+                                                                <td class="td_left">홍길동</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>인명피해현황</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>재산피해현황</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>투입인원</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>사상자인원</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>투입장비</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18<br />13:15:29</td>
+                                            <td>2021-08-18<br />13:15:29</td>
+                                            <td>관심</td>
+                                            <td>공항내 항공기 사고</td>
+                                            <td>
+                                                <button type="button" class="overlapping_btn">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>이벤트ID</th>
+                                                                <td class="td_left">20210818-001</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>이벤트유형</th>
+                                                                <td class="td_left">재난재해 > 항공기사고 > 공항내 항공기 사고</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>이벤트원인</th>
+                                                                <td class="td_left">기체결함 > 기체결함</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>발생위치</th>
+                                                                <td class="td_left">탑승동 ></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>신고자</th>
+                                                                <td class="td_left">홍길동</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>인명피해현황</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>재산피해현황</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>투입인원</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>사상자인원</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>투입장비</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18<br />13:15:29</td>
+                                            <td>2021-08-18<br />13:15:29</td>
+                                            <td>관심</td>
+                                            <td>공항내 항공기 사고</td>
+                                            <td>
+                                                <button type="button" class="overlapping_btn">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>이벤트ID</th>
+                                                                <td class="td_left">20210818-001</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>이벤트유형</th>
+                                                                <td class="td_left">재난재해 > 항공기사고 > 공항내 항공기 사고</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>이벤트원인</th>
+                                                                <td class="td_left">기체결함 > 기체결함</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>발생위치</th>
+                                                                <td class="td_left">탑승동 ></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>신고자</th>
+                                                                <td class="td_left">홍길동</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>인명피해현황</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>재산피해현황</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>투입인원</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>사상자인원</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>투입장비</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18<br />13:15:29</td>
+                                            <td>2021-08-18<br />13:15:29</td>
+                                            <td>관심</td>
+                                            <td>공항내 항공기 사고</td>
+                                            <td>
+                                                <button type="button" class="overlapping_btn">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>이벤트ID</th>
+                                                                <td class="td_left">20210818-001</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>이벤트유형</th>
+                                                                <td class="td_left">재난재해 > 항공기사고 > 공항내 항공기 사고</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>이벤트원인</th>
+                                                                <td class="td_left">기체결함 > 기체결함</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>발생위치</th>
+                                                                <td class="td_left">탑승동 ></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>신고자</th>
+                                                                <td class="td_left">홍길동</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>인명피해현황</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>재산피해현황</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>투입인원</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>사상자인원</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>투입장비</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18<br />13:15:29</td>
+                                            <td>2021-08-18<br />13:15:29</td>
+                                            <td>관심</td>
+                                            <td>공항내 항공기 사고</td>
+                                            <td>
+                                                <button type="button" class="overlapping_btn">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>이벤트ID</th>
+                                                                <td class="td_left">20210818-001</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>이벤트유형</th>
+                                                                <td class="td_left">재난재해 > 항공기사고 > 공항내 항공기 사고</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>이벤트원인</th>
+                                                                <td class="td_left">기체결함 > 기체결함</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>발생위치</th>
+                                                                <td class="td_left">탑승동 ></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>신고자</th>
+                                                                <td class="td_left">홍길동</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>인명피해현황</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>재산피해현황</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>투입인원</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>사상자인원</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>투입장비</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18<br />13:15:29</td>
+                                            <td>2021-08-18<br />13:15:29</td>
+                                            <td>관심</td>
+                                            <td>공항내 항공기 사고</td>
+                                            <td>
+                                                <button type="button" class="overlapping_btn">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>이벤트ID</th>
+                                                                <td class="td_left">20210818-001</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>이벤트유형</th>
+                                                                <td class="td_left">재난재해 > 항공기사고 > 공항내 항공기 사고</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>이벤트원인</th>
+                                                                <td class="td_left">기체결함 > 기체결함</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>발생위치</th>
+                                                                <td class="td_left">탑승동 ></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>신고자</th>
+                                                                <td class="td_left">홍길동</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>인명피해현황</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>재산피해현황</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>투입인원</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>사상자인원</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>투입장비</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18<br />13:15:29</td>
+                                            <td>2021-08-18<br />13:15:29</td>
+                                            <td>관심</td>
+                                            <td>공항내 항공기 사고</td>
+                                            <td>
+                                                <button type="button" class="overlapping_btn">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>이벤트ID</th>
+                                                                <td class="td_left">20210818-001</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>이벤트유형</th>
+                                                                <td class="td_left">재난재해 > 항공기사고 > 공항내 항공기 사고</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>이벤트원인</th>
+                                                                <td class="td_left">기체결함 > 기체결함</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>발생위치</th>
+                                                                <td class="td_left">탑승동 ></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>신고자</th>
+                                                                <td class="td_left">홍길동</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>인명피해현황</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>재산피해현황</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>투입인원</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>사상자인원</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>투입장비</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18<br />13:15:29</td>
+                                            <td>2021-08-18<br />13:15:29</td>
+                                            <td>관심</td>
+                                            <td>공항내 항공기 사고</td>
+                                            <td>
+                                                <button type="button" class="overlapping_btn">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>이벤트ID</th>
+                                                                <td class="td_left">20210818-001</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>이벤트유형</th>
+                                                                <td class="td_left">재난재해 > 항공기사고 > 공항내 항공기 사고</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>이벤트원인</th>
+                                                                <td class="td_left">기체결함 > 기체결함</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>발생위치</th>
+                                                                <td class="td_left">탑승동 ></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>신고자</th>
+                                                                <td class="td_left">홍길동</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>인명피해현황</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>재산피해현황</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>투입인원</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>사상자인원</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>투입장비</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18<br />13:15:29</td>
+                                            <td>2021-08-18<br />13:15:29</td>
+                                            <td>관심</td>
+                                            <td>공항내 항공기 사고</td>
+                                            <td>
+                                                <button type="button" class="overlapping_btn">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>이벤트ID</th>
+                                                                <td class="td_left">20210818-001</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>이벤트유형</th>
+                                                                <td class="td_left">재난재해 > 항공기사고 > 공항내 항공기 사고</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>이벤트원인</th>
+                                                                <td class="td_left">기체결함 > 기체결함</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>발생위치</th>
+                                                                <td class="td_left">탑승동 ></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>신고자</th>
+                                                                <td class="td_left">홍길동</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>인명피해현황</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>재산피해현황</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>투입인원</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>사상자인원</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>투입장비</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18<br />13:15:29</td>
+                                            <td>2021-08-18<br />13:15:29</td>
+                                            <td>관심</td>
+                                            <td>공항내 항공기 사고</td>
+                                            <td>
+                                                <button type="button" class="overlapping_btn">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>이벤트ID</th>
+                                                                <td class="td_left">20210818-001</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>이벤트유형</th>
+                                                                <td class="td_left">재난재해 > 항공기사고 > 공항내 항공기 사고</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>이벤트원인</th>
+                                                                <td class="td_left">기체결함 > 기체결함</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>발생위치</th>
+                                                                <td class="td_left">탑승동 ></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>신고자</th>
+                                                                <td class="td_left">홍길동</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>인명피해현황</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>재산피해현황</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>투입인원</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>사상자인원</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>투입장비</th>
+                                                                <td class="td_left"></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="6">
+                                                <p class="none_data">데이터가 없습니다.</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tar mt20">
+                            <button type="button" class="btn btn_lg main_btn">진행현황조회</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="floating_wrap">
+            <div class="float_btn">
+                <i class="plus_icon"></i>
+                <ul>
+                    <li><button type="button"><i class="chat_icon"></i>간편신고</button></li>
+                    <li><button type="button"><i class="report_icon"></i>신고</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

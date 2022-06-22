@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>인천국제공항 상황관리 협업플랫폼 및 이동지역 차량관리시스템 구축사업</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link type="text/css" rel="stylesheet" href="../css/style.css">
+    <link type="text/css" rel="stylesheet" href="../plugin/swiper-4.5.1/swiper.css">
+    <link type="text/css" rel="stylesheet" href="../plugin/datepicker-1.0.10/datepicker.css">
+    <!-- js -->
+    <script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../js/pub_js.js"></script>
+    <script type="text/javascript" src="../plugin/swiper-4.5.1/swiper.js"></script>
+    <script type="text/javascript" src="../plugin/slimScroll/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="../plugin/datepicker-1.0.10/datepicker.js"></script>
+</head>
+
+<body>
+   <div class="wrapper">
+        <div class="container"></div>
+        
+        <div class="dim" style="display:block;"></div>
+        <div class="layer_popup" style="display:block;">
+            <div class="popup_title">
+                <h3>신고</h3>
+                <div class="close_area">
+                    <button type="button" class="popup_closer">닫기</button>
+                </div>
+            </div>
+            <div class="popup_content">
+                <div class="table_type6">
+                    <table>
+                        <caption class="t_indent">신고</caption>
+                        <colgroup>
+                            <col width="20%">
+                            <col width="">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>위기유형 분류</th>
+                                <td>
+                                    <select name="" title="">
+                                        <option disabled="" selected="" hidden="" value="">항공기 사고</option>
+                                        <option value="">선택</option>
+                                        <option value="">구분2</option>
+                                        <option value="">구분3</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>위기유형 코드</th>
+                                <td>
+                                    <select name="" title="">
+                                        <option disabled="" selected="" hidden="" value="">공항내 항공기 사고</option>
+                                        <option value="">선택</option>
+                                        <option value="">구분2</option>
+                                        <option value="">구분3</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="content_title pb10">
+                    <h2>위기유형 기본정보</h2>
+                    <button type="button" class="btn btn_lg main_bdr">전체 초기화</button>
+                </div>
+                <div class="table_type1">
+                    <table>
+                        <caption class="t_indent">위기유형 기본정보</caption>
+                        <colgroup>
+                            <col width="18%">
+                            <col width="36%">
+                            <col width="36%">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>위기유형명</th>
+                                <td colspan="2">
+                                    <input type="text" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>개요</th>
+                                <td colspan="2">
+                                    <textarea rows="3">공공시설물 화재</textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>위기유형코드</th>
+                                <td colspan="2">
+                                    <input type="text" class="mr10 w30p" value="">
+                                    <div class="input_group">
+                                        <input type="text" class="search" value="">
+                                        <button class="search_btn popopen" data-pop="pop1">검색</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>신고일시</th>
+                                <td>
+                                    <input type="text" class="tac" value="2021.12.01(수)">
+                                </td>
+                                <td>
+                                    <input type="text" class="tac" value="14:25:30">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>발생일시</th>
+                                <td>
+                                    <input type="text" class="tac" value="2021.12.01(수)">
+                                </td>
+                                <td>
+                                    <input type="text" class="tac" value="14:25:30">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>위기유형</th>
+                                <td colspan="2">
+                                    <input type="text" class="mr10 w30p" value="">
+                                    <div class="input_group">
+                                        <input type="text" class="search" value="">
+                                        <button class="search_btn popopen" data-pop="pop2">검색</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>발생위치</th>
+                                <td colspan="2">
+                                    <input type="text" class="mr10 w30p" value="">
+                                    <div class="input_group location">
+                                        <input type="text" class="search" value="">
+                                        <button class="search_btn popopen" data-pop="pop3">검색</button>
+                                        <button class="location_btn popopen" data-pop="pop4">발생위치</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>세부위치</th>
+                                <td colspan="2">
+                                    <input type="text" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>주무조치부서</th>
+                                <td colspan="2">
+                                    <div class="flex w100p">
+                                        <input type="text" class="mr5 w30p" value="">
+                                        <div class="input_group mr15 w70p">
+                                            <input type="text" class="search" value="">
+                                            <button class="search_btn popopen" data-pop="pop5">검색</button>
+                                        </div>
+                                        <button type="button" class="btn btn_lg sub_btn popopen" data-pop="pop6" style="height:32px; line-height:32px; padding:0;">전파부서</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>유형구분/등급</th>
+                                <td>
+                                    <select name="">
+                                        <option value="">상황</option>
+                                        <option value="">용도2</option>
+                                        <option value="">용도3</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select name="">
+                                        <option value="">관심</option>
+                                        <option value="">용도2</option>
+                                        <option value="">용도3</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="content_title pt20 pb10">
+                    <h2>위기유형 세부정보</h2>
+                </div>
+                <div class="table_type1">
+                    <table>
+                        <caption class="t_indent">위기유형 세부정보</caption>
+                        <colgroup>
+                            <col width="18%">
+                            <col width="36%">
+                            <col width="18%">
+                            <col width="36%">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>인명피해현황</th>
+                                <td colspan="3">
+                                    <textarea rows="3">
+
+
+
+
+                                    </textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>재산피해현황</th>
+                                <td colspan="3">
+                                    <textarea rows="3">
+
+
+
+
+                                    </textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>신고방법</th>
+                                <td>
+                                    <select name="">
+                                        <option value="">선택</option>
+                                        <option value="">용도2</option>
+                                        <option value="">용도3</option>
+                                    </select>
+                                </td>
+                                <th>단위시스템</th>
+                                <td>
+                                    <select name="">
+                                        <option value="">선택</option>
+                                        <option value="">용도2</option>
+                                        <option value="">용도3</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>발생원인</th>
+                                <td colspan="3">
+                                    <input type="text" class="mr10 w30p" value="">
+                                    <div class="input_group">
+                                        <input type="text" class="search" value="">
+                                        <button class="search_btn popopen" data-pop="pop7">검색</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th rowspan="3">신고자</th>
+                                <td colspan="3">
+                                    <input type="text" class="mr10 w30p blue" value="이름" disabled>
+                                    <div class="input_group">
+                                        <input type="text" class="search" value="홍길동">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <input type="text" class="mr10 w30p blue" value="연락처" disabled>
+                                    <div class="input_group">
+                                        <input type="text" class="search" value="010-123-1234">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <input type="text" class="mr10 w30p blue" value="소속" disabled>
+                                    <div class="input_group">
+                                        <input type="text" class="search" value="공항소방대">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>접수자</th>
+                                <td><input type="text" value="홍길동"></td>
+                                <th>변경처리자</th>
+                                <td><input type="text" value=""></td>
+                            </tr>
+                        </tbody>
+                    </table> 
+                    <div class="add_photo">
+                       <div class="sub_title">
+                            <p class="p0">사진첨부</p>
+                            <button type="button" class="btn btn_lg main_bdr icon_btn opener" data-pop="pop8"><i class="file"></i>사진첨부</button>
+                        </div>
+                        <div class="relative">
+                            <div class="swiper-container img_wrap">
+                                <div class="swiper-wrapper img_list">
+                                    <div class="swiper-slide slide">
+                                        <a href="#">
+                                            <img src="../images/test13.png" alt="첨부사진이름1">
+                                        </a>
+                                        <button type="button" class="photo_de">삭제</button>
+                                    </div>
+                                    <div class="swiper-slide slide">
+                                        <a href="#">
+                                            <img src="../images/img/main_01.png" alt="첨부사진이름2">
+                                        </a>
+                                        <button type="button" class="photo_de">삭제</button>
+                                    </div>
+                                    <div class="swiper-slide slide">
+                                        <a href="#">
+                                            <img src="../images/test3.png" alt="첨부사진이름3">
+                                        </a>
+                                        <button type="button" class="photo_de">삭제</button>
+                                    </div>
+                                    <div class="swiper-slide slide">
+                                        <a href="#">
+                                            <img src="../images/test4.png" alt="첨부사진이름4">
+                                        </a>
+                                        <button type="button" class="photo_de">삭제</button>
+                                    </div>
+                                    <div class="swiper-slide slide">
+                                        <a href="#">
+                                            <img src="../images/test5.png" alt="첨부사진이름5">
+                                        </a>
+                                        <button type="button" class="photo_de">삭제</button>
+                                    </div>
+                                    <div class="swiper-slide slide">
+                                        <a href="#">
+                                            <img src="../images/test6.png" alt="첨부사진이름6">
+                                        </a>
+                                        <button type="button" class="photo_de">삭제</button>
+                                    </div>
+                                    <div class="swiper-slide slide">
+                                        <a href="#">
+                                            <img src="../images/test7.png" alt="첨부사진이름7">
+                                        </a>
+                                        <button type="button" class="photo_de">삭제</button>
+                                    </div>
+                                    <div class="swiper-slide slide">
+                                        <a href="#">
+                                            <img src="../images/test8.png" alt="첨부사진이름8">
+                                        </a>
+                                        <button type="button" class="photo_de">삭제</button>
+                                    </div>
+                                    <div class="swiper-slide slide">
+                                        <a href="#">
+                                            <img src="../images/test9.png" alt="첨부사진이름9">
+                                        </a>
+                                        <button type="button" class="photo_de">삭제</button>
+                                    </div>
+                                    <div class="swiper-slide slide">
+                                        <a href="#">
+                                            <img src="../images/test10.png" alt="첨부사진이름10">
+                                        </a>
+                                        <button type="button" class="photo_de">삭제</button>
+                                    </div>
+                                    <div class="swiper-slide slide">
+                                        <a href="#">
+                                            <img src="../images/test11.png" alt="첨부사진이름11">
+                                        </a>
+                                        <button type="button" class="photo_de">삭제</button>
+                                    </div>
+                                    <div class="swiper-slide slide">
+                                        <a href="#">
+                                            <img src="../images/test12.png" alt="첨부사진이름12">
+                                        </a>
+                                        <button type="button" class="photo_de">삭제</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-prev prev_btn arrow_btn"></div>
+                            <div class="swiper-button-next next_btn arrow_btn"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tac mt20">
+                    <button type="button" class="btn btn_lg main_btn w45p">신고</button>
+                    <button type="button" class="btn btn_lg main_bdr w45p">취소</button>
+                </div>
+            </div>
+        </div>
+       
+        <div class="layer_popup" id="pop1">
+            <div class="popup_title">
+                <h3>위기유형 코드 선택</h3>
+                <div class="close_area">
+                    <button type="button" class="popup_closer">닫기</button>
+                </div>
+            </div>
+            <div class="popup_content">
+                <div class="pc_content">
+                    <div class="table_type6">
+                        <table>
+                            <caption class="t_indent">위기유형 코드검색</caption>
+                            <colgroup>
+                                <col width="17%">
+                                <col width="30%">
+                                <col width="17%">
+                                <col width="">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>위기유형</th>
+                                    <td>
+                                        <select name="" title="">
+                                            <option disabled="" selected="" hidden="" value="">재난재해</option>
+                                            <option value="">선택</option>
+                                            <option value="">구분2</option>
+                                            <option value="">구분3</option>
+                                        </select>
+                                    </td>
+                                    <th>위기유형명</th>
+                                    <td>
+                                        <input type="text" title="이벤트명" maxlength="20" value="">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="m_content">
+                    <div class="table_type6">
+                        <table>
+                            <caption class="t_indent">위기유형 코드검색</caption>
+                            <colgroup>
+                                <col width="20%">
+                                <col width="">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>위기유형</th>
+                                    <td>
+                                        <select name="" title="">
+                                            <option disabled="" selected="" hidden="" value="">재난재해</option>
+                                            <option value="">선택</option>
+                                            <option value="">구분2</option>
+                                            <option value="">구분3</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>위기유형명</th>
+                                    <td>
+                                        <input type="text" title="이벤트명" maxlength="20" value="">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="pt10 tar">
+                    <button type="button" class="btn btn_lg main_btn">검색</button>
+                </div>
+                <div class="content_title">
+                    <h2>위기유형 코드 리스트</h2>
+                </div>
+                <div class="table_type2">
+                    <table>
+                        <caption class="t_indent">위기유형 코드 리스트</caption>
+                        <colgroup>
+                            <col width="15%">
+                            <col width="">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>위기유형</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table_type2 table_scroll_type1">
+                    <table>
+                        <caption class="t_indent">위기유형 코드 리스트</caption>
+                        <colgroup>
+                            <col width="15%">
+                            <col width="">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>공항내 항공기 사고</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>공항내 항공기 사고</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>공항내 항공기 사고</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>공항내 항공기 사고</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>공항내 항공기 사고</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>공항내 항공기 사고</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>공항내 항공기 사고</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>공항내 항공기 사고</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>공항내 항공기 사고</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>공항내 항공기 사고</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>공항내 항공기 사고</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>공항내 항공기 사고</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>공항내 항공기 사고</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>공항내 항공기 사고</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>공항내 항공기 사고</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>공항내 항공기 사고</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tar mt20">
+                    <button type="button" class="btn btn_lg main_btn">확인</button>
+                    <button type="button" class="btn btn_lg main_bdr popup_closer">닫기</button>
+                </div>
+            </div>
+        </div>
+       
+        <div class="layer_popup" id="pop2">
+            <div class="popup_title">
+                <h3>위기유형</h3>
+                <div class="close_area">
+                    <button type="button" class="popup_closer">닫기</button>
+                </div>
+            </div>
+            <div class="popup_content">
+                <div class="table_type6">
+                    <table>
+                        <caption class="t_indent">위기유형 리스트</caption>
+                        <colgroup>
+                            <col width="20%">
+                            <col width="">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>위기유형명</th>
+                                <td>
+                                    <input type="text" title="이벤트명" maxlength="20" value="">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pt10 tar">
+                    <button type="button" class="btn btn_lg main_btn">검색</button>
+                </div>
+                <div class="pc2_m1">
+                    <div class="co">
+                        <div class="content_title">
+                            <h2>위기유형 리스트</h2>
+                        </div>
+                        <div class="table_type2">
+                            <table>
+                                <caption class="t_indent">위기유형 리스트</caption>
+                                <colgroup>
+                                    <col width="10%">
+                                    <col width="20%">
+                                    <col width="10%">
+                                    <col width="10%">
+                                    <col width="20%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>위기유형명</th>
+                                        <th>상황/이벤트</th>
+                                        <th>등급</th>
+                                        <th>위기유형 설명</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div class="table_type2 table_scroll_type1">
+                            <table>
+                                <caption class="t_indent">위기유형 리스트</caption>
+                                <colgroup>
+                                    <col width="10%">
+                                    <col width="20%">
+                                    <col width="10%">
+                                    <col width="10%">
+                                    <col width="20%">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>대체공항운영</td>
+                                        <td>상황</td>
+                                        <td>관심</td>
+                                        <td>위기유형 설명</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>대체공항운영</td>
+                                        <td>상황</td>
+                                        <td>관심</td>
+                                        <td>위기유형 설명</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>대체공항운영</td>
+                                        <td>상황</td>
+                                        <td>관심</td>
+                                        <td>위기유형 설명</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>대체공항운영</td>
+                                        <td>상황</td>
+                                        <td>관심</td>
+                                        <td>위기유형 설명</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>대체공항운영</td>
+                                        <td>상황</td>
+                                        <td>관심</td>
+                                        <td>위기유형 설명</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>대체공항운영</td>
+                                        <td>상황</td>
+                                        <td>관심</td>
+                                        <td>위기유형 설명</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>대체공항운영</td>
+                                        <td>상황</td>
+                                        <td>관심</td>
+                                        <td>위기유형 설명</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>대체공항운영</td>
+                                        <td>상황</td>
+                                        <td>관심</td>
+                                        <td>위기유형 설명</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>대체공항운영</td>
+                                        <td>상황</td>
+                                        <td>관심</td>
+                                        <td>위기유형 설명</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>대체공항운영</td>
+                                        <td>상황</td>
+                                        <td>관심</td>
+                                        <td>위기유형 설명</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="co">
+                        <div class="content_title">
+                            <h2>전파부서 리스트</h2>
+                        </div>
+                        <div class="table_type2">
+                            <table>
+                                <caption class="t_indent">전파부서 리스트</caption>
+                                <colgroup>
+                                    <col width="14.3%">
+                                    <col width="">
+                                    <col width="">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>구분</th>
+                                        <th>부서명</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>정부기관</td>
+                                        <td>부서명</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>정부기관</td>
+                                        <td>부서명</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>정부기관</td>
+                                        <td>부서명</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>정부기관</td>
+                                        <td>부서명</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="tar mt20">
+                    <button type="button" class="btn btn_lg main_btn">확인</button>
+                    <button type="button" class="btn btn_lg main_bdr popup_closer">닫기</button>
+                </div>
+            </div>
+        </div>
+       
+        <div class="layer_popup" id="pop3">
+            <div class="popup_title">
+                <h3>발생위치 코드 선택</h3>
+                <div class="close_area">
+                    <button type="button" class="popup_closer">닫기</button>
+                </div>
+            </div>
+            <div class="popup_content">
+                <div class="pc_content">
+                    <div class="table_type6">
+                        <table>
+                            <caption class="t_indent">발생위치 코드검색</caption>
+                            <colgroup>
+                                <col width="17%">
+                                <col width="">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>코드명</th>
+                                    <td>
+                                        <div class="flex">
+                                            <select name="" title="" class="mr10 w25p">
+                                                <option disabled="" selected="" hidden="" value="">선택</option>
+                                                <option value="">선택</option>
+                                                <option value="">구분2</option>
+                                                <option value="">구분3</option>
+                                            </select>
+                                            <select name="" title="" class="mr10 w25p">
+                                                <option disabled="" selected="" hidden="" value="">선택</option>
+                                                <option value="">선택</option>
+                                                <option value="">구분2</option>
+                                                <option value="">구분3</option>
+                                            </select>
+                                            <input type="text" title="이벤트명" maxlength="20" value="">
+                                            
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="m_content">
+                    <div class="table_type6">
+                        <table>
+                            <caption class="t_indent">발생위치 코드검색</caption>
+                            <colgroup>
+                                <col width="20%">
+                                <col width="">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>대분류</th>
+                                    <td>
+                                        <select name="" title="">
+                                            <option disabled="" selected="" hidden="" value="">선택</option>
+                                            <option value="">선택</option>
+                                            <option value="">구분2</option>
+                                            <option value="">구분3</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>중분류</th>
+                                    <td>
+                                        <select name="" title="">
+                                            <option disabled="" selected="" hidden="" value="">선택</option>
+                                            <option value="">선택</option>
+                                            <option value="">구분2</option>
+                                            <option value="">구분3</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>코드명</th>
+                                    <td>
+                                        <input type="text" title="이벤트명" maxlength="20" value="">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="pt10 tar">
+                    <button type="button" class="btn btn_lg main_btn">검색</button>
+                </div>
+                <div class="content_title">
+                    <h2>발생위치 리스트</h2>
+                </div>
+                <div class="table_type2">
+                    <table>
+                        <caption class="t_indent">발생위치 리스트</caption>
+                        <colgroup>
+                            <col width="15%">
+                            <col width="">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>발생위치</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table_type2 table_scroll_type1">
+                    <table>
+                        <caption class="t_indent">발생위치 리스트</caption>
+                        <colgroup>
+                            <col width="15%">
+                            <col width="">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>대한항공화물터미널</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>대한항공화물터미널</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>대한항공화물터미널</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>대한항공화물터미널</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>대한항공화물터미널</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>대한항공화물터미널</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>대한항공화물터미널</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>대한항공화물터미널</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>대한항공화물터미널</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>대한항공화물터미널</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>대한항공화물터미널</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>대한항공화물터미널</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>대한항공화물터미널</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>대한항공화물터미널</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>대한항공화물터미널</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>대한항공화물터미널</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tar mt20">
+                    <button type="button" class="btn btn_lg main_btn">확인</button>
+                    <button type="button" class="btn btn_lg main_bdr popup_closer">닫기</button>
+                </div>
+            </div>
+        </div>
+       
+        <div class="layer_popup" id="pop4">
+            <div class="popup_title">
+                <h3>발생위치 맵 선택</h3>
+                <div class="close_area">
+                    <button type="button" class="popup_closer">닫기</button>
+                </div>
+            </div>
+            <div class="popup_content">
+                <div class="">
+                    <img src="../images/test13.png" alt="" style="width:100%;">
+                </div>
+                <div class="tar mt20">
+                    <button type="button" class="btn btn_lg main_btn">확인</button>
+                    <button type="button" class="btn btn_lg main_bdr popup_closer">취소</button>
+                </div>
+            </div>
+        </div>
+       
+        <div class="layer_popup" id="pop5">
+            <div class="popup_title">
+                <h3>주무조치부서</h3>
+                <div class="close_area">
+                    <button type="button" class="popup_closer">닫기</button>
+                </div>
+            </div>
+            <div class="popup_content">
+                <div class="table_type6">
+                    <table>
+                        <caption class="t_indent">주무조치부서</caption>
+                        <colgroup>
+                            <col width="15%">
+                            <col width="">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>부서명</th>
+                                <td>
+                                    <input type="text" title="이벤트명" maxlength="20" value="">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pt10 tar">
+                    <button type="button" class="btn btn_lg main_btn">검색</button>
+                </div>
+                <div class="table_type2 mt20">
+                    <table>
+                        <caption class="t_indent">주무조치부서 리스트</caption>
+                        <colgroup>
+                            <col width="15%">
+                            <col width="25%">
+                            <col width="">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>부서코드</th>
+                                <th>부서명</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table_type2 table_scroll_type1">
+                    <table>
+                        <caption class="t_indent">주무조치부서 리스트</caption>
+                        <colgroup>
+                            <col width="15%">
+                            <col width="25%">
+                            <col width="">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>123456</td>
+                                <td>CS관리팀</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>123456</td>
+                                <td>CS관리팀</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>123456</td>
+                                <td>CS관리팀</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>123456</td>
+                                <td>CS관리팀</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>123456</td>
+                                <td>CS관리팀</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>123456</td>
+                                <td>CS관리팀</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>123456</td>
+                                <td>CS관리팀</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>123456</td>
+                                <td>CS관리팀</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>123456</td>
+                                <td>CS관리팀</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>123456</td>
+                                <td>CS관리팀</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>123456</td>
+                                <td>CS관리팀</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tar mt20">
+                    <button type="button" class="btn btn_lg main_btn">확인</button>
+                    <button type="button" class="btn btn_lg main_bdr popup_closer">닫기</button>
+                </div>
+            </div>
+        </div>
+       
+        <div class="layer_popup" id="pop6">
+            <div class="popup_title">
+                <h3>전파부서</h3>
+                <div class="close_area">
+                    <button type="button" class="popup_closer">닫기</button>
+                </div>
+            </div>
+            <div class="popup_content">
+                <div class="table_type2 mt20">
+                    <table>
+                        <caption class="t_indent">전파부서</caption>
+                        <colgroup>
+                            <col width="10%">
+                            <col width="28%">
+                            <col width="20%">
+                            <col width="28%">
+                            <col width="14%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>세부기능</th>
+                                <th>부서코드</th>
+                                <th>주관부서(팀)</th>
+                                <th>담당업무</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table_type2 table_scroll_type1">
+                    <table>
+                        <caption class="t_indent">전파부서</caption>
+                        <colgroup>
+                            <col width="10%">
+                            <col width="28%">
+                            <col width="20%">
+                            <col width="28%">
+                            <col width="14%">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>운항시설운영</td>
+                                <td>123456</td>
+                                <td>CS관리팀</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>운항시설운영</td>
+                                <td>123456</td>
+                                <td>CS관리팀</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>운항시설운영</td>
+                                <td>123456</td>
+                                <td>CS관리팀</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>운항시설운영</td>
+                                <td>123456</td>
+                                <td>CS관리팀</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>운항시설운영</td>
+                                <td>123456</td>
+                                <td>CS관리팀</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>운항시설운영</td>
+                                <td>123456</td>
+                                <td>CS관리팀</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>운항시설운영</td>
+                                <td>123456</td>
+                                <td>CS관리팀</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>운항시설운영</td>
+                                <td>123456</td>
+                                <td>CS관리팀</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>운항시설운영</td>
+                                <td>123456</td>
+                                <td>CS관리팀</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tar mt20">
+                    <button type="button" class="btn btn_lg main_bdr popup_closer">닫기</button>
+                </div>
+            </div>
+        </div>
+       
+        <div class="layer_popup" id="pop7">
+            <div class="popup_title">
+                <h3>발생원인 코드 선택</h3>
+                <div class="close_area">
+                    <button type="button" class="popup_closer">닫기</button>
+                </div>
+            </div>
+            <div class="popup_content">
+                <div class="pc_content">
+                    <div class="table_type6">
+                        <table>
+                            <caption class="t_indent">발생원인 코드 검색</caption>
+                            <colgroup>
+                                <col width="17%">
+                                <col width="">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>발생원인</th>
+                                    <td>
+                                        <div class="flex">
+                                            <select name="" title="" class="mr10 w25p">
+                                                <option disabled="" selected="" hidden="" value="">선택</option>
+                                                <option value="">선택</option>
+                                                <option value="">구분2</option>
+                                                <option value="">구분3</option>
+                                            </select>
+                                            <select name="" title="" class="mr10 w25p">
+                                                <option disabled="" selected="" hidden="" value="">선택</option>
+                                                <option value="">선택</option>
+                                                <option value="">구분2</option>
+                                                <option value="">구분3</option>
+                                            </select>
+                                            <input type="text" title="" maxlength="20" value="">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="m_content">
+                    <div class="table_type6">
+                        <table>
+                            <caption class="t_indent">발생원인 코드 검색</caption>
+                            <colgroup>
+                                <col width="17%">
+                                <col width="">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>대분류</th>
+                                    <td>
+                                        <select name="" title="">
+                                            <option disabled="" selected="" hidden="" value="">선택</option>
+                                            <option value="">선택</option>
+                                            <option value="">구분2</option>
+                                            <option value="">구분3</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>중분류</th>
+                                    <td>
+                                        <select name="" title="">
+                                            <option disabled="" selected="" hidden="" value="">선택</option>
+                                            <option value="">선택</option>
+                                            <option value="">구분2</option>
+                                            <option value="">구분3</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>발생원인</th>
+                                    <td>
+                                        <input type="text" title="" maxlength="20" value="">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="pt10 tar">
+                    <button type="button" class="btn btn_lg main_btn">검색</button>
+                </div>
+                <div class="table_type2 mt20">
+                    <table>
+                        <caption class="t_indent">발생원인 코드 리스트</caption>
+                        <colgroup>
+                            <col width="15%">
+                            <col width="25%">
+                            <col width="">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>중분류</th>
+                                <th>발생원인</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table_type2 table_scroll_type1">
+                    <table>
+                        <caption class="t_indent">발생원인 코드 리스트</caption>
+                        <colgroup>
+                            <col width="15%">
+                            <col width="25%">
+                            <col width="">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tar mt20">
+                    <button type="button" class="btn btn_lg main_btn">확인</button>
+                    <button type="button" class="btn btn_lg main_bdr popup_closer">닫기</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="layer_popup img_pop" id="pop8">
+            <div class="popup_title">
+                <div class="close_area" style="left:10px;">
+                    <button type="button" class="popup_closer">닫기</button>
+                </div>
+                <h3 class="tac">1/12</h3>
+                <div class="close_area" style="width:32px; height:32px; top:3px;">
+                    <button type="button" class="popup_download">다운로드</button>
+                </div>
+            </div>
+            <div class="popup_content">
+                <div thumbsSlider="" class="swiper-container img_area">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slide">
+                            <a href="#">
+                                <img src="../images/test13.png" alt="첨부사진이름1">
+                            </a>
+                        </div>
+                        <div class="swiper-slide slide">
+                            <a href="#">
+                                <img src="../images/img/main_01.png" alt="첨부사진이름2">
+                            </a>
+                        </div>
+                        <div class="swiper-slide slide">
+                            <a href="#">
+                                <img src="../images/test3.png" alt="첨부사진이름3">
+                            </a>
+                        </div>
+                        <div class="swiper-slide slide">
+                            <a href="#">
+                                <img src="../images/test4.png" alt="첨부사진이름4">
+                            </a>
+                        </div>
+                        <div class="swiper-slide slide">
+                            <a href="#">
+                                <img src="../images/test5.png" alt="첨부사진이름5">
+                            </a>
+                        </div>
+                        <div class="swiper-slide slide">
+                            <a href="#">
+                                <img src="../images/test6.png" alt="첨부사진이름6">
+                            </a>
+                        </div>
+                        <div class="swiper-slide slide">
+                            <a href="#">
+                                <img src="../images/test7.png" alt="첨부사진이름7">
+                            </a>
+                        </div>
+                        <div class="swiper-slide slide">
+                            <a href="#">
+                                <img src="../images/test8.png" alt="첨부사진이름8">
+                            </a>
+                        </div>
+                        <div class="swiper-slide slide">
+                            <a href="#">
+                                <img src="../images/test9.png" alt="첨부사진이름9">
+                            </a>
+                        </div>
+                        <div class="swiper-slide slide">
+                            <a href="#">
+                                <img src="../images/test10.png" alt="첨부사진이름10">
+                            </a>
+                        </div>
+                        <div class="swiper-slide slide">
+                            <a href="#">
+                                <img src="../images/test11.png" alt="첨부사진이름11">
+                            </a>
+                        </div>
+                        <div class="swiper-slide slide">
+                            <a href="#">
+                                <img src="../images/test12.png" alt="첨부사진이름12">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-prev prev_btn arrow_btn"></div>
+                <div class="swiper-button-next next_btn arrow_btn"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>인천국제공항 상황관리 협업플랫폼 및 이동지역 차량관리시스템 구축사업</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link type="text/css" rel="stylesheet" href="../css/style.css">
+    <link type="text/css" rel="stylesheet" href="../plugin/swiper-4.5.1/swiper.css">
+    <link type="text/css" rel="stylesheet" href="../plugin/datepicker-1.0.10/datepicker.css">
+    <!-- js -->
+    <script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../js/pub_js.js"></script>
+    <script type="text/javascript" src="../plugin/swiper-4.5.1/swiper.js"></script>
+    <script type="text/javascript" src="../plugin/slimScroll/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="../plugin/datepicker-1.0.10/datepicker.js"></script>
+</head>
+
+<body>
+   
+    <!-- testpopup -->
+    <div style="position:fixed; top:50%; left:50%; width:150px; height:100px; transform:translate(-50%, -50%); background-color:aqua; z-index:100; text-align:center;">
+        <a href="#" style="font-size:20px; font-weight:700; color:red; width:100%; height:100%; display:inline-block;" onclick="testPopup();">popup</a>
+        <script>
+
+            function testPopup() {
+                $("#pop1").show();
+                $(".dim").show();
+            }
+        </script>
+    </div>
+    <!-- //testpopup -->
+   
+   
+   <div class="wrapper">
+        <div class="header">
+            <div class="header_top">
+                <div class="header_inner">
+                    <h1>
+                        <a href="#"><img src="../images/img/logo_header.png" alt="Incheon Airport"></a>
+                        <div class="header_text">상황관리 <span>협업플랫폼</span></div>
+                    </h1>
+                    <div class="header_util">
+                        <p>홍길동(인천공항공사)</p>
+                        <button type="button">로그아웃</button>
+                        <button type="button" class="menu_btn">메뉴열기</button>
+                    </div>
+                </div>
+            </div>
+            <div class="header_bot">
+                <div class="gnb">
+                    <ul>
+                        <li><a href="#">상황</a></li>
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">통계</a></li>
+                        <li><a href="#">매뉴얼</a></li>
+                        <li><a href="#">전화번호</a></li>
+                        <li><a href="#" class="active">당직관리</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="m_header">
+            <a href="javascript:window.history.back();" class="util back" title="뒤로가기"><img src="../images/icon/page/arrow_left_24.png"></a>
+            <h1>당직지시 및 보고</h1>
+            <div class="util">
+                <button class="menu">메뉴</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="content_wrap">
+                <div class="content_inner">
+                    <div class="side_gnb">
+                        <dl>
+                            <dt>당직관리</dt>
+                            <dd class="active">
+                                <a href="#">- 당직지시 및 보고</a>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="content_box">
+                        <div class="pc_content">
+                            <div class="table_type1">
+                                <table>
+                                    <caption class="t_indent">당직관리검색</caption>
+                                    <colgroup>
+                                        <col width="8%">
+                                        <col width="">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>당직일자</th>
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="text" title="검사 기간 시작일" maxlength="20" class="date w40p" value="2020-09-01">
+                                                    <span class="date_add">~</span>
+                                                    <input type="text" title="검사 기간 마지막일" maxlength="20" class="date w40p" value="2020-09-01">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="m_content">
+                            <div class="table_type1 tborder_none">
+                                <table>
+                                    <caption class="t_indent">당직관리검색</caption>
+                                    <colgroup>
+                                        <col width="15%">
+                                        <col width="">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>당직일자</th>
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="text" title="검사 기간 시작일" maxlength="20" class="date w50p" value="2020-09-01">
+                                                    <span class="date_add">~</span>
+                                                    <input type="text" title="검사 기간 마지막일" maxlength="20" class="date w50p" value="2020-09-01">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="pt20 tar">
+                            <button type="button" class="btn btn_lg main_btn">검색</button>
+                        </div>
+                    </div>
+                    <div class="content_box mt20">
+                        <div class="content_title">
+                            <h2>당직 근무 지시 리스트</h2>
+                        </div>
+                        <div class="pc_content">
+                            <div class="table_type2">
+                                <table>
+                                    <caption class="t_indent">당직 근무 지시 리스트</caption>
+                                    <colgroup>
+                                        <col width="10%">
+                                        <col width="20%">
+                                        <col width="20%">
+                                        <col width="">
+                                        <col width="20%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>지시일자</th>
+                                            <th>주/야</th>
+                                            <th>당직지시자</th>
+                                            <th>당직지시사항</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                            <div class="table_type2 table_scroll_type1">
+                                <table>
+                                    <caption class="t_indent">당직 근무 지시 리스트</caption>
+                                    <colgroup>
+                                        <col width="10%">
+                                        <col width="20%">
+                                        <col width="20%">
+                                        <col width="">
+                                        <col width="20%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18 13:15:29</td>
+                                            <td>주간</td>
+                                            <td>홍길동</td>
+                                            <td>
+                                                <button type="button" class="btn btn_md sub_bdr overlapping_btn on">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping" style="display:table-row;">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>당직지시사항</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="tal pl10 pr10">
+                                                                        1. 당직지시사항<br />
+                                                                        - 입력<br />
+                                                                        2. 당직근무자<br />
+                                                                        - 당직사령 : 홍길동<br />
+                                                                        - 당직보좌 : 홍길동
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18 13:15:29</td>
+                                            <td>주간</td>
+                                            <td>홍길동</td>
+                                            <td>
+                                                <button type="button" class="btn btn_md sub_bdr overlapping_btn">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>당직지시사항</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="tal pl10 pr10">
+                                                                        1. 당직지시사항<br />
+                                                                        - 입력<br />
+                                                                        2. 당직근무자<br />
+                                                                        - 당직사령 : 홍길동<br />
+                                                                        - 당직보좌 : 홍길동
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18 13:15:29</td>
+                                            <td>주간</td>
+                                            <td>홍길동</td>
+                                            <td>
+                                                <button type="button" class="btn btn_md sub_bdr overlapping_btn">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>당직지시사항</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="tal pl10 pr10">
+                                                                        1. 당직지시사항<br />
+                                                                        - 입력<br />
+                                                                        2. 당직근무자<br />
+                                                                        - 당직사령 : 홍길동<br />
+                                                                        - 당직보좌 : 홍길동
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18 13:15:29</td>
+                                            <td>주간</td>
+                                            <td>홍길동</td>
+                                            <td>
+                                                <button type="button" class="btn btn_md sub_bdr overlapping_btn">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>당직지시사항</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="tal pl10 pr10">
+                                                                        1. 당직지시사항<br />
+                                                                        - 입력<br />
+                                                                        2. 당직근무자<br />
+                                                                        - 당직사령 : 홍길동<br />
+                                                                        - 당직보좌 : 홍길동
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18 13:15:29</td>
+                                            <td>주간</td>
+                                            <td>홍길동</td>
+                                            <td>
+                                                <button type="button" class="btn btn_md sub_bdr overlapping_btn">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>당직지시사항</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="tal pl10 pr10">
+                                                                        1. 당직지시사항<br />
+                                                                        - 입력<br />
+                                                                        2. 당직근무자<br />
+                                                                        - 당직사령 : 홍길동<br />
+                                                                        - 당직보좌 : 홍길동
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18 13:15:29</td>
+                                            <td>주간</td>
+                                            <td>홍길동</td>
+                                            <td>
+                                                <button type="button" class="btn btn_md sub_bdr overlapping_btn">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>당직지시사항</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="tal pl10 pr10">
+                                                                        1. 당직지시사항<br />
+                                                                        - 입력<br />
+                                                                        2. 당직근무자<br />
+                                                                        - 당직사령 : 홍길동<br />
+                                                                        - 당직보좌 : 홍길동
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18 13:15:29</td>
+                                            <td>주간</td>
+                                            <td>홍길동</td>
+                                            <td>
+                                                <button type="button" class="btn btn_md sub_bdr overlapping_btn">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>당직지시사항</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="tal pl10 pr10">
+                                                                        1. 당직지시사항<br />
+                                                                        - 입력<br />
+                                                                        2. 당직근무자<br />
+                                                                        - 당직사령 : 홍길동<br />
+                                                                        - 당직보좌 : 홍길동
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18 13:15:29</td>
+                                            <td>주간</td>
+                                            <td>홍길동</td>
+                                            <td>
+                                                <button type="button" class="btn btn_md sub_bdr overlapping_btn">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>당직지시사항</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="tal pl10 pr10">
+                                                                        1. 당직지시사항<br />
+                                                                        - 입력<br />
+                                                                        2. 당직근무자<br />
+                                                                        - 당직사령 : 홍길동<br />
+                                                                        - 당직보좌 : 홍길동
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18 13:15:29</td>
+                                            <td>주간</td>
+                                            <td>홍길동</td>
+                                            <td>
+                                                <button type="button" class="btn btn_md sub_bdr overlapping_btn">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>당직지시사항</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="tal pl10 pr10">
+                                                                        1. 당직지시사항<br />
+                                                                        - 입력<br />
+                                                                        2. 당직근무자<br />
+                                                                        - 당직사령 : 홍길동<br />
+                                                                        - 당직보좌 : 홍길동
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18 13:15:29</td>
+                                            <td>주간</td>
+                                            <td>홍길동</td>
+                                            <td>
+                                                <button type="button" class="btn btn_md sub_bdr overlapping_btn">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>당직지시사항</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="tal pl10 pr10">
+                                                                        1. 당직지시사항<br />
+                                                                        - 입력<br />
+                                                                        2. 당직근무자<br />
+                                                                        - 당직사령 : 홍길동<br />
+                                                                        - 당직보좌 : 홍길동
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18 13:15:29</td>
+                                            <td>주간</td>
+                                            <td>홍길동</td>
+                                            <td>
+                                                <button type="button" class="btn btn_md sub_bdr overlapping_btn">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>당직지시사항</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="tal pl10 pr10">
+                                                                        1. 당직지시사항<br />
+                                                                        - 입력<br />
+                                                                        2. 당직근무자<br />
+                                                                        - 당직사령 : 홍길동<br />
+                                                                        - 당직보좌 : 홍길동
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="m_content">
+                            <div class="table_type2">
+                                <table>
+                                    <caption class="t_indent">당직 근무 지시 리스트</caption>
+                                    <colgroup>
+                                        <col width="10%">
+                                        <col width="20%">
+                                        <col width="20%">
+                                        <col width="">
+                                        <col width="20%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>지시일자</th>
+                                            <th>주/야</th>
+                                            <th>당직지시자</th>
+                                            <th>당직지시사항</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                            <div class="table_type2 table_scroll_type1">
+                                <table>
+                                    <caption class="t_indent">당직 근무 지시 리스트</caption>
+                                    <colgroup>
+                                        <col width="10%">
+                                        <col width="20%">
+                                        <col width="20%">
+                                        <col width="">
+                                        <col width="20%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18 13:15:29</td>
+                                            <td>주간</td>
+                                            <td>홍길동</td>
+                                            <td>
+                                                <button type="button" class="overlapping_btn on">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping" style="display:table-row;">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>당직지시사항</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="tal pl10 pr10">
+                                                                        1. 당직지시사항<br />
+                                                                        - 입력<br />
+                                                                        2. 당직근무자<br />
+                                                                        - 당직사령 : 홍길동<br />
+                                                                        - 당직보좌 : 홍길동
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18 13:15:29</td>
+                                            <td>주간</td>
+                                            <td>홍길동</td>
+                                            <td>
+                                                <button type="button" class="overlapping_btn">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>당직지시사항</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="tal pl10 pr10">
+                                                                        1. 당직지시사항<br />
+                                                                        - 입력<br />
+                                                                        2. 당직근무자<br />
+                                                                        - 당직사령 : 홍길동<br />
+                                                                        - 당직보좌 : 홍길동
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18 13:15:29</td>
+                                            <td>주간</td>
+                                            <td>홍길동</td>
+                                            <td>
+                                                <button type="button" class="overlapping_btn">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>당직지시사항</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="tal pl10 pr10">
+                                                                        1. 당직지시사항<br />
+                                                                        - 입력<br />
+                                                                        2. 당직근무자<br />
+                                                                        - 당직사령 : 홍길동<br />
+                                                                        - 당직보좌 : 홍길동
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18 13:15:29</td>
+                                            <td>주간</td>
+                                            <td>홍길동</td>
+                                            <td>
+                                                <button type="button" class="overlapping_btn">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>당직지시사항</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="tal pl10 pr10">
+                                                                        1. 당직지시사항<br />
+                                                                        - 입력<br />
+                                                                        2. 당직근무자<br />
+                                                                        - 당직사령 : 홍길동<br />
+                                                                        - 당직보좌 : 홍길동
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18 13:15:29</td>
+                                            <td>주간</td>
+                                            <td>홍길동</td>
+                                            <td>
+                                                <button type="button" class="overlapping_btn">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>당직지시사항</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="tal pl10 pr10">
+                                                                        1. 당직지시사항<br />
+                                                                        - 입력<br />
+                                                                        2. 당직근무자<br />
+                                                                        - 당직사령 : 홍길동<br />
+                                                                        - 당직보좌 : 홍길동
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18 13:15:29</td>
+                                            <td>주간</td>
+                                            <td>홍길동</td>
+                                            <td>
+                                                <button type="button" class="overlapping_btn">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>당직지시사항</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="tal pl10 pr10">
+                                                                        1. 당직지시사항<br />
+                                                                        - 입력<br />
+                                                                        2. 당직근무자<br />
+                                                                        - 당직사령 : 홍길동<br />
+                                                                        - 당직보좌 : 홍길동
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18 13:15:29</td>
+                                            <td>주간</td>
+                                            <td>홍길동</td>
+                                            <td>
+                                                <button type="button" class="overlapping_btn">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>당직지시사항</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="tal pl10 pr10">
+                                                                        1. 당직지시사항<br />
+                                                                        - 입력<br />
+                                                                        2. 당직근무자<br />
+                                                                        - 당직사령 : 홍길동<br />
+                                                                        - 당직보좌 : 홍길동
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2021-08-18 13:15:29</td>
+                                            <td>주간</td>
+                                            <td>홍길동</td>
+                                            <td>
+                                                <button type="button" class="overlapping_btn">상세</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="overlapping">
+                                            <td colspan="6">
+                                                <div class="table_type2">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>당직지시사항</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="tal pl10 pr10">
+                                                                        1. 당직지시사항<br />
+                                                                        - 입력<br />
+                                                                        2. 당직근무자<br />
+                                                                        - 당직사령 : 홍길동<br />
+                                                                        - 당직보좌 : 홍길동
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tar mt20">
+                            <button type="button" class="btn btn_lg main_btn">당직 확인/보고</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="dim"></div>
+        <div class="layer_popup" id="pop1">
+            <div class="popup_title">
+                <h3>당직 확인/보고 입력 팝업</h3>
+                <div class="close_area">
+                    <button type="button" class="popup_closer">닫기</button>
+                </div>
+            </div>
+            <div class="popup_content">
+                <div class="content_title pt5 pb10">
+                    <h2>당직 지시사항 확인</h2>
+                </div>
+                <div class="table_type1">
+                    <table>
+                        <caption class="t_indent">당직 지시사항 확인</caption>
+                        <colgroup>
+                            <col width="25%">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>지시사항전파자</th>
+                                <td class="td_left">홍길동</td>
+                            </tr>
+                            <tr>
+                                <th>당직전파일시</th>
+                                <td class="td_left">2021-08-18 13:15:29</td>
+                            </tr>
+                            <tr>
+                                <th>당직지시사항</th>
+                                <td class="td_left">
+                                    <div class="tal pl10 pr10">
+                                        1. 당직지시사항<br />
+                                        - 입력<br />
+                                        2. 당직근무자<br />
+                                        - 당직사령 : 홍길동<br />
+                                        - 당직보좌 : 홍길동
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="content_title pt20 pb10">
+                    <h2>당직자 보고사항</h2>
+                </div>
+                <div class="table_type1">
+                    <table>
+                        <caption class="t_indent">당직자 보고사항</caption>
+                        <colgroup>
+                            <col width="25%">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>보고일시</th>
+                                <td class="td_left">
+                                    <input type="text" value="2021-08-18 15:30:30" disabled>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><span class="txt_star">*</span>당직자/책임자</th>
+                                <td class="td_left">
+                                    <input type="text" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>부서명/회사명</th>
+                                <td class="td_left">
+                                    <input type="text" value="통합운영(IOC)" disabled>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><span class="txt_star">*</span>비상연락처(전화번호)</th>
+                                <td class="td_left">
+                                    <input type="text" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><span class="txt_star">*</span>근무인원</th>
+                                <td class="td_left">
+                                    <div class="employees_num">
+                                        <lable><span class="pc_content">공사:</span><span class="m_content">공 사:</span><input type="text" value=""></lable>
+                                        <lable><span class="pc_content">자회사 시설관리:</span><span class="m_content">자 회 사 시 설 관 리:</span><input type="text" value=""></lable>
+                                        <lable><span class="pc_content">운영서비스:</span><span class="m_content">운 영 서 비 스:</span><input type="text" value=""></lable>
+                                        <lable><span class="pc_content">보안:</span><span class="m_content">보 안:</span><input type="text" value=""></lable>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>특이사항</th>
+                                <td>
+                                    <textarea rows="3"></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tac mt20">
+                    <button type="button" class="btn btn_lg main_btn w45p">당직보고</button>
+                    <button type="button" class="btn btn_lg main_bdr w45p">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

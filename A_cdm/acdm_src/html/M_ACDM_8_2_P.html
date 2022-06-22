@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A-CDM</title>
+    
+    <!-- jquery -->
+    <link rel="stylesheet" href="../css/jquery-ui.min.css" type="text/css"/>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    
+    <!-- custom -->
+    <link type="text/css" rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="../js/pub_js.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+           <div class="header_title">
+               <a class="back" href="javascript:window.history.back();">뒤로가기</a>
+               <h2>DEPARTURES</h2>
+           </div>
+            <div class="header_util">
+                <button class="header_time" type="button" title="추천"><i class="icon_time"></i>UTC 10:21</button>
+                <button type="button" title="알림"><i class="icon_alert"></i></button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="content_wrap bg_height">
+                <div class="detail_info">
+                    <div class="flight_info p0">
+                        <div class="ci_logo">
+                            <img src="../images/Asiana_Airlines.svg.svg" alt="asiana airlines">
+                        </div>
+                        <div class="flight">
+                            <p class="flight_name ice">KE011</p>
+                            <p class="flight_time">SIBT <span class="ml10">16:35</span></p>
+                            <ul class="mb5">
+                                <li>CDG(*HKG)</li>
+                                <li>B748</li>
+                                <li>Ard</li>
+                            </ul>
+                            <ul>
+                                <li>2022-12-25</li>
+                                <li>BOARDING</li>
+                            </ul>
+                            <div class="icon_favorite"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="state_line"></div>
+                <div class="content_inner">
+                    <div class="result_list detail">
+                        <div class="mb40">
+                            <div class="list_header">
+                                <p class="list_title">TIMES</p>
+                                <button type="button" class="info_open"></button>
+                            </div>
+                            <button type="button" class=""></button>
+                            <div class="time_list">
+                                <ul>
+                                    <li>
+                                        <div><span>EOBT</span>16:35</div>
+                                    </li>
+                                    <li class="bor_green">
+                                        <div class="fc_green"><span class="fc_green">TOBT</span>15:05</div>
+                                    </li>
+                                    <li>
+                                        <div class="fc_blue"><span class="fc_blue">TSAT</span>12:10</div>
+                                    </li>
+                                    <li>
+                                        <div class="fc_blue"><span class="fc_blue">TSAT</span>12:10</div>
+                                    </li>
+                                    <li>
+                                        <div><span>ARDT</span>16:35</div>
+                                    </li>
+                                    <li>
+                                        <div><span>ASAT</span>15:05</div>
+                                    </li>
+                                    <li>
+                                        <div><span>AOBT</span>16:35</div>
+                                    </li>
+                                    <li>
+                                        <div><span>ATOT</span>16:35</div>
+                                    </li>
+                                    <li>
+                                        <div><span>CTOT</span>16:35</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="">
+                           <div class="list_header">
+                               <p class="list_title">RESOURCES</p>
+                           </div>
+                            <div class="resource_list">
+                                <dl>
+                                    <dt>GATE</dt>
+                                    <dd>230</dd>
+                                </dl>
+                                <dl>
+                                    <dt>STAND</dt>
+                                    <dd>541</dd>
+                                </dl>
+                                <dl>
+                                    <dt>RWY</dt>
+                                    <dd>33L</dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="pb0">
+                           <div class="list_header">
+                               <p class="list_title">DE-ICING<button type="button" class="icon_tooltip"></button></p>
+                               <input type="checkbox" id="checkbox" class="slide_chk" checked>
+                               <label for="checkbox"><span></span></label>
+                               <button type="button"></button>
+                           </div>
+                            <div class="time_list">
+                                <ul>
+                                    <li>
+                                        <div><span>ELDT</span>11:55</div>
+                                    </li>
+                                    <li class="bor_green">
+                                        <div><span>ALDT</span>15:45</div>
+                                    </li>
+                                    <li class="position">
+                                        <div class="w100p"><span>DEICING POSITION</span>AS<span class="zone">ZONE</span>831</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup_wrap" style="visibility: visible">
+            <div class="popup_bg"></div>
+            <div class="popup setting_pop">
+               <button type="button" class="popup_close"></button>
+                <div class="detail_info">
+                    <div class="flight_info p0">
+                        <div class="ci_logo">
+                            <img src="../images/Asiana_Airlines.svg.svg" alt="asiana airlines">
+                        </div>
+                        <div class="flight">
+                            <p class="flight_name">KE011</p>
+                            <div class="info_list">
+                                <dl>
+                                    <dt>GATE</dt>
+                                    <dd>231</dd>
+                                </dl>
+                                <dl>
+                                    <dt>TYP</dt>
+                                    <dd>330</dd>
+                                </dl>
+                                <dl>
+                                    <dt>DES</dt>
+                                    <dd>HKG</dd>
+                                </dl>
+                                <dl class="w100p">
+                                    <dt>EOBT</dt>
+                                    <dd>2022-01-25 16:35</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="time_setting">
+                    <p class="set_title">TOBT 설정</p>
+                    <div class="input_box">
+                        <input type="text" title="날짜 선택" class="date" id="datepicker" value="2022-01-05">
+                        <button type="button">시</button>
+                        <button type="button">분</button>
+                    </div>
+                    <textarea rows="1" placeholder="사유를 입력하세요."></textarea>
+                    <p class="mt4">TOBT설정 시 기준일시는 KST입니다.</p>
+                    <p class="warn">TOBT를 00:50로 수정하시겠습니까?<span>잘못된 TOBT 입력 시 출발 순서가 변경 될 수 있습니다.</span></p>
+                </div>
+                <div class="pop_btn_wrap">
+                    <button type="button" class="confirm">확인</button>
+                    <button type="button" class="change">수정</button>
+                    <button type="button" class="delete">삭제</button>
+                </div>
+            </div>
+        </div>
+        <div class="menu_bar">
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="icon_home"></i>
+                        <p>홈</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="icon_arrive on"></i>
+                        <p>도착편</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="icon_depart"></i>
+                        <p>출발편</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="icon_star"></i>
+                        <p>즐겨찾기</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="icon_menu"></i>
+                        <p>전체메뉴</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        $(function() {
+            fn_datepicker();
+        });
+
+        function fn_datepicker() {
+            $("#datepicker").datepicker({
+                dateFormat: 'yy-mm-dd' //Input Display Format 변경
+                    ,
+                showOtherMonths: true //빈 공간에 현재월의 앞뒤월의 날짜를 표시
+                    ,
+                showMonthAfterYear: true //년도 먼저 나오고, 뒤에 월 표시            
+                    //,showOn: "both" //button:버튼을 표시하고,버튼을 눌러야만 달력 표시 ^ both:버튼을 표시하고,버튼을 누르거나 input을 클릭하면 달력 표시
+                    //,buttonImage: "http://jqueryui.com/resources/demos/datepicker/images/calendar.gif" //버튼 이미지 경로
+                    //,buttonImageOnly: true //기본 버튼의 회색 부분을 없애고, 이미지만 보이게 함
+                    ,
+                buttonText: "선택" //버튼에 마우스 갖다 댔을 때 표시되는 텍스트                
+                    ,
+                yearSuffix: "년" //달력의 년도 부분 뒤에 붙는 텍스트
+                    ,
+                monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'] //달력의 월 부분 텍스트
+                    ,
+                monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'] //달력의 월 부분 Tooltip 텍스트
+                    ,
+                dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'] //달력의 요일 부분 텍스트
+                    ,
+                dayNames: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'] //달력의 요일 부분 Tooltip 텍스트               
+            });
+            
+            //초기값을 오늘 날짜로 설정
+            $('#datepicker').datepicker('setDate', 'today'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
+        }
+
+        function getDate(element) {
+            var date;
+            var dateFormat = "yy-mm-dd";
+            try {
+                date = $.datepicker.parseDate(dateFormat, element.value);
+            } catch (error) {
+                date = null;
+            }
+            return date;
+        }
+    </script>
+    
+</body>
+
+</html>

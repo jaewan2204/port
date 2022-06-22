@@ -1,0 +1,87 @@
+.pagination {
+	width: 100%;
+	text-align: center;
+	a {
+		display: inline-block;
+	}
+}
+.page-link {
+	position: relative;
+	display: block;
+	padding: 0.5rem 0.75rem;
+	line-height: 1.25;
+	color: #007bff;
+	background-color: transparent;
+	font-size: 0.8rem;
+	&.active {
+		border-radius: 2px;
+		transition: all 0.2s linear;
+		@extend.z-depth-1;
+		color: #fff !important;
+		&:hover {
+			color: #fff !important; 
+		}
+	}
+	&.disabled {
+		opacity: 0.6;
+		pointer-events: none;
+		background-color: #fff;
+		border-color: #ddd;
+	}
+}
+// Circle pagination
+.pagination {
+  &.pagination-circle {
+    .page-link {
+      border-radius: 2px;
+      margin-left: 2px;
+      margin-right: 2px;
+      &:hover {
+        border-radius: 2px;
+      }
+    }
+    .active .page-link {
+      border-radius: 50%;
+    }
+  }
+}
+
+.pagination .page-link {
+  border: 0;
+  transition: all 0.3s linear;
+  &:hover {
+    transition: all 0.3s linear;
+    background-color: #eee;
+  }
+  &:focus {
+    background-color: transparent;
+  }
+}
+
+.pagination {
+  &.pg-blue {
+    .active {
+      background-color: $primary-color;
+    }
+  }
+  &.pg-red {
+    .active {
+      background-color: $danger-color;
+    }
+  }
+  &.pg-teal {
+    .active {
+      background-color: $default-color;
+    }
+  }
+  &.pg-darkgrey {
+    .active {
+      background-color: $special-color;
+    }
+  }
+  &.pg-dark {
+    .active {
+      background-color: $elegant-color;
+    }
+  }
+}

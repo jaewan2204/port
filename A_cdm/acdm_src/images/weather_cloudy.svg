@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>img/weather_cloudy</title>
+    <defs>
+        <filter x="-33.8%" y="-54.0%" width="167.5%" height="208.1%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.12 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="img/weather_cloudy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="011-cloudy" filter="url(#filter-1)" transform="translate(12.000000, 20.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <path d="M32.4111311,9.74633704 C31.906509,9.74633704 31.4028975,9.79673144 30.9083813,9.89718213 C30.5354731,8.02852999 29.3298374,6.43451045 27.6370964,5.57171745 C25.9446924,4.70892437 23.951469,4.67273507 22.2287473,5.47329611 C20.6697414,1.16169834 15.924677,-1.06444985 11.6303366,0.500821133 C7.33599618,2.06609212 5.11875833,6.83056326 6.67776425,11.1418228 C2.91600555,11.2612136 -0.0554704947,14.3873588 0.000785747646,18.1655874 C0.0573788323,21.9441543 3.12115562,24.9789807 6.88493554,24.9850686 L32.4111311,24.9850686 C36.6020543,24.9850686 40,21.573806 40,17.3657028 C40,13.1575996 36.6020543,9.74633704 32.4111311,9.74633704 Z" id="Path"></path>
+        </g>
+    </g>
+</svg>

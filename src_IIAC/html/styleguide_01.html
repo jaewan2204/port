@@ -1,0 +1,1548 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link type="text/css" rel="stylesheet" href="../css/style.css">
+    <link type="text/css" rel="stylesheet" href="../plugin/swiper-4.5.1/swiper.css">
+    <link type="text/css" rel="stylesheet" href="../plugin/datepicker-1.0.10/datepicker.css">
+    <!-- js -->
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../js/pub_js.js"></script>
+    <script type="text/javascript" src="../plugin/swiper-4.5.1/swiper.js"></script>
+    <script type="text/javascript" src="../plugin/slimScroll/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="../plugin/datepicker-1.0.10/datepicker.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="header_top">
+                <div class="header_inner">
+                    <h1>
+                        <a href="#"><img src="../images/img/logo_header.png" alt="Incheon Airport"></a>
+                        <div class="header_text">상황관리 <span>협업플랫폼</span></div>
+                    </h1>
+                    <div class="header_util">
+                        <p>홍길동(인천공항공사)</p>
+                        <button type="button">로그아웃</button>
+                        <button type="button" class="menu_btn">메뉴열기</button>
+                    </div>
+                </div>
+            </div>
+            <div class="header_bot">
+                <div class="gnb">
+                    <ul>
+                        <li><a href="#" class="active">상황</a></li>
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">통계</a></li>
+                        <li><a href="#">매뉴얼</a></li>
+                        <li><a href="#">전화번호</a></li>
+                        <li><a href="#">당직관리</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div> 
+        <div class="container">
+            <div class="content_wrap">
+                <div class="content_inner">
+                    <div class="side_gnb">
+                        <dl>
+                            <dt>상황관리</dt>
+                            <dd class="active">
+                                <a href="#">- 유형분류</a>
+                            </dd>
+                            <dd>
+                                <a href="#">- 상황접수</a>
+                            </dd>
+                            <dd>
+                                <a href="#">- 진행상황</a>
+                            </dd>
+                            <dd>
+                                <a href="#">- 상황처리현황</a>
+                            </dd>
+                            <dd>
+                                <a href="#">- 삭제상황</a>
+                            </dd>
+                        </dl>
+                    </div>
+                   
+                    <div class="content_title">
+                        <h2>상황관리</h2>
+                    </div>
+                    
+                    <div class="content_title">
+                        <h2>상황관리</h2>
+                        <div class="crumb_list">
+                            <ul>
+                                <li class="home"><i></i>HOME</li>
+                                <li>상황관리</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="content_title">
+                        <h2>
+                            목록
+                            <div class="total_list">
+                                <span class="num">총 000</span><span>건</span>
+                            </div>
+                        </h2>
+                    </div>
+                    
+                    <div class="content_title">
+                        <h2>
+                            접수대기 상황관리 리스트
+                            <div class="count_list">
+                                [ <span>00</span> / ALL ]
+                            </div>
+                        </h2>
+                    </div>
+
+                    <button type="button" class="btn btn_lg main_btn">조회</button>
+                    <button type="button" class="btn btn_lg red_btn">조회</button>
+                    <button type="button" class="btn btn_lg sub_btn">조회</button>
+                    <button type="button" class="btn btn_lg green_btn">조회</button>
+                    <button type="button" class="btn btn_lg blue_btn">조회</button>
+
+                    <button type="button" class="btn btn_lg main_bdr">초기화</button>
+                    <button type="button" class="btn btn_lg red_bdr">초기화</button>
+                    <button type="button" class="btn btn_lg sub_bdr">초기화</button>
+                    <button type="button" class="btn btn_lg green_bdr">초기화</button>
+                    <button type="button" class="btn btn_lg blue_bdr">초기화</button>
+
+                    <button type="button" class="btn btn_lg green_bdr icon_btn"><i class="excel"></i>엑셀보기</button>
+                    <button type="button" class="btn btn_lg main_bdr icon_btn"><i class="reset"></i>등록사진연계</button>
+                    <button type="button" class="btn btn_lg main_bdr icon_btn"><i class="print"></i>등록부출력</button>
+                    <button type="button" class="btn btn_lg main_bdr icon_btn"><i class="file"></i>사진첨부</button>
+                    <button type="button" class="btn btn_lg main_bdr icon_btn"><i class="confirm"></i>파일첨부</button>
+                    <button type="button" class="btn btn_lg main_bdr icon_btn"><i class="plus"></i>확대보기</button>
+
+                    <div class="tab_list">
+                        <ul>
+                            <li class="active">
+                                <a href="#">차량제원</a>
+                                <button type="button" class="t_indent">탭 닫기</button>
+                            </li>
+                            <li>
+                                <a href="#">검사결과등록</a>
+                                <button type="button" class="t_indent">탭 닫기</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab_contents">
+                        <div class="content_box">
+                            <div style="display: block;">
+                                <h3 class="t_indent">차량제원</h3>
+                                <p>차량 및 장비정보</p>
+                            </div>
+                            <div>
+                                <h3 class="t_indent">검사결과등록</h3>
+                                <p>검사결과등록</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="content_box">
+                        <div class="table_type1">
+                            <table>
+                                <caption class="t_indent">차량조회</caption>
+                                <colgroup>
+                                    <col>
+                                    <col width="27.5%">
+                                    <col>
+                                    <col width="20.8%">
+                                    <col>
+                                    <col width="20.8%">
+                                </colgroup>
+                                <thead></thead>
+                                <tbody>
+                                    <tr>
+                                        <th>소속사</th>
+                                        <td>
+                                            <input type="text" class="mr10 w30p" title="소속사" maxlength="20" value="ABC">
+                                            <div class="input_group">
+                                                <input type="text" class="search" title="상세 소속사" maxlength="20" value="아시아나에어포트">
+                                                <button class="search_btn">검색</button>
+                                            </div>
+                                        </td>
+
+                                        <th>부서명</th>
+                                        <td>
+                                            <select name="부서명" title="부서명">
+                                                <option disabled selected hidden value="">선택</option>
+                                                <option value="">부서명1</option>
+                                                <option value="">부서명2</option>
+                                                <option value="">부서명3</option>
+                                            </select>
+                                        </td>
+
+                                        <th>검사 구분</th>
+                                        <td>
+                                            <select name="검사 구분" title="검사 구분">
+                                                <option disabled selected hidden value="">정기</option>
+                                                <option value="">정기</option>
+                                                <option value="">구분2</option>
+                                                <option value="">구분3</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>검사 기간</th>
+                                        <td>
+                                            <label for="inspection_period" class="label_hide">검사기간 선택</label>
+                                            <select name="검사 기간" title="검사기간" class="w22p mr10" id="inspection_period">
+                                                <option value="">금월</option>
+                                                <option value="">기간2</option>
+                                                <option value="">기간3</option>
+                                            </select>
+
+                                            <div class="cal_chk group">
+                                                <input type="text" title="검사 기간 시작일" maxlength="20" class="date cal_open" value="2020-09-01">
+                                                <div class="cal" style="display: block">
+                                                    <div class="cal_header">
+                                                        <button type="button" class="prev t_indent">저번달</button>
+                                                        <p>July 2020</p>
+                                                        <button type="button" class="next t_indent">다음달</button>
+                                                    </div>
+                                                    <div class="calender_container">
+                                                        <table>
+                                                           <caption class="t_indent">날짜선택 캘린더</caption>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Mo</th>
+                                                                    <th>Tu</th>
+                                                                    <th>We</th>
+                                                                    <th>Th</th>
+                                                                    <th>Fr</th>
+                                                                    <th>Sa</th>
+                                                                    <th>Su</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td>
+                                                                        <div>1</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>2</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>3</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>4</div>
+                                                                    </td>
+                                                                    <td class="sun">
+                                                                        <div>5</div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div>6</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>7</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>8</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>9</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>10</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>11</div>
+                                                                    </td>
+                                                                    <td class="sun select_day">
+                                                                        <div>12</div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div>13</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>14</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>15</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>16</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>17</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>18</div>
+                                                                    </td>
+                                                                    <td class="sun">
+                                                                        <div>19</div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div>20</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>21</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>22</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>23</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>24</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>25</div>
+                                                                    </td>
+                                                                    <td class="sun">
+                                                                        <div>26</div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div>27</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>28</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>29</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>30</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>31</div>
+                                                                    </td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <span class="date_add">~</span>
+                                                <input type="text" title="검사 기간 마지막일" maxlength="20" class="date" value="2020-09-01">
+                                            </div>
+                                        </td>
+
+                                        <th>검사예정일</th>
+                                        <td>
+                                            <select name="검사 예정일" title="검사 예정일" class="w30p mr10">
+                                                <option disabled selected hidden value="">금월</option>
+                                                <option value="">금월</option>
+                                                <option value="">기간2</option>
+                                                <option value="">기간3</option>
+                                            </select>
+                                            <div class="cal_chk">
+                                                <input type="text" title="검사 예정일" maxlength="20" class="date" value="2020-09-01">
+                                            </div>
+                                        </td>
+
+                                        <th>검사 만료일</th>
+                                        <td>
+                                            <select name="검사 만료일" title="검사 만료일" class="w30p mr10">
+                                                <option disabled selected hidden value="">금월</option>
+                                                <option value="">금월</option>
+                                                <option value="">기간2</option>
+                                                <option value="">기간3</option>
+                                            </select>
+                                            <div class="cal_chk">
+                                                <input type="text" title="검사 만료일" maxlength="20" class="date" value="2020-09-01">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>등록 여부</th>
+                                        <td>
+                                            <div class="input_group w100p">
+                                                <input type="text" class="search" title="등록여부" maxlength="20" value="">
+                                                <button class="search_btn">검색</button>
+                                            </div>
+                                        </td>
+
+                                        <th>차량장비명</th>
+                                        <td>
+                                            <select name="차량장비명" title="차량장비명">
+                                                <option disabled selected hidden value="">선택</option>
+                                                <option value="">선택1</option>
+                                                <option value="">선택2</option>
+                                                <option value="">선택3</option>
+                                            </select>
+                                        </td>
+
+                                        <th>차대번호</th>
+                                        <td>
+                                            <input type="text" title="차대번호" maxlength="20" value="">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>판정 여부</th>
+                                        <td>
+                                            <div class="radio_btn">
+                                                <input type="radio" id="test" name="판정여부" value="all" checked>
+                                                <label for="test"><span></span>전체</label>
+                                            </div>
+                                            <div class="radio_btn">
+                                                <input type="radio" id="test" name="판정여부" value="pass">
+                                                <label for="test"><span></span>합격</label>
+                                            </div>
+                                            <div class="radio_btn">
+                                                <input type="radio" id="test" name="판정여부" value="none_pass">
+                                                <label for="test"><span></span>불합격</label>
+                                            </div>
+                                        </td>
+
+                                        <th>차량장비 상태</th>
+                                        <td colspan="3">
+                                            <div class="chk_box">
+                                                <input type="checkbox" id="all" checked>
+                                                <label for="all"><span></span>전체</label>
+                                            </div>
+                                            <div class="chk_box">
+                                                <input type="checkbox" id="a_normal">
+                                                <label for="a_normal"><span></span>A 정상</label>
+                                            </div>
+                                            <div class="chk_box">
+                                                <input type="checkbox" id="c_check">
+                                                <label for="c_check"><span></span>C 검사대상</label>
+                                            </div>
+                                            <div class="chk_box">
+                                                <input type="checkbox" id="d_cancel">
+                                                <label for="d_cancel"><span></span>D 말소대상(미검사)</label>
+                                            </div>
+                                            <div class="chk_box">
+                                                <input type="checkbox" id="x_cancel">
+                                                <label for="x_cancel"><span></span>X 말소</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>검사 여부</th>
+                                        <td colspan="3">
+                                            <div class="radio_btn">
+                                                <input type="radio" id="test" name="검사여부" value="all">
+                                                <label for="test"><span></span>전체</label>
+                                            </div>
+                                            <div class="radio_btn">
+                                                <input type="radio" id="test" name="검사여부" value="check" checked>
+                                                <label for="test"><span></span>검사</label>
+                                            </div>
+                                            <div class="radio_btn">
+                                                <input type="radio" id="test" name="검사여부" value="none_check">
+                                                <label for="test"><span></span>미검사</label>
+                                            </div>
+                                        </td>
+                                        <td colspan="2" class="pr0">
+                                            <div class="btn_wrap">
+                                                <button type="button" class="btn btn_lg main_btn">조회</button>
+                                                <button type="button" class="btn btn_lg main_bdr">초기화</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="content_box">
+                        <div class="table_type2">
+                            <table>
+                                <caption class="t_indent">차량조회 결과 목록 총 000건</caption>
+                                <colgroup>
+                                    <col width="4%">
+                                    <col width="">
+                                    <col width="5.8%">
+                                    <col width="6.5%">
+                                    <col width="8%">
+                                    <col width="8%">
+                                    <col width="11.1%">
+                                    <col width="11.1%">
+                                    <col width="11.1%">
+                                    <col width="8.9%">
+                                    <col width="7.1%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>소속사</th>
+                                        <th>부서명</th>
+                                        <th>검사구분</th>
+                                        <th>검사예정일</th>
+                                        <th>검사만료일</th>
+                                        <th>등록번호</th>
+                                        <th>차대번호</th>
+                                        <th>차량장비명</th>
+                                        <th>장비상태</th>
+                                        <th>판정여부</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>아이비에스인더스트리</td>
+                                        <td>관리총괄</td>
+                                        <td>정기</td>
+                                        <td>2020-12-12</td>
+                                        <td>2020-12-12</td>
+                                        <td>3TFD34-124t4</td>
+                                        <td>3TFD34-124t4</td>
+                                        <td>ASB CAR/BAGRET</td>
+                                        <td>정상</td>
+                                        <td>합격</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>대한항공</td>
+                                        <td>항공운항</td>
+                                        <td>비정기</td>
+                                        <td>2020-12-12</td>
+                                        <td>2020-12-12</td>
+                                        <td>3TFD34-124t4</td>
+                                        <td>3TFD34-124t4</td>
+                                        <td>ASB CAR/BAGRET</td>
+                                        <td>검사대상</td>
+                                        <td>불합격</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>아시아나에어포트</td>
+                                        <td>항공운항</td>
+                                        <td>정기</td>
+                                        <td>2020-12-12</td>
+                                        <td>2020-12-12</td>
+                                        <td>3TFD34-124t4</td>
+                                        <td>3TFD34-124t4</td>
+                                        <td>ASB CAR/BAGRET</td>
+                                        <td>말소대상</td>
+                                        <td>합격</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>아시아나</td>
+                                        <td>항공운항</td>
+                                        <td>정기</td>
+                                        <td>2020-12-12</td>
+                                        <td>2020-12-12</td>
+                                        <td>3TFD34-124t4</td>
+                                        <td>3TFD34-124t4</td>
+                                        <td>ASB CAR/BAGRET</td>
+                                        <td>정상</td>
+                                        <td>불합격</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>아이비에스인더스트리</td>
+                                        <td>관리총괄</td>
+                                        <td>정기</td>
+                                        <td>2020-12-12</td>
+                                        <td>2020-12-12</td>
+                                        <td>3TFD34-124t4</td>
+                                        <td>3TFD34-124t4</td>
+                                        <td>ASB CAR/BAGRET</td>
+                                        <td>정상</td>
+                                        <td>합격</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>아이비에스인더스트리</td>
+                                        <td>관리총괄</td>
+                                        <td>정기</td>
+                                        <td>2020-12-12</td>
+                                        <td>2020-12-12</td>
+                                        <td>3TFD34-124t4</td>
+                                        <td>3TFD34-124t4</td>
+                                        <td>ASB CAR/BAGRET</td>
+                                        <td>정상</td>
+                                        <td>합격</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>아이비에스인더스트리</td>
+                                        <td>관리총괄</td>
+                                        <td>정기</td>
+                                        <td>2020-12-12</td>
+                                        <td>2020-12-12</td>
+                                        <td>3TFD34-124t4</td>
+                                        <td>3TFD34-124t4</td>
+                                        <td>ASB CAR/BAGRET</td>
+                                        <td>정상</td>
+                                        <td>합격</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>아이비에스인더스트리</td>
+                                        <td>관리총괄</td>
+                                        <td>정기</td>
+                                        <td>2020-12-12</td>
+                                        <td>2020-12-12</td>
+                                        <td>3TFD34-124t4</td>
+                                        <td>3TFD34-124t4</td>
+                                        <td>ASB CAR/BAGRET</td>
+                                        <td>정상</td>
+                                        <td>합격</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>아이비에스인더스트리</td>
+                                        <td>관리총괄</td>
+                                        <td>정기</td>
+                                        <td>2020-12-12</td>
+                                        <td>2020-12-12</td>
+                                        <td>3TFD34-124t4</td>
+                                        <td>3TFD34-124t4</td>
+                                        <td>ASB CAR/BAGRET</td>
+                                        <td>정상</td>
+                                        <td>합격</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>아이비에스인더스트리</td>
+                                        <td>관리총괄</td>
+                                        <td>정기</td>
+                                        <td>2020-12-12</td>
+                                        <td>2020-12-12</td>
+                                        <td>3TFD34-124t4</td>
+                                        <td>3TFD34-124t4</td>
+                                        <td>ASB CAR/BAGRET</td>
+                                        <td>정상</td>
+                                        <td>합격</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11</td>
+                                        <td>아이비에스인더스트리</td>
+                                        <td>관리총괄</td>
+                                        <td>정기</td>
+                                        <td>2020-12-12</td>
+                                        <td>2020-12-12</td>
+                                        <td>3TFD34-124t4</td>
+                                        <td>3TFD34-124t4</td>
+                                        <td>ASB CAR/BAGRET</td>
+                                        <td>정상</td>
+                                        <td>합격</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12</td>
+                                        <td>아이비에스인더스트리</td>
+                                        <td>관리총괄</td>
+                                        <td>정기</td>
+                                        <td>2020-12-12</td>
+                                        <td>2020-12-12</td>
+                                        <td>3TFD34-124t4</td>
+                                        <td>3TFD34-124t4</td>
+                                        <td>ASB CAR/BAGRET</td>
+                                        <td>정상</td>
+                                        <td>합격</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                   
+                    <div class="content_box">
+                        <div class="table_type2">
+                            <table>
+                                <caption class="t_indent">차량조회 결과 목록 총 000건</caption>
+                                <colgroup>
+                                    <col width="4%">
+                                    <col width="">
+                                    <col width="5.8%">
+                                    <col width="6.5%">
+                                    <col width="8%">
+                                    <col width="8%">
+                                    <col width="11.1%">
+                                    <col width="11.1%">
+                                    <col width="11.1%">
+                                    <col width="8.9%">
+                                    <col width="7.1%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>소속사</th>
+                                        <th>부서명</th>
+                                        <th>검사구분</th>
+                                        <th>검사예정일</th>
+                                        <th>검사만료일</th>
+                                        <th>등록번호</th>
+                                        <th>차대번호</th>
+                                        <th>차량장비명</th>
+                                        <th>장비상태</th>
+                                        <th>판정여부</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="paging mt30">
+                        <div class="arrow arrow_first mr5"><a href="#" class="t_indent">첫페이지로</a></div>
+                        <div class="arrow arrow_prev mr20"><a href="#" class="t_indent">이전페이지로</a></div>
+                        <ul>
+                            <li class="num"><a href="#">1</a></li>
+                            <li class="num active"><a href="#">2</a></li>
+                            <li class="num"><a href="#">3</a></li>
+                            <li class="num"><a href="#">4</a></li>
+                            <li class="num"><a href="#">5</a></li>
+                            <li class="num"><a href="#">6</a></li>
+                            <li class="num"><a href="#">7</a></li>
+                            <li class="num"><a href="#">8</a></li>
+                            <li class="num"><a href="#">9</a></li>
+                            <li class="num"><a href="#">10</a></li>
+                        </ul>
+                        <div class="arrow arrow_next ml20"><a href="#" class="t_indent">다음페이지로</a></div>
+                        <div class="arrow arrow_last ml5"><a href="#" class="t_indent">마지막페이지로</a></div>
+                    </div>
+
+                    <div class="tab_list">
+                        <ul>
+                            <li class="active">
+                                <a href="#">차량제원수정</a>
+                                <button type="button" class="t_indent">탭 닫기</button>
+                            </li>
+                            <li>
+                                <a href="#">검사결과등록</a>
+                                <button type="button" class="t_indent">탭 닫기</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab_contents">
+                        <div class="content_box">
+                            <div style="display: block">
+                                <h3 class="t_indent">차량제원수정</h3>
+                                <div class="table_type1">
+                                    <p>소속사 정보</p>
+                                    <table>
+                                        <caption class="t_indent">소속사 정보</caption>
+                                        <colgroup>
+                                            <col width="9.3%">
+                                            <col width="18.1%">
+                                            <col width="9.3%">
+                                            <col width="17.5%">
+                                            <col width="9.3%">
+                                            <col width="13%">
+                                            <col width="9.3%">
+                                            <col width="">
+                                        </colgroup>
+                                        <thead></thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>소속사</th>
+                                                <td>
+                                                    <input type="text" class="mr10 w30p" title="소속사" maxlength="20" value="ABC">
+                                                    <div class="input_group">
+                                                        <input type="text" class="search" title="상세 소속사" maxlength="20" value="영국항공">
+                                                        <button class="search_btn">검색</button>
+                                                    </div>
+                                                </td>
+
+                                                <th>부서명</th>
+                                                <td>
+                                                    <select name="부서명" title="부서명" class="mr10 w46p">
+                                                        <option disabled selected hidden value="">선택</option>
+                                                        <option value="">부서명1</option>
+                                                        <option value="">부서명2</option>
+                                                        <option value="">부서명3</option>
+                                                    </select>
+                                                    <input type="text" class="w46p" title="부서명" maxlength="20" value="">
+                                                </td>
+
+                                                <th>차량장비구분</th>
+                                                <td colspan="3">
+                                                    <select name="차량장비구분" title="차량장비구분">
+                                                        <option value="">승용/승합</option>
+                                                        <option value="">구분2</option>
+                                                        <option value="">구분3</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>차량담당자</th>
+                                                <td>
+                                                    <input type="text" class="" title="차량담당자" maxlength="20" value="홍길동">
+                                                </td>
+
+                                                <th>연락처</th>
+                                                <td>
+                                                    <input type="text" class="" title="연락처" maxlength="20" value="02-2163-2000">
+                                                </td>
+
+                                                <th>차량규모</th>
+                                                <td>
+                                                    <select name="차량규모" title="차량규모" class="">
+                                                        <option disabled selected hidden value="">N/A</option>
+                                                        <option value="">N/A</option>
+                                                        <option value="">규모2</option>
+                                                        <option value="">규모3</option>
+                                                    </select>
+                                                </td>
+
+                                                <th>연번</th>
+                                                <td>
+                                                    <input type="text" class="w50p mr15" title="연번" maxlength="20" value="81"><span class="unit mt10">채번</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="table_type1">
+                                    <p>차량 및 장비정보</p>
+                                    <table>
+                                        <caption class="t_indent">차량 및 장비정보</caption>
+                                        <colgroup>
+                                            <col width="11.7%">
+                                            <col width="12.9%">
+                                            <col width="11.7%">
+                                            <col width="11.4%">
+                                            <col width="10.9%">
+                                            <col width="14.1%">
+                                            <col width="10.9%">
+                                            <col width="">
+                                        </colgroup>
+                                        <thead></thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>이동지역등록번호</th>
+                                                <td>
+                                                    <input type="text" class="" title="이동지역등록번호" maxlength="20" value="">
+                                                </td>
+
+                                                <th>등록일</th>
+                                                <td>
+                                                    <div class="cal_chk w100p">
+                                                        <input type="text" title="등록일" maxlength="20" class="date" value="2020-09-01">
+                                                    </div>
+                                                </td>
+
+                                                <th>동력구분</th>
+                                                <td>
+                                                    <select name="동력구분" title="동력구분">
+                                                        <option value="">휘발유</option>
+                                                        <option value="">구분2</option>
+                                                        <option value="">구분3</option>
+                                                    </select>
+                                                </td>
+
+                                                <th>형식</th>
+                                                <td>
+                                                    <input type="text" class="" title="형식" maxlength="20" value="3TFD34-124t4">
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>차대번호</th>
+                                                <td colspan="3">
+                                                    <input type="text" class="" title="차대번호" maxlength="20" value="3TFD34-124t4">
+                                                </td>
+
+                                                <th>과금선택</th>
+                                                <td>
+                                                    <div class="radio_btn">
+                                                        <input type="radio" id="test" name="과금선택" value="charge" checked>
+                                                        <label for="test"><span></span>과금</label>
+                                                    </div>
+                                                    <div class="radio_btn mr0">
+                                                        <input type="radio" id="test" name="과금선택" value="uncharge">
+                                                        <label for="test"><span></span>비과금</label>
+                                                    </div>
+                                                </td>
+
+                                                <th>년식</th>
+                                                <td>
+                                                    <input type="text" class="" title="년식" maxlength="20" value="1999">
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>차량장비명</th>
+                                                <td colspan="3">
+                                                    <select name="차량장비명" class="" title="차량장비명">
+                                                        <option value="">ASB CAR/BAGRET</option>
+                                                        <option value="">장비명2</option>
+                                                        <option value="">장비명3</option>
+                                                    </select>
+                                                </td>
+
+                                                <th rowspan="2">비고</th>
+                                                <td rowspan="2" colspan="3">
+                                                    <textarea rows="3">시도등록차량 12235789 불법차량개조 말소이유 변동사항</textarea>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>용도</th>
+                                                <td>
+                                                    <select name="용도" class="" title="용도">
+                                                        <option value="">화물견인용</option>
+                                                        <option value="">용도2</option>
+                                                        <option value="">용도3</option>
+                                                    </select>
+                                                </td>
+
+                                                <th>차륜수</th>
+                                                <td>
+                                                    <select name="차륜수" class="" title="차륜수">
+                                                        <option value="">2륜</option>
+                                                        <option value="">차륜수2</option>
+                                                        <option value="">차륜수3</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <table class="mt10">
+                                        <caption class="t_indent">차량 및 장비정보</caption>
+                                        <colgroup>
+                                            <col width="11.7%">
+                                            <col width="14.1%">
+                                            <col width="11.7%">
+                                            <col width="12.9%">
+                                            <col width="10.9%">
+                                            <col width="">
+                                            <col width="10.9%">
+                                            <col width="">
+                                        </colgroup>
+                                        <thead></thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>원동기번호</th>
+                                                <td>
+                                                    <input type="text" class="" title="원동기번호" maxlength="20" value="1234AGFE">
+                                                </td>
+
+                                                <th>모델명</th>
+                                                <td>
+                                                    <input type="text" class="" title="모델명" maxlength="20" value="1234AGFE">
+                                                </td>
+
+                                                <th>차량중량</th>
+                                                <td>
+                                                    <input type="text" class="w70p mr5" title="차량중량" maxlength="20" value="4,200"><span class="unit mt5">kg</span>
+                                                </td>
+
+                                                <th>총배기량</th>
+                                                <td>
+                                                    <input type="text" class="w70p mr5" title="총배기량" maxlength="20" value="10"><span class="unit mt5">cc</span>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>제작사</th>
+                                                <td>
+                                                    <input type="text" class="" title="제작사" maxlength="20" value="TOYOTA">
+                                                </td>
+
+                                                <th>제작일</th>
+                                                <td>
+                                                    <div class="cal_chk w100p">
+                                                        <input type="text" title="제작일" maxlength="20" class="date" value="2020-09-01">
+                                                    </div>
+                                                </td>
+
+                                                <th>차량총중량</th>
+                                                <td>
+                                                    <input type="text" class="w70p mr5" title="차량총중량" maxlength="20" value="4,200"><span class="unit mt5">kg</span>
+                                                </td>
+
+                                                <th>길이</th>
+                                                <td>
+                                                    <input type="text" class="w70p mr5" title="길이" maxlength="20" value="3,000"><span class="unit mt5">mm</span>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>시도등록여부</th>
+                                                <td>
+                                                    <div class="radio_btn">
+                                                        <input type="radio" id="test" name="시도등록여부" value="register" checked>
+                                                        <label for="test"><span></span>등록</label>
+                                                    </div>
+                                                    <div class="radio_btn mr0">
+                                                        <input type="radio" id="test" name="시도등록여부" value="unregister">
+                                                        <label for="test"><span></span>미등록</label>
+                                                    </div>
+                                                </td>
+
+                                                <th>시도등록번호</th>
+                                                <td>
+                                                    <input type="text" class="" title="시도등록번호" maxlength="20" value="1234AGFE">
+                                                </td>
+
+                                                <th>최대 적재량</th>
+                                                <td>
+                                                    <input type="text" class="w70p mr5" title="최대 적재량" maxlength="20" value="10"><span class="unit mt5">kg</span>
+                                                </td>
+
+                                                <th>폭</th>
+                                                <td>
+                                                    <input type="text" class="w70p mr5" title="폭" maxlength="20" value="1,000"><span class="unit mt5">mm</span>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>시도등록일자</th>
+                                                <td>
+                                                    <div class="cal_chk w100p">
+                                                        <input type="text" title="시도등록일자" maxlength="20" class="date" value="2020-09-01">
+                                                    </div>
+                                                </td>
+
+                                                <th>연계ID</th>
+                                                <td>
+                                                    <input type="text" class="" title="연계ID" maxlength="20" value="1234AGFE">
+                                                </td>
+
+                                                <th>승차정원</th>
+                                                <td>
+                                                    <input type="text" class="w70p mr5" title="승차정원" maxlength="20" value="0"><span class="unit mt5">kg</span>
+                                                </td>
+
+                                                <th>높이</th>
+                                                <td>
+                                                    <input type="text" class="w70p mr5" title="높이" maxlength="20" value="1,000"><span class="unit mt5">mm</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="table_type1 w50p">
+                                    <p>안전도 검사 정보</p>
+                                    <table>
+                                        <caption class="t_indent">안전도 검사 정보</caption>
+                                        <colgroup>
+                                            <col width="23.2%">
+                                            <col width="">
+                                            <col width="23.2%">
+                                            <col width="">
+                                        </colgroup>
+                                        <thead></thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>신규검사일자</th>
+                                                <td>
+                                                    <div class="cal_chk w100p">
+                                                        <input type="text" title="신규검사일자" maxlength="20" class="date" value="2020-09-01">
+                                                    </div>
+                                                </td>
+
+                                                <th>검사만료일자</th>
+                                                <td>
+                                                    <div class="cal_chk w100p">
+                                                        <input type="text" title="검사만료일자" maxlength="20" class="date" value="2020-09-01">
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>최종검사일자</th>
+                                                <td>
+                                                    <div class="cal_chk w100p">
+                                                        <input type="text" title="최종검사일자" maxlength="20" class="date" value="2020-09-01">
+                                                    </div>
+                                                </td>
+
+                                                <th>검사대상여부</th>
+                                                <td>
+                                                    <div class="radio_btn">
+                                                        <input type="radio" id="test" name="검사대상여부" value="subject" checked>
+                                                        <label for="test"><span></span>대상</label>
+                                                    </div>
+                                                    <div class="radio_btn mr0">
+                                                        <input type="radio" id="test" name="검사대상여부" value="none_subject">
+                                                        <label for="test"><span></span>비대상</label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="table_type1 w50p">
+                                    <p>상태 정보</p>
+                                    <table>
+                                        <caption class="t_indent">상태 정보</caption>
+                                        <colgroup>
+                                            <col width="23.2%">
+                                            <col width="">
+                                            <col width="23.2%">
+                                            <col width="">
+                                        </colgroup>
+                                        <thead></thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>신규검사일자</th>
+                                                <td>
+                                                    <div class="cal_chk w100p">
+                                                        <input type="text" title="신규검사일자" maxlength="20" class="date" value="2020-09-01">
+                                                    </div>
+                                                </td>
+
+                                                <th>차량장비상태</th>
+                                                <td>
+                                                    <select name="차량장비상태" class="" title="차량장비상태">
+                                                        <option value="">정상</option>
+                                                        <option value="">상태2</option>
+                                                        <option value="">상태3</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>말소사유</th>
+                                                <td colspan="3">
+                                                    <input type="text" class="" title="말소사유" maxlength="20" value="취득면허원동기번호">
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>반입일자</th>
+                                                <td>
+                                                    <div class="cal_chk w100p">
+                                                        <input type="text" title="반입일자" maxlength="20" class="date" value="2020-09-01">
+                                                    </div>
+                                                </td>
+
+                                                <th>반출일자</th>
+                                                <td>
+                                                    <div class="cal_chk w100p">
+                                                        <input type="text" title="반출일자" maxlength="20" class="date" value="2020-09-01">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            
+                                <div class="add_photo">
+                                   <div class="sub_title">
+                                        <p class="p0">사진첨부</p>
+                                        <button type="button" class="btn btn_lg main_bdr icon_btn"><i class="file"></i>사진첨부</button>
+                                    </div>
+                                    <div class="relative">
+                                        <div class="swiper-container img_wrap">
+                                            <div class="swiper-wrapper img_list">
+                                                <div class="swiper-slide slide">
+                                                    <a href="#">
+                                                        <img src="../images/test.png" alt="첨부사진이름1">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide slide">
+                                                    <a href="#">
+                                                        <img src="../images/test2.png" alt="첨부사진이름2">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide slide">
+                                                    <a href="#">
+                                                        <img src="../images/test3.png" alt="첨부사진이름3">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide slide">
+                                                    <a href="#">
+                                                        <img src="../images/test4.png" alt="첨부사진이름4">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide slide">
+                                                    <a href="#">
+                                                        <img src="../images/test5.png" alt="첨부사진이름5">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide slide">
+                                                    <a href="#">
+                                                        <img src="../images/test6.png" alt="첨부사진이름6">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide slide">
+                                                    <a href="#">
+                                                        <img src="../images/test7.png" alt="첨부사진이름7">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide slide">
+                                                    <a href="#">
+                                                        <img src="../images/test8.png" alt="첨부사진이름8">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide slide">
+                                                    <a href="#">
+                                                        <img src="../images/test9.png" alt="첨부사진이름9">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide slide">
+                                                    <a href="#">
+                                                        <img src="../images/test10.png" alt="첨부사진이름10">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide slide">
+                                                    <a href="#">
+                                                        <img src="../images/test11.png" alt="첨부사진이름11">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide slide">
+                                                    <a href="#">
+                                                        <img src="../images/test12.png" alt="첨부사진이름12">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-button-prev prev_btn arrow_btn"></div>
+                                        <div class="swiper-button-next next_btn arrow_btn"></div>
+                                    </div>
+                                </div>
+                                
+                                <script>
+                                    var swiper = new Swiper(".img_wrap",{
+                                        slidesPerView: 5,
+                                        spaceBetween: 20,
+                                        navigation: {
+                                            nextEl: ".swiper-button-next",
+                                            prevEl: ".swiper-button-prev",
+                                        },
+                                    });
+                                </script>
+
+                                <div class="add_file w50p">
+                                    <div class="sub_title">
+                                        <p class="p0">파일첨부</p>
+                                        <button type="button" class="btn btn_lg main_bdr icon_btn"><i class="confirm"></i>파일첨부</button>
+                                    </div>
+                                    <div class="table_type2">
+                                        <table>
+                                            <caption class="t_indent">파일첨부</caption>
+                                            <colgroup>
+                                                <col width="8.2%">
+                                                <col width="">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>No</th>
+                                                    <th>No</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Abcdef.pdf</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>Grefd.pdf</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>Grefd.pdf</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>Grefd.pdf</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="table_type2">
+                                    <p>안전도 검사 내역</p>
+                                    <table class="mb15">
+                                        <caption class="t_indent">안전도 검사 내역</caption>
+                                        <colgroup>
+                                            <col width="9.3%">
+                                            <col width="12.5%">
+                                            <col width="12.5%">
+                                            <col width="">
+                                            <col width="9.8%">
+                                            <col width="9.8%">
+                                            <col width="13.3%">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>검사일자</th>
+                                                <th>검사만료일자</th>
+                                                <th>검사기관</th>
+                                                <th>구분</th>
+                                                <th>판정</th>
+                                                <th>비고</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>2020-01-31</td>
+                                                <td>2019-01-29</td>
+                                                <td>한국공항(주)</td>
+                                                <td>신규</td>
+                                                <td>합격</td>
+                                                <td></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>2</td>
+                                                <td>2020-01-31</td>
+                                                <td>2019-01-29</td>
+                                                <td>아시아나에어포트(주)</td>
+                                                <td>신규</td>
+                                                <td>합격</td>
+                                                <td></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>3</td>
+                                                <td>2020-01-31</td>
+                                                <td>2019-01-29</td>
+                                                <td>한국공항(주)</td>
+                                                <td>신규</td>
+                                                <td>합격</td>
+                                                <td></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>4</td>
+                                                <td>2020-01-31</td>
+                                                <td>2019-01-29</td>
+                                                <td>아시아나에어포트(주)</td>
+                                                <td>신규</td>
+                                                <td>합격</td>
+                                                <td></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>5</td>
+                                                <td>2020-01-31</td>
+                                                <td>2019-01-29</td>
+                                                <td>한국공항(주)</td>
+                                                <td>신규</td>
+                                                <td>합격</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="buttons_wrap">
+                                        <button type="button" class="btn btn_lg main_bdr">신규검사결과등록</button>
+                                        <button type="button" class="btn btn_lg main_btn">저장</button>
+                                        <button type="button" class="btn btn_lg red_btn">닫기</button>
+                                    </div>
+                                </div>
+
+                                <div class="table_type1 results_table">
+                                    <table class="mt15 mb10">
+                                        <caption class="t_indent">종합검사결과 검사결과 검사 확인자</caption>
+                                        <colgroup>
+                                            <col width="17.6%">
+                                            <col width="">
+                                            <col width="19.3%">
+                                            <col width="27.8%">
+                                        </colgroup>
+                                        <thead></thead>
+                                        <tbody>
+                                            <tr>
+                                                <th rowspan="2">종합<br>검사결과</th>
+                                                <td rowspan="2"></td>
+
+                                                <th>검사결과</th>
+                                                <td>
+                                                    <div class="radio_btn">
+                                                        <input type="radio" id="test" name="검사결과" value="pass" checked>
+                                                        <label for="test"><span></span>합격</label>
+                                                    </div>
+                                                    <div class="radio_btn mr0">
+                                                        <input type="radio" id="test" name="검사결과" value="none_pass">
+                                                        <label for="test"><span></span>불합격</label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>검사 확인자</th>
+                                                <td>
+                                                    <span class="fr">(인)</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="btn_wrap">
+                                        <button type="button" class="btn btn_lg main_btn">저장</button>
+                                        <button type="button" class="btn btn_lg main_bdr">출력</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="t_indent">검사결과등록</h3>
+                                <p>검사결과등록</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

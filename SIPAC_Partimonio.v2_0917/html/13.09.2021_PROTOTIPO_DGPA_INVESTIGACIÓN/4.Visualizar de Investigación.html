@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>SIPAC-작업중</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- js,css files -->
+    <!-- css -->
+    <link type="text/css" rel="stylesheet" href="../../plugins/MDB/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="../../plugins/datepicker/css/bootstrap-datetimepicker.min.css">
+    <link type="text/css" rel="stylesheet" href="../../plugins/datatables/dataTables.bootstrap4.css">
+    <!--slick slide CSS_main slide-->
+    <link type="text/css" rel="stylesheet" href="../../plugins/slick/slick.css">
+    <link type="text/css" rel="stylesheet" href="../../css/common.css">
+    <link type="text/css" rel="stylesheet" href="../../js/c3-0.6.12/c3.css">
+
+    <link rel="shortcut icon" href="../../images/favicon2.ico">
+
+    <script type="text/javascript" src="../../js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../../plugins/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../plugins/totemticker/jquery.totemticker.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="../../plugins/MDB/js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="../../plugins/MDB/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../plugins/datepicker/js/moment.min.js"></script>
+    <script type="text/javascript" src="../../plugins/datepicker/js/bootstrap-datetimepicker.min.js"></script>
+    <!-- Datatables -->
+    <script type="text/javascript" src="../../plugins/datatables/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="../../plugins/jquery-slimScroll-1.3.8/jquery.slimscroll.js"></script>
+    <!-- Slick slider -->
+    <script type="text/javascript" src="../../plugins/slick/slick.min.js"></script>
+
+    <script type="text/javascript" src="../../plugins/fixto/fixto.min.js"></script>
+    <!-- D3.js Chart Library-->
+    <script type="text/javascript" src="../../js/d3/d3.min.js"></script>
+    <script type="text/javascript" src="../../js/c3-0.6.12/c3.min.js"></script>
+
+    <!-- develop common js -->
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <script type="text/javascript" src="../../js/commonUtil.js"></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div id="headerWrap" class="clf">
+        <div class="header_t">
+            <h1 id="logo">
+                <a href="../0_메인,로그인/메인.html">SIPAC – Sistema de Registro Integrado del Patrimonio Cultural Peruano</a>
+            </h1>
+            <div id="headerOption">
+                <div id="bellBtnWrap" class="layerTooltipBtn" data-layer-tool-tip="notiTooltip"><a href="javascript:void(0);"><i class="xi-bell-o"></i><span id="alertTotalCnt">99+</span></a></div>
+                <button id="logoutBtnWrap" class="ml20"><i class="xi-log-out"></i> Cerrar sesión</button>
+            </div>
+        </div>
+
+        <ul id="nav" class="clf">
+            <li><a href="">Patrimonio Mueble</a></li>
+            <li><a href="">Patriomonio Immueble Histórico</a></li>
+            <li><a href="" class="active">Patrimonio Arqueológico</a></li>
+            <li><a href="">SIG</a></li>
+            <li><a href="">Plataforma Externa</a></li>
+            <li><a href="">Gestión Electrónica(DCS)</a></li>
+            <li><a href="">Gestión de Sistema</a></li>
+        </ul>
+    </div>
+    <!-- //HEADER -->
+    <div id="breadCrumbWrap" class="clf">
+        <ul class="clf">
+            <li><i class="xi-home" style="color:#717171"></i></li>
+            <li>Patrimonio Arqueológico</li>
+            <li>DPGA</li>
+            <li>INVESTIGACIÓN EN PATRIMONIO INMUEBLE PREHISPÁNICO</li>
+            <li class="active">BÚSQUEDA INVESTIGACIÓN</li>
+        </ul>
+    </div>
+    <!-- wrapper -->
+    <div id="wrapper">
+        <!-- SIDEBAR -->
+        <div id="sideBarWrap">
+            <div class="profile-wrap">
+                <div class="profile-name"><i class="xi-profile"></i><span>Juan diego flor</span></div>
+                <div class="profile-btn">
+                    <a href="#none" class="btn1"><i class="xi-document"></i> Mi Página</a>
+                    <a href="#none" class="btn2"><i class="xi-star"></i> Favoritos</a>
+                </div>
+            </div>
+            <ul id="sideNavWrap">
+                <li><a href="#none">Búsqueda</a></li>
+                <li>
+                    <a href="#none">DSFL<i class="xi-angle-right-min"></i></a>
+                    <ul>
+                        <li><a href="#none">Registro</a></li>
+                        <li><a href="#none">Fichas para imprimir</a></li>
+                        <li><a href="#none">Historial</a></li>
+                        <li><a href="#none">Repositorio</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#none">DCIA<i class="xi-angle-right-min"></i></a>
+                    <ul>
+                        <li><a href="#none">Registro</a></li>
+                        <li><a href="#none">Historial</a></li>
+                        <li><a href="#none">Reporte</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#none">DMO<i class="xi-angle-right-min"></i></a>
+                    <ul>
+                        <li><a href="#none">Registro</a></li>
+                        <li><a href="#none">Historial</a></li>
+                        <li><a href="#none">Reporte</a></li>
+                    </ul>
+                </li>
+                <li class="on">
+                    <a href="#none">DPGA<i class="xi-angle-right-min"></i></a>
+                    <ul>
+                        <li><a href="#none">RESOLUCIÓN DE DECLARATORIA</a></li>
+                        <li><a href="#none">RETIRO DE CONDICIÓN</a></li>
+                        <li>
+                            <a href="#none" class="on">INVESTIGACIÓN EN PATRIMONIO INMUEBLE PREHISPÁNICO</a>
+                            <p>
+                                <a href="#none">NUEVO INVESTIGACIÓN</a>
+                                <a href="#none" class="on">BÚSQUEDA INVESTIGACIÓN</a>
+                            </p>
+                        </li>
+                        <li><a href="#none">ESTADÍSTICAS</a></li>
+                    </ul>
+                </li>
+                <li><a href="#none">DOCUMENTACIÓN</a></li>
+                <li><a href="#none">VISUALIZACIÓN DE FICHA EXTERNA</a></li>
+                <li><a href="#none">Mantenimineto</a></li>
+            </ul>
+            <script>
+                $('#sideNavWrap > li > a').on('click', function() {
+                    if ($(this).parent().hasClass('on')) {
+                        $(this).parent().removeClass('on');
+                    } else {
+                        $('#sideNavWrap > li').removeClass('on');
+                        $(this).parent().addClass('on');
+                    }
+                });
+            </script>
+        </div>
+        <!-- SIDEBAR -->
+        <div id="contentsWrap" class="clf">
+            <div class="ContentsHeader">
+                <h2 class="title">VISUALIZAR DE INVESTIGACIÓN EN PATRIMONIO INMUEBLE PREHISPÁNICO</h2>
+            </div>
+            <!-- cont -->
+            <div class="cont">
+                <!--tableWrap-->
+                <div class="tableWrap">
+                    <div class="tabConWrap mt">
+                        <div class="titleWrap">
+                            <i class="xi-list xi-angle-up-min"></i>
+                            <span>PATRIMONIO INMUEBLE PREHISPÁNICO</span>
+                            <i class="tabConXi xi-angle-up-min"></i>
+                        </div>
+                        <div class="tableWrap clf on " style="display: block;">
+                            <table class="td_border_r center">
+                                <thead>
+                                    <tr>
+                                        <th>Nº</th>
+                                        <th>Imagen</th>
+                                        <th>Nº Inscripción</th>
+                                        <th>Código de Registro Nacional</th>
+                                        <th>Clasificación específica</th>
+                                        <th>Nombre</th>
+                                        <th>Ubicación política</th>
+                                        <th>Acción</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>
+                                            <b class="imgThum2 mg_center">
+                                                <u>
+                                                    <i class="xi-image-o"></i>
+                                                    No image
+                                                </u>
+                                            </b>
+                                        </td>
+                                        <td>0000000157</td>
+                                        <td>BC-ARQ-0000000157</td>
+                                        <td>Zona Monumento</td>
+                                        <td>LA PAMPA DE HUAMACHUCO</td>
+                                        <td>LIMA-LIMA-LIMA</td>
+                                        <td>
+                                            <div class="dt-list-control">
+                                                <span class="dt-list-edit"><i class="xi-search"></i></span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>
+                                            <b class="imgThum2 mg_center">
+                                                <i><img src="../../images/new_f_select2_5.jpg" alt=""></i>
+                                            </b>
+                                        </td>
+                                        <td>0000000157</td>
+                                        <td>BC-ARQ-0000000157</td>
+                                        <td>Zona Monumento</td>
+                                        <td>LA PAMPA DE HUAMACHUCO</td>
+                                        <td>LIMA-LIMA-LIMA</td>
+                                        <td>
+                                            <div class="dt-list-control">
+                                                <span class="dt-list-edit"><i class="xi-search"></i></span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tabConWrap mt">
+                        <div class="titleWrap">
+                            <i class="xi-list xi-angle-up-min"></i>
+                            <span>DATOS DE INVESTIGACIÓN</span>
+                            <i class="tabConXi xi-angle-up-min"></i>
+                        </div>
+                        <div class="tableWrap clf on " style="display: block;">
+                            <table class="td_border_r">
+                                <colgroup>
+                                    <col width="180">
+                                    <col width="">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>Tipo de investigación<span>*</span></th>
+                                        <td>Ponencias</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="td_border_r mt10">
+                                <colgroup>
+                                    <col width="180">
+                                    <col width="">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>Nombre de proyecto<span>*</span></th>
+                                        <td>SAMPLE DATA</td>
+                                    </tr>
+                                    <tr>
+                                        <th>N° de Resolución de autorización<span>*</span></th>
+                                        <td>ABC-12345</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Título</th>
+                                        <td>SAMPLE DATA</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Autores</th>
+                                        <td>Autores1, Autores2, Autores3, Autores4</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="td_border_r mt10">
+                                <colgroup>
+                                    <col width="180">
+                                    <col width="">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>Palabras claves</th>
+                                        <td>Textual</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Organizado por</th>
+                                        <td>Textual</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Paticipó en el CNA </th>
+                                        <td>SI</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Edición de CNA</th>
+                                        <td>Seleccione DATA</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Ubicación política</th>
+                                        <td>LIMA – LIMA – LIMA</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Filiación Cronológica </th>
+                                        <td>Horizonte Medio, Horizonte Tardío</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Fecha</th>
+                                        <td>13/09/2021</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Enlace a la ponencia </th>
+                                        <td><a href="#">http://test.com</a><br><a href="#">http://test.net</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //wrapper -->
+
+    <!-- footer-wrap -->
+    <div id="footer-wrap">
+        <div class="footer">
+            <!-- <div class="footer-img"><img src="/images/footer_logo.png" alt=""></div> -->
+            <div class="footer-text">SIPAC</div>
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="javascript:void(0);">Notificaciones</a></li>
+                    <li><a href="javascript:void(0);">Sugerencia</a></li>
+                    <li><a href="javascript:void(0);">Manual de usuario</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-center"><img src="/images/koica_logo.png" alt=""></div>
+            <div class="footer-address">
+                Sede Central: Av. Javier Prado Este 2465<br>
+                San Borja, Lima 41 Perú<br>
+                Central Telefónica: 511-6189393
+            </div>
+        </div>
+    </div>
+    <!-- //footer-wrap -->
+
+</body>
+<script src="../../js/commonPublish.js"></script>
+
+</html>

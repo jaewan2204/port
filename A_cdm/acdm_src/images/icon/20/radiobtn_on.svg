@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/32/radiobtn_off</title>
+    <g id="icon/32/radiobtn_off" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" x="0" y="0" width="32" height="32"></rect>
+        <g id="Group" transform="translate(5.000000, 5.000000)">
+            <rect id="Rectangle" stroke="#1A51BE" stroke-width="1.8" fill="#1A51BE" x="0" y="0" width="22" height="22" rx="11"></rect>
+            <path d="M9.39141088,14.6420153 L5.71163185,10.7831726 C5.42212906,10.5038025 5.43067139,10.0684534 5.73095406,9.79844038 C6.03123672,9.52842738 6.51539047,9.52074615 6.82607921,9.78106593 L9.94863456,13.1388554 L15.1739208,7.89029853 C15.4846095,7.62997876 15.9687633,7.63765998 16.2690459,7.90767299 C16.5693286,8.17768599 16.5778709,8.61303515 16.2883681,8.89240525 L10.5058582,14.6420153 C10.3581232,14.7750237 10.1576937,14.8498345 9.94863456,14.85 C9.73957543,14.8498345 9.53914597,14.7750237 9.39141088,14.6420153 Z" id="Shape" stroke="#FFFFFF" stroke-width="0.55" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>

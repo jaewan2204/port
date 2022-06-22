@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>인천국제공항 상황관리 협업플랫폼 및 이동지역 차량관리시스템 구축사업</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link type="text/css" rel="stylesheet" href="../css/style.css">
+    <link type="text/css" rel="stylesheet" href="../plugin/swiper-4.5.1/swiper.css">
+    <link type="text/css" rel="stylesheet" href="../plugin/datepicker-1.0.10/datepicker.css">
+    <!-- js -->
+    <script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../js/pub_js.js"></script>
+    <script type="text/javascript" src="../plugin/swiper-4.5.1/swiper.js"></script>
+    <script type="text/javascript" src="../plugin/slimScroll/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="../plugin/datepicker-1.0.10/datepicker.js"></script>
+</head>
+
+<body>
+    <!-- AVMS_LO 페이지 .login 추가 -->
+    <div class="wrapper login">
+       <div class="loding_wrap">
+           <div class="loding"></div>
+           <div class="circle"></div>
+       </div>
+        <div class="header">
+            <div class="header_top">
+                <div class="header_inner">
+                    <h1>
+                        <a href="#"><img src="../images/img/logo_header.png" alt="Incheon Airport"></a>
+                        <div class="header_text">상황관리 <span>협업플랫폼</span></div>
+                    </h1>
+                    <div class="header_util">
+                        <p>홍길동(인천공항공사)</p>
+                        <button type="button">로그아웃</button>
+                        <button type="button" class="menu_btn">메뉴열기</button>
+                    </div>
+                </div>
+            </div>
+            <div class="header_bot">
+                <div class="gnb">
+                    <ul>
+                        <li><a href="#" class="active">상황</a></li>
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">통계</a></li>
+                        <li><a href="#">매뉴얼</a></li>
+                        <li><a href="#">전화번호</a></li>
+                        <li><a href="#">당직관리</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="m_header">
+            <a href="javascript:window.history.back();" class="util back" title="뒤로가기"><img src="../images/icon/page/arrow_left_24.png"></a>
+            <h1>회원가입</h1>
+            <div class="util">
+                <button class="menu">메뉴</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="content_wrap">
+                <div class="content_inner">
+                    <div class="join_contents join_area">
+                        <div class="content_title pc_content">
+                            <h2>회원가입</h2>
+                        </div>
+                        <div class="content_box">
+                            <div class="join_process">
+                                <ul>
+                                    <li class="active">
+                                        <a href="#">
+                                            <i class="consent_icon"></i>
+                                            <p><span>STEP 01</span>이용약관</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="member_icon"></i>
+                                            <p><span>STEP 02</span>회원정보 입력</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="completion_icon"></i>
+                                            <p><span>STEP 03</span>회원가입 완료</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="join_tab">
+                                <div class="policy_content">
+                                    <h3 class="t_indent">이용약관 동의</h3>
+                                    <div class="agree_group">
+                                        <p>이용약관</p>
+                                        <div class="chk_box">
+                                            <input type="checkbox" id="agree" checked>
+                                            <label for="agree"><span></span>동의</label>
+                                        </div>
+                                    </div>
+                                    <div class="policy">
+                                        <textarea rows="5" title="이용약관" readonly>이동지역 차량관리시스템의 이용약관 텍스트가 들어가는 자리입니다. 이동지역 차량관리시스템의 이용약관 텍스트가 들어가는 자리입니다. 이동지역 차량관리시스템의 이용약관 텍스트가 들어가는 자리입니다. 이동지역 차량관리시스템의 이용약관 텍스트가 들어가는 자리입니다. 이동지역 차량관리시스템의 이용약관 텍스트가 들어가는 자리입니다. 이동지역 차량관리시스템의 이용약관 텍스트가 들어가는 자리입니다. 이동지역 차량관리시스템의 이용약관 텍스트가 들어가는 자리입니다. 이동지역 차량관리시스템의 이용약관 텍스트가 들어가는 자리입니다. 이동지역 차량관리시스템의 이용약관 텍스트가 들어가는 자리입니다. 이동지역 차량관리시스템의 이용약관 텍스트가 들어가는 자리입니다. </textarea>
+                                    </div>
+
+                                    <div class="agree_group">
+                                        <p>개인정보 수집・이용 동의서</p>
+                                        <div class="chk_box">
+                                            <input type="checkbox" id="agree" checked>
+                                            <label for="agree"><span></span>동의</label>
+                                        </div>
+                                    </div>
+                                    <div class="policy">
+                                        <textarea rows="5" title="개인정보 수집・이용 동의서" readonly>이동지역 차량관리시스템의 개인정보 수집 및 이용 동의서 텍스트가 들어가는 자리입니다. 이동지역 차량관리시스템의 개인정보 수집 및 이용 동의서 텍스트가 들어가는 자리입니다. 이동지역 차량관리시스템의 개인정보 수집 및 이용 동의서 텍스트가 들어가는 자리입니다. 이동지역 차량관리시스템의 개인정보 수집 및 이용 동의서 텍스트가 들어가는 자리입니다. 이동지역 차량관리시스템의 개인정보 수집 및 이용 동의서 텍스트가 들어가는 자리입니다. 이동지역 차량관리시스템의 개인정보 수집 및 이용 동의서 텍스트가 들어가는 자리입니다. 이동지역 차량관리시스템의 개인정보 수집 및 이용 동의서 텍스트가 들어가는 자리입니다. 이동지역 차량관리시스템의 개인정보 수집 및 이용 동의서 텍스트가 들어가는 자리입니다. 이동지역 차량관리시스템의 개인정보 수집 및 이용 동의서 텍스트가 들어가는 자리입니다. </textarea>
+                                    </div>
+
+                                    <div class="agree_group">
+                                        <div class="w80p">
+                                            <p class="mb10">정보 보호 서약서</p>
+                                            <p class="ex">인천국제공항공사(이하 ＂공사＂라 함)에 직.간접적으로 근무하는 모든 인원들은 아래의 보안사항을 준수할 것을 입증하는 서약서에 서명해야 합니다.<br>본 서약서의 내용은 회사에 근무하는 기간뿐만 아니라, 퇴직 후에도 동일하게 적용됨을 인식하고 서명하기 전에 반드시 숙독해 주시기 바랍니다.</p>
+                                        </div>
+                                        <div class="chk_box">
+                                            <input type="checkbox" id="agree">
+                                            <label for="agree"><span></span>동의</label>
+                                        </div>
+                                    </div>
+                                    <div class="policy mb0">
+                                        <textarea rows="5" title="정보 보호 서약서" readonly>이동지역 차량관리시스템의 정보 보호 서약서 텍스트가 들어가는 자리입니다. 이동지역 차량관리시스템의 정보 보호 서약서 텍스트가 들어가는 자리입니다. 이동지역 차량관리시스템의 정보 보호 서약서 텍스트가 들어가는 자리입니다. 이동지역 차량관리시스템의 정보 보호 서약서 텍스트가 들어가는 자리입니다. 이동지역 차량관리시스템의 정보 보호 서약서 텍스트가 들어가는 자리입니다. 이동지역 차량관리시스템의 정보 보호 서약서 텍스트가 들어가는 자리입니다. 이동지역 차량관리시스템의 정보 보호 서약서 텍스트가 들어가는 자리입니다. 이동지역 차량관리시스템의 정보 보호 서약서 텍스트가 들어가는 자리입니다. 이동지역 차량관리시스템의 정보 보호 서약서 텍스트가 들어가는 자리입니다. 이동지역 차량관리시스템의 정보 보호 서약서 텍스트가 들어가는 자리입니다.</textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tac mt30 two">
+                            <button type="button" class="btn btn_lg main_bdr">취소</button>
+                            <button type="button" class="btn btn_lg main_btn mr0">확인</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <div class="footer_inner">
+                        <div class="fnb">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        홈
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        이용약관
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        개인정보처리방침
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        항공안전신고
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        저작권보호정책
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        이메일 주소 무단수집 거부
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        시각장애인 이용안내
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <label for="family_site" class="label_hide">관련사이트선택</label>
+                        <select name="검사 구분" title="관련사이트" id="family_site" class="family_site">
+                            <option disabled selected hidden value="">관련사이트</option>
+                            <option value="">사이트1</option>
+                            <option value="">사이트2</option>
+                            <option value="">사이트3</option>
+                        </select>
+                        <div class="call">
+                            <div class="footer_logo">
+                                <img src="../images/img/logo_white.png" alt="Incheon Airport">
+                            </div>
+                            <p>통합 관리팀<span>032-000-0000</span></p>
+                        </div>
+                        <div class="address">
+                            <ul>
+                                <li>인천국제공항 제1여객터미널 - 22382 인천시 중구 공항로 272</li>
+                                <li>인천국제공항 제2여객터미널 - 22382 인천시 중구 제2터미널대로 446</li>
+                                <li class="blk">인천국제공항사 - 22382 인천시 중구 공항로 424번길 47</li>
+                            </ul>
+                        </div>
+                        <div class="copyright">
+                            <p>Copyright Incheon International Airport Corporation. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

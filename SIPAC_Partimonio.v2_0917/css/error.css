@@ -1,0 +1,11 @@
+@charset "UTF-8";
+.error {background: #f2f2f2;}
+.errorWrap{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%); margin:0 auto; width:50%; min-width:500px; background: #fff; box-shadow: 0 10px 10px rgba(0,0,0,0.2);}
+.errorWrap .errorHeader {height:40px; line-height:40px !important; padding-left:30px; background:#414141; color:#fff; font:bold 18px 'notokr'; vertical-align: middle;}
+.errorWrap .errorHeader:before{clear:both; display:inline-block; content:''; width:25px; height:25px; margin-right:10px; vertical-align: middle; background:url("../images/peru_logo.png") 50% 50% no-repeat;}
+.errorWrap h2 {padding:30px 30px 15px 30px; color:#d53337}
+.errorWrap h2 i {font-size:25px; margin:0 5px 0 0}
+.errorWrap h2 span {font-size:28px; font-weight:bold}
+.errorWrap .errorMsg {padding:5px 30px 30px 30px; word-break:break-word; font:13px 'notokr'}
+.errorWrap .errorBack {width:100%; outline:none; border:none; background:#e1e1e1; height:50px; background:#e1e1e1; font-size:15px; font-weight:bold; transition:.3s ease-out;}
+.errorWrap .errorBack:hover {background:#d53337; color:#fff;}

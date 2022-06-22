@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>인천국제공항 상황관리 협업플랫폼 및 이동지역 차량관리시스템 구축사업</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link type="text/css" rel="stylesheet" href="../css/style.css">
+    <link type="text/css" rel="stylesheet" href="../plugin/swiper-4.5.1/swiper.css">
+    <link type="text/css" rel="stylesheet" href="../plugin/datepicker-1.0.10/datepicker.css">
+    <!-- js -->
+    <script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="../js/pub_js.js"></script>
+    <script type="text/javascript" src="../plugin/swiper-4.5.1/swiper.js"></script>
+    <script type="text/javascript" src="../plugin/slimScroll/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="../plugin/datepicker-1.0.10/datepicker.js"></script>
+</head>
+
+<body>
+   <div class="wrapper">
+        <!-- header -->
+        <div class="header">
+            <div class="header_top">
+                <div class="header_inner">
+                    <h1>
+                        <a href="#">Incheon Airport</a>
+                        <div class="header_text">상황관리 <span>협업플랫폼</span></div>
+                    </h1>
+                    <div class="header_util">
+                        <!--<p>홍길동(인천공항공사)</p>-->
+                        <a href="#">로그인</a>
+                    </div>
+                </div>
+            </div>
+            <div class="header_bot">
+                <div class="gnb">
+                    <ul>
+                        <li>
+                            <a href="#">상황</a>
+                            <!--
+                            <a href="#" class="active">상황</a>
+                            -->
+                            <ul>
+                                <li>
+                                    <a href="#">유형분류</a>
+                                    <!--
+                                    <a href="#" class="active">유형분류</a>
+                                    -->
+                                </li>
+                                <li>
+                                    <a href="#">상황접수</a>
+                                </li>
+                                <li>
+                                    <a href="#">진행상황</a>
+                                </li>
+                                <li>
+                                    <a href="#">상황처리현황</a>
+                                </li>
+                                <li>
+                                    <a href="#">완료상황</a>
+                                </li>
+                                <li>
+                                    <a href="#">진행상황</a>
+                                </li>
+                                <li>
+                                    <a href="#">공지사항</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">이벤트</a>
+                            <ul>
+                                <li>
+                                    <a href="#">이벤트 접수</a>
+                                </li>
+                                <li>
+                                    <a href="#">진행 이벤트</a>
+                                </li>
+                                <li>
+                                    <a href="#">이벤트 처리현황</a>
+                                </li>
+                                <li>
+                                    <a href="#">완료 이벤트</a>
+                                </li>
+                                <li>
+                                    <a href="#">삭제 이벤트</a>
+                                </li>
+                                <li>
+                                    <a href="#">저시정운영현황조회</a>
+                                </li>
+                                <li>
+                                    <a href="#">대체공항운영현황조회</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">통계</a>
+                            <ul>
+                                <li>
+                                    <a href="#">위기유형별 통계</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">매뉴얼</a>
+                            <ul>
+                                <li>
+                                    <a href="#">상황관리 매뉴얼</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">전화번호</a>
+                            <ul>
+                                <li>
+                                    <a href="#">부서 전화번호</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">당직관리</a>
+                            <ul>
+                                <li>
+                                    <a href="#">당직지시 및 보고</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="m_header">
+            <a href="javascript:window.history.back();" class="util back" title="뒤로가기"><img src="../images/icon/page/arrow_left_24.png"></a>
+            <h1>메뉴명</h1>
+            <div class="util">
+                <button class="menu">메뉴</button>
+            </div>
+        </div>
+        <div class="menu_wrap">
+            <div class="dim"></div>
+            <div class="menu_area">
+                <div class="menu_btn">
+                    <button type="button" class="home">home</button>
+                    <button type="button" class="close">close</button>
+                </div>
+                <div class="menu_login">
+                    <!--
+                    <div class="txt1">로그인 해주세요</div>
+                    -->
+                    <div class="txt2"><i></i>홍길동님 안녕하세요.</div>
+                    <div>
+                        <!--
+                        <a href="#">로그인</a>
+                        -->
+                        <a href="#">로그아웃</a>
+                    </div>
+                </div>
+                <div class="menu_content">
+                    <ul>
+                        <li class="om">
+                            <i></i><button type="button">상황</button>
+                            <ul>
+                                <li><a href="#">유형분류</a></li>
+                                <!--
+                                <li><a href="#" class="active">유형분류</a></li>
+                                -->
+                                <li><a href="#">상황접수</a></li>
+                                <li><a href="#">진행상황</a></li>
+                                <li><a href="#">상황처리현황</a></li>
+                                <li><a href="#">완료상황</a></li>
+                                <li><a href="#">삭제상황</a></li>
+                                <li><a href="#">공지사항</a></li>
+                            </ul>
+                        </li>
+                        <li class="ev">
+                            <i></i><button type="button">이벤트</button>
+                            <ul>
+                                <li><a href="#">이벤트 접수</a></li>
+                                <li><a href="#">진행 이벤트</a></li>
+                                <li><a href="#">이벤트 처리현황</a></li>
+                                <li><a href="#">완료 이벤트</a></li>
+                                <li><a href="#">삭제 이벤트</a></li>
+                                <li><a href="#">저시정운영현황조회</a></li>
+                                <li><a href="#">대체공항운영현황조회</a></li>
+                            </ul>
+                        </li>
+                        <li class="st">
+                            <i></i><button type="button">통계</button>
+                            <ul>
+                                <li><a href="#">위기유형별통계</a></li>
+                            </ul>
+                        </li>
+                        <li class="ma">
+                            <i></i><button type="button">매뉴얼</button>
+                            <ul>
+                                <li><a href="#">상황관리매뉴얼</a></li>
+                            </ul>
+                        </li>
+                        <li class="te">
+                            <i></i><button type="button">전화번호</button>
+                            <ul>
+                                <li><a href="#">부서 전화번호</a></li>
+                            </ul>
+                        </li>
+                        <li class="wk">
+                            <i></i><button type="button">당직관리</button>
+                            <ul>
+                                <li><a href="#">당직지시 및 보고</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- //header -->
+        <div class="container">
+        </div>
+        <div class="layer_popup" style="display:block;">
+            <div class="popup_title">
+                <h3>진행현황</h3>
+                <div class="close_area">
+                    <button type="button" class="popup_closer">닫기</button>
+                </div>
+            </div>
+            <div class="popup_content">
+                <textarea name="" id="" cols="30" rows="5" readonly>
+○ 이벤트/상황명 
+○ 발생일시
+○ 발생장소
+○ 이벤트/상황 개요
+○ 인명피해현황(IOC)
+○ 재산피해현황(IOC)
+○ 이벤트/상황명 
+○ 발생일시
+○ 발생장소
+○ 이벤트/상황 개요
+○ 인명피해현황(IOC)
+○ 재산피해현황(IOC)
+○ 이벤트/상황명 
+○ 발생일시
+○ 발생장소
+○ 이벤트/상황 개요
+○ 인명피해현황(IOC)
+○ 재산피해현황(IOC)
+                </textarea>
+                <div class="content_title pt20">
+                    <h2>위기등급</h2>
+                </div>
+                <div class="table_type2">
+                    <table>
+                        <colgroup>
+                            <col width="10%">
+                            <col width="">
+                            <col width="25%">
+                            <col width="25%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>등급</th>
+                                <th>등급 발령시간</th>
+                                <th>경보발령기준</th>
+                                <th>표준절차상세</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>주의</td>
+                                <td>2021-08-17 15:12</td>
+                                <td>
+                                    <button type="button" class="btn btn_md main_bdr">상세</button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn_md main_bdr">상세</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="content_title pt20">
+                    <h2>부서별 처리현황</h2>
+                    <div class="title_util">
+                        <i class="wait"></i> 대기
+                        <i class="progress ml5"></i> 진행
+                        <i class="complete ml5"></i> 완료
+                    </div>
+                </div>
+                <div class="table_type2">
+                    <table>
+                        <caption class="t_indent">부서별 처리 현황</caption>
+                        <colgroup>
+                            <col width="">
+                            <col width="20%">
+                            <col width="20%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>조치부서(처)</th>
+                                <th>구분</th>
+                                <th>처리상태</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table_type2 table_scroll_type1 scroll_style2">
+                    <table>
+                        <caption class="t_indent">부서별 처리 현황</caption>
+                        <colgroup>
+                            <col width="">
+                            <col width="20%">
+                            <col width="20%">
+                        </colgroup>
+                        <thead>
+                        <tbody>
+                            <tr>
+                                <td class="td_left">항행처</td>
+                                <td>주무조치부서</td>
+                                <td><i class="wait"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="td_left">운항서비스처</td>
+                                <td></td>
+                                <td><i class="progress"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="td_left">친환경공항처</td>
+                                <td></td>
+                                <td><i class="complete"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="td_left">계류장관제팀</td>
+                                <td></td>
+                                <td><i class="progress"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="td_left">공항운영1팀</td>
+                                <td></td>
+                                <td><i class="complete"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="td_left">공항운영1팀</td>
+                                <td></td>
+                                <td><i class="complete"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="td_left">공항운영1팀</td>
+                                <td></td>
+                                <td><i class="complete"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="td_left">공항운영1팀</td>
+                                <td></td>
+                                <td><i class="complete"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="content_title pt20">
+                    <h2>
+                        부서별 조치내용
+                        <div class="tip_box">
+                            <i></i>
+                            <span class="tip_txt">※개인정보 입력금지(주민번호,여권번호,이름+핸드폰번호)</span>
+                        </div>
+                    </h2>
+                    <div class="title_util">
+                        <div class="chk_box">
+                            <input type="checkbox" id="all" checked="">
+                            <label for="all"><span></span>전체부서 보기</label>
+                        </div>
+                        <button class="plusbox" type="button">plus</button>
+                    </div>
+                </div>
+                <div class="table_type7 table_scroll_type1 scroll_style">
+                    <table>
+                        <colgroup>
+                            <col width="5%">
+                            <col width="14%">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th rowspan="5">1</th>
+                                <td class="bg">조치부서</td>
+                                <td class="td_left">
+                                    항행처 계기착륙표지소
+                                    <div class="more_mini">
+                                        <button type="button" class="fr btn main_btn pr5 pl5 ml10">외부공개</button>
+                                        <button type="button" class="fr more_btn">더보기</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bg">조치일시</td>
+                                <td class="td_left">2021-08-17 15:12</td>
+                            </tr>
+                            <tr>
+                                <td class="bg">조치내용</td>
+                                <td class="td_left">공항내 항공기 사고 관련 부서에 전파조치</td>
+                            </tr>
+                            <tr>
+                                <td class="bg">인명피해현황</td>
+                                <td class="td_left">공항내 항공기 사고 인명피해현황</td>
+                            </tr>
+                            <tr>
+                                <td class="bg">재산피해현황</td>
+                                <td class="td_left">공항내 항공기 사고 재산피해현황</td>
+                            </tr>
+                            <tr>
+                                <th rowspan="5">2</th>
+                                <td class="bg">조치부서</td>
+                                <td class="td_left">
+                                    항행처 계기착륙표지소
+                                    <div class="more_mini">
+                                        <button type="button" class="fr btn main_btn pr5 pl5 ml10">외부공개</button>
+                                        <button type="button" class="fr more_btn">더보기</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bg">조치일시</td>
+                                <td class="td_left">2021-08-17 15:12</td>
+                            </tr>
+                            <tr>
+                                <td class="bg">조치내용</td>
+                                <td class="td_left">공항내 항공기 사고 관련 부서에 전파조치</td>
+                            </tr>
+                            <tr>
+                                <td class="bg">인명피해현황</td>
+                                <td class="td_left">공항내 항공기 사고 인명피해현황</td>
+                            </tr>
+                            <tr>
+                                <td class="bg">재산피해현황</td>
+                                <td class="td_left">공항내 항공기 사고 재산피해현황</td>
+                            </tr>
+                            <tr>
+                                <th rowspan="5">3</th>
+                                <td class="bg">조치부서</td>
+                                <td class="td_left">
+                                    항행처 계기착륙표지소
+                                    <div class="more_mini">
+                                        <button type="button" class="fr btn main_btn pr5 pl5 ml10">외부공개</button>
+                                        <button type="button" class="fr more_btn">더보기</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bg">조치일시</td>
+                                <td class="td_left">2021-08-17 15:12</td>
+                            </tr>
+                            <tr>
+                                <td class="bg">조치내용</td>
+                                <td class="td_left">공항내 항공기 사고 관련 부서에 전파조치</td>
+                            </tr>
+                            <tr>
+                                <td class="bg">인명피해현황</td>
+                                <td class="td_left">공항내 항공기 사고 인명피해현황</td>
+                            </tr>
+                            <tr>
+                                <td class="bg">재산피해현황</td>
+                                <td class="td_left">공항내 항공기 사고 재산피해현황</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3 class="mt10">조치내용</h3>
+                <textarea class="mt5" name="" id="" cols="30" rows="2" placeholder="부서별 조치내용을 입력해주세요"></textarea>
+                <h3 class="mt10">인명피해현황</h3>
+                <textarea class="mt5" name="" id="" cols="30" rows="2" placeholder="부서별 인명피해현황 입력해주세요"></textarea>
+                <h3 class="mt10">재산피해현황</h3>
+                <textarea class="mt5" name="" id="" cols="30" rows="2" placeholder="부서별 재산피해현황 입력해주세요"></textarea>
+                <h3 class="mt10">재산피해현황</h3>
+                <div class="table_type2 mt5">
+                    <table>
+                        <caption class="t_indent">첨부파일</caption>
+                        <colgroup>
+                            <col width="10%">
+                            <col width="">
+                            <col width="10%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>파일이름</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><a href="#">항행처 계기착률표지소 첨부파일.pdf</a></td>
+                                <td><button type="button" class="fr btn btn_md red_bdr">삭제</button></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <p class="none_data p0">등록된 첨부 파일이 없습니다.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="clf mt5">
+                    <button type="button" class="btn btn_lg main_bdr icon_btn fl ml0"><i class="confirm"></i>파일첨부</button>
+                    <button type="button" class="btn btn_lg main_bdr fr">등록</button>
+                </div>
+                <div class="btn_group6">
+                    <button type="button" class="btn btn_lg main_btn">수정</button>
+                    <button type="button" class="btn btn_lg main_btn">보고서</button>
+                    <button type="button" class="btn btn_lg main_btn popopen" data-pop="pop3">보고서 의견</button>
+                    <button type="button" class="btn btn_lg main_btn">조회/종결</button>
+                    <button type="button" class="btn btn_lg main_btn">조치완료 취소</button>
+                    <button type="button" class="btn btn_lg main_btn">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

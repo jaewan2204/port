@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A-CDM</title>
+    
+    <!-- jquery -->
+    <link rel="stylesheet" href="../css/jquery-ui.min.css" type="text/css"/>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    
+    <!-- custom -->
+    <link type="text/css" rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="../js/pub_js.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+       
+        <!-- HEADER -->
+        <div class="header">
+            <div class="header_title">
+                <a class="back" href="javascript:window.history.back();">뒤로가기</a>
+                <h2>사용자 관리</h2>
+            </div>
+            <div class="header_util"><!-- 보이는 페이지 에서만 ac 추가 해주세요. -->
+                <button class="header_time" type="button" title="추천"><i class="icon_time"></i>UTC 10:21</button>
+                <button type="button" title="알림"><i class="icon_alert"></i></button>
+            </div>
+        </div>
+        <!-- //HEADER -->
+        
+        <!-- CONTAINER -->
+        <div class="container">
+            <div class="content_wrap bg_height">
+                <div class="search_area">
+                    <div class="calendar flex just_sbw">
+                        <input type="text" name="calendar" id="datepicker_start" placeholder="">
+                        <span class="">~</span>
+                        <input type="text" name="calendar" id="datepicker_end" placeholder="">
+                    </div>
+                    <div class="selet_area flex just_sbw mt4">
+                        <select name="" title="" id="select_1">
+                            <option selected="">구분</option>
+                            <option>00</option>
+                            <option>00</option>
+                        </select>
+                        <select name="" title="" id="select_2">
+                            <option selected="">상태</option>
+                            <option>0000</option>
+                            <option>0000</option>
+                        </select>
+                        <input type="text" name="calendar" placeholder="성명">
+                    </div>
+                    <div class="mt8 btn_area flex just_sbw">
+                        <button class="rset_btn">초기화</button>
+                        <button class="sach_btn">조회</button>
+                    </div>
+                </div>
+                
+                <div class="page_date flex just_sbw">
+                    <ul class="flex just_sbw">
+                        <li><img src="../images/icon/20/date.svg" alt=""></li>
+                        <li><span>2022-01-05</span></li>
+                        <li><span>~</span></li>
+                        <li><span>2022-01-05</span></li>
+                    </ul>
+                    <div class="date_num">
+                        <p><em>총</em>26건</p>
+                    </div>
+                </div>
+
+                <div class="list_wrap">
+                    <ul class="title flex just_sbw">
+                        <li>번호</li>
+                        <li>구분</li>
+                        <li>아이디</li>
+                        <li>성명</li>
+                        <li>신청일</li>
+                        <li>상태</li>
+                    </ul>
+
+                    <div class="result_text">
+                        <ul>
+                            <li class="result_area">
+                                <div class="r_list_box">
+                                    <ul>
+                                        <a href="" class="flex just_sbw">
+                                            <li>1</li>
+                                            <li>신규</li>
+                                            <li>jkdsdjkstd12</li>
+                                            <li>박혁거세</li>
+                                            <li>2022-02-15</li>
+                                            <li>신청대기</li>
+                                        </a>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="result_area">
+                                <div class="r_list_box">
+                                    <ul>
+                                        <a href="" class="flex just_sbw">
+                                            <li>2</li>
+                                            <li>신규</li>
+                                            <li>jkdsjks</li>
+                                            <li>홍길동</li>
+                                            <li>2022-02-15</li>
+                                            <li>1차승인</li>
+                                        </a>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="result_area">
+                                <div class="r_list_box">
+                                    <ul>
+                                        <a href="" class="flex just_sbw">
+                                            <li>3</li>
+                                            <li>변경</li>
+                                            <li>jkdsjks</li>
+                                            <li>홍길동</li>
+                                            <li>2022-02-15</li>
+                                            <li>승인완료</li>
+                                        </a>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="result_area">
+                                <div class="r_list_box">
+                                    <ul>
+                                        <a href="" class="flex just_sbw">
+                                            <li>4</li>
+                                            <li>해지</li>
+                                            <li>jkdsjks</li>
+                                            <li>홍길동</li>
+                                            <li>2022-02-15</li>
+                                            <li>반려</li>
+                                        </a>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+        <!-- //CONTAINER -->
+    </div>
+</body>
+</html>

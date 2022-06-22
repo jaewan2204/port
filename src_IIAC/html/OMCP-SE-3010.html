@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>인천국제공항 상황관리 협업플랫폼 및 이동지역 차량관리시스템 구축사업</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link type="text/css" rel="stylesheet" href="../css/style.css">
+    <link type="text/css" rel="stylesheet" href="../plugin/swiper-4.5.1/swiper.css">
+    <link type="text/css" rel="stylesheet" href="../plugin/datepicker-1.0.10/datepicker.css">
+    <!-- js -->
+    <script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../js/pub_js.js"></script>
+    <script type="text/javascript" src="../plugin/swiper-4.5.1/swiper.js"></script>
+    <script type="text/javascript" src="../plugin/slimScroll/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="../plugin/datepicker-1.0.10/datepicker.js"></script>
+</head>
+
+<body>
+    <!-- OMCP_SE 페이지 .setting 추가 -->
+    <div class="wrapper setting">
+        <div class="m_header">
+            <a href="javascript:window.history.back();" class="util back" title="뒤로가기"><img src="../images/icon/page/arrow_left_24.png"></a>
+            <h1>비밀번호 변경</h1>
+            <div class="util">
+                <button class="menu">메뉴</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="content_wrap">
+                <div class="content_inner help">
+                    <div class="set_contents mb80">
+                        <p class="mb20">새로운<br>비밀번호를 입력해주세요.</p>
+                        <div class="input_group_wrap">
+                            <div class="input_group">
+                                <label for="pw">현재 비밀번호</label>
+                                <div>
+                                    <input type="password" title="현재 비밀번호" id="pw" maxlength="15" placeholder="영어, 대소문자, 숫자, 특수기호 혼합 9~15자 입니다.">
+                                    <p class="warning">정확한 비밀번호를 입력해 주세요.</p>
+                                </div>
+                            </div>
+
+                            <div class="input_group">
+                                <label for="new_pw">새로운 비밀번호</label>
+                                <div>
+                                    <input type="password" title="새로운 비밀번호" id="new_pw" maxlength="15" placeholder="영어, 대소문자, 숫자, 특수기호 혼합 9~15자 입니다.">
+                                    <p class="warning">비밀번호가 일치하지 않습니다.</p>
+                                </div>
+                            </div>
+
+                            <div class="input_group">
+                                <label for="pw_chk">비밀번호 확인</label>
+                                <div>
+                                    <input type="password" title="비밀번호 확인" id="pw_chk" maxlength="15" placeholder="영어 소문자, 대문자, 숫자, 특수기호 혼합 9~15자">
+                                    <p class="warning">비밀번호가 일치하지 않습니다.</p>
+                                </div>
+                            </div>
+
+                            <div class="input_group">
+                                <label for="certify_num">OTP 번호 인증<span>핸드폰으로 받은 번호를 입력해주세요.</span></label>
+                                <button type="button" title="재전송" class="re">재전송</button>
+                                <div>
+                                    <input type="text" title="OTP번호" id="certify_num" class="certify" placeholder="">
+                                    <p class="warning">정확한 OTP 번호를 입력해 주세요.</p>
+                                    <span class="time">03:00</span>
+                                    <button type="button" class="btn btn_lg main_btn">OTP번호 전송</button>
+                                    <!--<button type="button" class="btn btn_lg main_btn">확인</button>-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w100p">
+                            <button type="button" class="btn btn_lg main_btn w100p">비밀번호 변경</button>
+                            <!--<button type="button" class="btn btn_lg main_btn w100p">확인</button>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

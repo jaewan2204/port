@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>인천국제공항 상황관리 협업플랫폼 및 이동지역 차량관리시스템 구축사업</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link type="text/css" rel="stylesheet" href="../css/style.css">
+    <link type="text/css" rel="stylesheet" href="../plugin/swiper-4.5.1/swiper.css">
+    <link type="text/css" rel="stylesheet" href="../plugin/datepicker-1.0.10/datepicker.css">
+    <!-- js -->
+    <script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="../js/pub_js.js"></script>
+    <script type="text/javascript" src="../plugin/swiper-4.5.1/swiper.js"></script>
+    <script type="text/javascript" src="../plugin/slimScroll/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="../plugin/datepicker-1.0.10/datepicker.js"></script>
+</head>
+
+<body>
+   <div class="wrapper">
+        <!-- header -->
+        <div class="header">
+            <div class="header_top">
+                <div class="header_inner">
+                    <h1>
+                        <a href="#">Incheon Airport</a>
+                        <div class="header_text">상황관리 <span>협업플랫폼</span></div>
+                    </h1>
+                    <div class="header_util">
+                        <!--<p>홍길동(인천공항공사)</p>-->
+                        <a href="#">로그인</a>
+                    </div>
+                </div>
+            </div>
+            <div class="header_bot">
+                <div class="gnb">
+                    <ul>
+                        <li>
+                            <a href="#">상황</a>
+                            <!--
+                            <a href="#" class="active">상황</a>
+                            -->
+                            <ul>
+                                <li>
+                                    <a href="#">유형분류</a>
+                                    <!--
+                                    <a href="#" class="active">유형분류</a>
+                                    -->
+                                </li>
+                                <li>
+                                    <a href="#">상황접수</a>
+                                </li>
+                                <li>
+                                    <a href="#">진행상황</a>
+                                </li>
+                                <li>
+                                    <a href="#">상황처리현황</a>
+                                </li>
+                                <li>
+                                    <a href="#">완료상황</a>
+                                </li>
+                                <li>
+                                    <a href="#">진행상황</a>
+                                </li>
+                                <li>
+                                    <a href="#">공지사항</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">이벤트</a>
+                            <ul>
+                                <li>
+                                    <a href="#">이벤트 접수</a>
+                                </li>
+                                <li>
+                                    <a href="#">진행 이벤트</a>
+                                </li>
+                                <li>
+                                    <a href="#">이벤트 처리현황</a>
+                                </li>
+                                <li>
+                                    <a href="#">완료 이벤트</a>
+                                </li>
+                                <li>
+                                    <a href="#">삭제 이벤트</a>
+                                </li>
+                                <li>
+                                    <a href="#">저시정운영현황조회</a>
+                                </li>
+                                <li>
+                                    <a href="#">대체공항운영현황조회</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">통계</a>
+                            <ul>
+                                <li>
+                                    <a href="#">위기유형별 통계</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">매뉴얼</a>
+                            <ul>
+                                <li>
+                                    <a href="#">상황관리 매뉴얼</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">전화번호</a>
+                            <ul>
+                                <li>
+                                    <a href="#">부서 전화번호</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">당직관리</a>
+                            <ul>
+                                <li>
+                                    <a href="#">당직지시 및 보고</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="m_header">
+            <a href="javascript:window.history.back();" class="util back" title="뒤로가기"><img src="../images/icon/page/arrow_left_24.png"></a>
+            <h1>메뉴명</h1>
+            <div class="util">
+                <button class="menu">메뉴</button>
+            </div>
+        </div>
+        <div class="menu_wrap">
+            <div class="dim"></div>
+            <div class="menu_area">
+                <div class="menu_btn">
+                    <button type="button" class="home">home</button>
+                    <button type="button" class="close">close</button>
+                </div>
+                <div class="menu_login">
+                    <!--
+                    <div class="txt1">로그인 해주세요</div>
+                    -->
+                    <div class="txt2"><i></i>홍길동님 안녕하세요.</div>
+                    <div>
+                        <!--
+                        <a href="#">로그인</a>
+                        -->
+                        <a href="#">로그아웃</a>
+                    </div>
+                </div>
+                <div class="menu_content">
+                    <ul>
+                        <li class="om">
+                            <i></i><button type="button">상황</button>
+                            <ul>
+                                <li><a href="#">유형분류</a></li>
+                                <!--
+                                <li><a href="#" class="active">유형분류</a></li>
+                                -->
+                                <li><a href="#">상황접수</a></li>
+                                <li><a href="#">진행상황</a></li>
+                                <li><a href="#">상황처리현황</a></li>
+                                <li><a href="#">완료상황</a></li>
+                                <li><a href="#">삭제상황</a></li>
+                                <li><a href="#">공지사항</a></li>
+                            </ul>
+                        </li>
+                        <li class="ev">
+                            <i></i><button type="button">이벤트</button>
+                            <ul>
+                                <li><a href="#">이벤트 접수</a></li>
+                                <li><a href="#">진행 이벤트</a></li>
+                                <li><a href="#">이벤트 처리현황</a></li>
+                                <li><a href="#">완료 이벤트</a></li>
+                                <li><a href="#">삭제 이벤트</a></li>
+                                <li><a href="#">저시정운영현황조회</a></li>
+                                <li><a href="#">대체공항운영현황조회</a></li>
+                            </ul>
+                        </li>
+                        <li class="st">
+                            <i></i><button type="button">통계</button>
+                            <ul>
+                                <li><a href="#">위기유형별통계</a></li>
+                            </ul>
+                        </li>
+                        <li class="ma">
+                            <i></i><button type="button">매뉴얼</button>
+                            <ul>
+                                <li><a href="#">상황관리매뉴얼</a></li>
+                            </ul>
+                        </li>
+                        <li class="te">
+                            <i></i><button type="button">전화번호</button>
+                            <ul>
+                                <li><a href="#">부서 전화번호</a></li>
+                            </ul>
+                        </li>
+                        <li class="wk">
+                            <i></i><button type="button">당직관리</button>
+                            <ul>
+                                <li><a href="#">당직지시 및 보고</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- //header -->
+        <div class="container">
+        </div>
+        <div class="layer_popup w90p" style="max-width:960px; display:block;"><!-- 임시 style max-width -->
+            <div class="popup_title">
+                <h3>현장당직확인 리스트</h3>
+                <div class="close_area">
+                    <button type="button" class="popup_closer">닫기</button>
+                </div>
+            </div>
+            <div class="popup_content">
+                <div class="content_title pt0">
+                    <h2>상부기관지시사항 확인</h2>
+                </div>
+                <div class="pc_content">
+                    <div class="table_type2">
+                        <table>
+                            <caption class="t_indent">상부기관지시사항 확인</caption>
+                            <colgroup>
+                                <col width="23%">
+                                <col width="15%">
+                                <col width="10%">
+                                <col width="15%">
+                                <col width="15%">
+                                <col width="22%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>상부기관지시사항전파자</th>
+                                    <td class="td_left">홍길동</td>
+                                    <th>CO구분</th>
+                                    <td class="td_left">AFCO</td>
+                                    <th>전파일시</th>
+                                    <td class="td_left">2021-08-17 15:12:29</td>
+                                </tr>
+                                <tr>
+                                    <th>상부기관지시사항</th>
+                                    <td colspan="5" class="td_left">
+                                        1. 당직지시사항<br />
+                                         -입력<br />
+                                        2. 당직근무자<br />
+                                         - 당직사형 : 홍길동<br />
+                                         - 당직보좌 : 홍길동
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="m_content">
+                    <div class="table_type2">
+                        <table>
+                            <caption class="t_indent">상부기관지시사항 확인</caption>
+                            <colgroup>
+                                <col width="31%">
+                                <col width="23%">
+                                <col width="23%">
+                                <col width="23%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>상부기관<br />지시사항전파자</th>
+                                    <td class="td_left">홍길동</td>
+                                    <th>CO구분</th>
+                                    <td class="td_left">AFCO</td>
+                                </tr>
+                                <tr>
+                                    <th>전파일시</th>
+                                    <td colspan="3" class="td_left">2021-08-17 15:12:29</td>
+                                </tr>
+                                <tr>
+                                    <th>상부기관<br />지시사항</th>
+                                    <td colspan="3" class="td_left">
+                                        1. 당직지시사항<br />
+                                         -입력<br />
+                                        2. 당직근무자<br />
+                                         - 당직사형 : 홍길동<br />
+                                         - 당직보좌 : 홍길동
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="content_title">
+                    <h2>근무자 확인리스트</h2>
+                </div>
+                <div class="table_type2 table_pd1">
+                    <table>
+                        <caption class="t_indent">근무자 확인리스트</caption>
+                        <colgroup>
+                            <col width="9%">
+                            <col width="">
+                            <col width="12%">
+                            <col width="12%">
+                            <col width="12%">
+                            <col width="12%">
+                            <col width="12%">
+                            <col width="12%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>NO</th>
+                                <th>부서명/회사명</th>
+                                <th>근무자/책임자</th>
+                                <th>지시확인</th>
+                                <th>공사인원</th>
+                                <th>시설관리 인원</th>
+                                <th>운영 서비스인원</th>
+                                <th>보안인원</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table_type2 table_scroll_type1 max_height1">
+                    <table>
+                        <caption class="t_indent">근무자 확인리스트</caption>
+                        <colgroup>
+                            <col width="9%">
+                            <col width="">
+                            <col width="12%">
+                            <col width="12%">
+                            <col width="12%">
+                            <col width="12%">
+                            <col width="12%">
+                            <col width="12%">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>계류장관제소(741-0000)</td>
+                                <td>홍길동</td>
+                                <td>
+                                    <div class="chk_box">
+                                        <input type="checkbox" id="all">
+                                        <label for="all"><span></span></label>
+                                    </div>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>계류장관제소(741-0000)</td>
+                                <td>홍길동</td>
+                                <td>
+                                    <div class="chk_box">
+                                        <input type="checkbox" id="all">
+                                        <label for="all"><span></span></label>
+                                    </div>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>계류장관제소(741-0000)</td>
+                                <td>홍길동</td>
+                                <td>
+                                    <div class="chk_box">
+                                        <input type="checkbox" id="all">
+                                        <label for="all"><span></span></label>
+                                    </div>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>계류장관제소(741-0000)</td>
+                                <td>홍길동</td>
+                                <td>
+                                    <div class="chk_box">
+                                        <input type="checkbox" id="all">
+                                        <label for="all"><span></span></label>
+                                    </div>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>계류장관제소(741-0000)</td>
+                                <td>홍길동</td>
+                                <td>
+                                    <div class="chk_box">
+                                        <input type="checkbox" id="all">
+                                        <label for="all"><span></span></label>
+                                    </div>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pc_content pt20">
+                    <div class="table_type2">
+                        <table>
+                            <colgroup>
+                                <col width="20%">
+                                <col width="30%">
+                                <col width="20%">
+                                <col width="30%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>보고일시</th>
+                                    <td class="td_left" style="border-right:none;"><input type="text" value="2021-08-18 15:30:30" disabled></td>
+                                    <td colspan="2" style="border-left:none;"></td>
+                                </tr>
+                                <tr>
+                                    <th><span class="txt_star">*</span>근무자/책임자</th>
+                                    <td><input type="text" value=""></td>
+                                    <th><span class="txt_star">*</span>직급</th>
+                                    <td>
+                                        <div class="input_group w100p">
+                                            <input type="text" class="search" value="">
+                                            <button class="search_btn popopen" data-pop="pop2">검색</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>부서명/회사명</th>
+                                    <td class="td_left"><input type="text" value="계류장관제소(741-0000)" disabled></td>
+                                    <th><span class="txt_star">*</span>비상연락처</th>
+                                    <td><input type="text" value=""></td>
+                                </tr>
+                                <tr>
+                                    <th><span class="txt_star">*</span>근무인원</th>
+                                    <td colspan="3">
+                                        <div class="box_style9">
+                                            <div class="blk">
+                                                <div class="flex">
+                                                    <p>공사<br />자회사</p>
+                                                    <p>: <input type="text">명</p>
+                                                </div>
+                                            </div>
+                                            <div class="bot">
+                                                <div>
+                                                    <p>시설관리</p>
+                                                    <p>: <input type="text">명</p>
+                                                </div>
+                                                <div>
+                                                    <p>운영서비스</p>
+                                                    <p>: <input type="text">명</p>
+                                                </div>
+                                                <div>
+                                                    <p>보안</p>
+                                                    <p>: <input type="text">명</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>특이사항</th>
+                                    <td colspan="3">
+                                        <textarea class="mt5" name="" id="" cols="30" rows="2" placeholder=""></textarea>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="m_content pt20">
+                    <div class="table_type2">
+                        <table>
+                            <colgroup>
+                                <col width="35%">
+                                <col width="65%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>보고일시</th>
+                                    <td class="td_left"><input type="text" value="2021-08-18 15:30:30" disabled></td>
+                                </tr>
+                                <tr>
+                                    <th><span class="txt_star">*</span>근무자/책임자</th>
+                                    <td><input type="text" value=""></td>
+                                </tr>
+                                <tr>
+                                    <th><span class="txt_star">*</span>직급</th>
+                                    <td>
+                                        <div class="input_group w100p">
+                                            <input type="text" class="search" value="">
+                                            <button class="search_btn popopen" data-pop="pop2">검색</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>부서명/회사명</th>
+                                    <td class="td_left"><input type="text" value="계류장관제소(741-0000)" disabled></td>
+                                </tr>
+                                <tr>
+                                    <th><span class="txt_star">*</span>비상연락처</th>
+                                    <td><input type="text" value=""></td>
+                                </tr>
+                                <tr>
+                                    <th><span class="txt_star">*</span>근무인원</th>
+                                    <td>
+                                        <div class="box_style9">
+                                            <div class="blk">
+                                                <div class="flex">
+                                                    <p>공사<br />자회사</p>
+                                                    <p>: <input type="text">명</p>
+                                                </div>
+                                            </div>
+                                            <div class="bot">
+                                                <div>
+                                                    <p>시설관리</p>
+                                                    <p>: <input type="text">명</p>
+                                                </div>
+                                                <div>
+                                                    <p>운영서비스</p>
+                                                    <p>: <input type="text">명</p>
+                                                </div>
+                                                <div>
+                                                    <p>보안</p>
+                                                    <p>: <input type="text">명</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>특이사항</th>
+                                    <td>
+                                        <textarea class="mt5" name="" id="" cols="30" rows="2" placeholder=""></textarea>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="tar mt10 m_btn_tac_50p">
+                    <button type="button" class="btn btn_lg main_btn">저장</button>
+                    <button type="button" class="btn btn_lg main_bdr popup_closer">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

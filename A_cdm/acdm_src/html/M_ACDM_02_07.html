@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A-CDM</title>
+    
+    <!-- jquery -->
+    <link rel="stylesheet" href="../css/jquery-ui.min.css" type="text/css"/>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    
+    <!-- custom -->
+    <link type="text/css" rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="../js/pub_js.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+       
+        <!-- HEADER -->
+        <div class="header">
+            <div class="header_title">
+                <a class="back" href="javascript:window.history.back();">뒤로가기</a>
+                <h2>계정신청 변경/해지</h2>
+            </div>
+            <div class="header_util"><!-- 보이는 페이지 에서만 ac 추가 해주세요. -->
+                <button class="header_time" type="button" title="추천"><i class="icon_time"></i>UTC 10:21</button>
+                <button type="button" title="알림"><i class="icon_alert"></i></button>
+            </div>
+        </div>
+        <!-- //HEADER -->
+        
+        <!-- CONTAINER -->
+        <div class="container">
+            <div class="account_wrap">
+                <div class="apply_box">
+                    <ul class="apply_inp">
+                        <li>
+                            <span>신청권한</span>
+                            <div class="ck_box">
+                                <input type="radio" id="cgbtn01" name="ckbtn" checked>
+                                <label for="cgbtn01">계정 변경</label>
+                                <input type="radio" id="cgbtn02" name="ckbtn">
+                                <label for="cgbtn02">계정 해지</label>
+                            </div>
+                        </li>
+                        <li>
+                            <span>성명</span>
+                            <div class="flex just_sbw mt8">
+                                <input type="text" title="num" maxlength="10" placeholder="홍길동" disabled>
+                            </div>
+                        </li>
+                        <li class="phone">
+                            <span>핸드폰번호</span>
+                            <div class="flex just_sbw mt8">
+                                <select name="phone" class="select" id="select_1">
+                                    <option value="1">010</option>
+                                    <option value="2">011</option>
+                                    <option value="3">017</option>
+                                    <option value="4">016</option>
+                                </select>
+                                <input type="text" title="num" maxlength="10" placeholder="- 없이 숫자만 입력하세요.">
+                            </div>
+                        </li>
+                        <li>
+                            <span>신청 아이디</span>
+                            <div class="flex just_sbw mt8">
+                                <input type="text" placeholder="ascgvsad" maxlength="20" disabled>
+                            </div>
+                        </li>
+                        <li>
+                            <span>신청사유</span>
+                            <div class="flex just_sbw mt8">
+                                <input type="text" placeholder="신청 사유를 입력해주세요." maxlength="20">
+                            </div>
+                        </li>
+                        <li class="airline">
+                            <span>소속사</span>
+                            <div class="mt8">
+                                <input class="w100p" type="text" placeholder="항공사" maxlength="20" disabled>
+                            </div>
+                            <div class="flex just_sbw mt4">
+                                <input type="text" placeholder="IATA" maxlength="20" disabled="">
+                                <input class="" type="text" placeholder="선택해주세요" maxlength="20" disabled>
+                            </div>
+                        </li>
+                        <li class="authorit">
+                            <span>신청권한</span>
+                            <div class="accordion">
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" id="answer01">
+                                        <label for="answer01">A 항공사명 및 코드<em></em></label>
+                                        <div>
+                                            <input type="checkbox" class="btn-check" id="setbtn01">
+                                            <label class="btn btn-primary" for="setbtn01"><em></em>TOBT 조회</label>
+        
+                                            <input type="checkbox" class="btn-check" id="setbtn02">
+                                            <label class="btn btn-primary" for="setbtn02"><em></em>TOBT 입력</label>
+        
+                                            <input type="checkbox" class="btn-check" id="setbtn03">
+                                            <label class="btn btn-primary" for="setbtn03"><em></em><p>제방빙신청 EEZT 입력</p></label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="answer02">
+                                        <label for="answer02">B 항공사명 및 코드<em></em></label>
+                                        <div>
+                                            <input type="checkbox" class="btn-check" id="setbtn04">
+                                            <label class="btn btn-primary" for="setbtn04"><em></em>TOBT 조회</label>
+        
+                                            <input type="checkbox" class="btn-check" id="setbtn05">
+                                            <label class="btn btn-primary" for="setbtn05"><em></em>TOBT 입력</label>
+        
+                                            <input type="checkbox" class="btn-check" id="setbtn06">
+                                            <label class="btn btn-primary" for="setbtn06"><em></em><p>제방빙신청 EEZT 입력</p></label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="answer03">
+                                        <label for="answer03">C 항공사명 및 코드<em></em></label>
+                                        <div>
+                                            <input type="checkbox" class="btn-check" id="setbtn07">
+                                            <label class="btn btn-primary" for="setbtn07"><em></em>TOBT 조회</label>
+        
+                                            <input type="checkbox" class="btn-check" id="setbtn08">
+                                            <label class="btn btn-primary" for="setbtn08"><em></em>TOBT 입력</label>
+        
+                                            <input type="checkbox" class="btn-check" id="setbtn09">
+                                            <label class="btn btn-primary" for="setbtn09"><em></em><p>제방빙신청 EEZT 입력</p></label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="agreeBottom mt32">
+                <span><a href="#" class="btn_default">이전</a></span>
+                <span><a href="#" class="btn_primary">저장</a></span>
+            </div>
+        </div>
+        <!-- //CONTAINER -->
+    </div>
+</body>
+</html>
